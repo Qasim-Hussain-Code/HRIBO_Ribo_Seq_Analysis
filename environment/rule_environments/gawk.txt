@@ -1,0 +1,9 @@
+# This file may be used to create an environment using:
+# $ conda create --name <env> --file <this file>
+# platform: linux-64
+# created-by: conda 26.7.2
+_openmp_mutex=4.5=20_gnu
+gawk=5.0.1=h516909a_1
+libgcc=16.2.0=ha9f2e26_4
+libgcc-ng=16.2.0=h69a702a_4
+libgomp=16.2.0=he0feb66_4

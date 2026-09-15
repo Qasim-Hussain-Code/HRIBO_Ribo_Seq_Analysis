@@ -1,0 +1,5 @@
+image	docker://gelhausr/deepribo:latest
+file	b3dbb017086fe68b8327c0493f05e676.simg
+bytes	1915088896
+sha256	9166dd345ae6bf8aad9ce2677ff3e135e17f671dfa6efd1fdb1602a8fbeaf7d0
+labels	org.label-schema.build-arch: amd64;org.label-schema.build-date: Tuesday_15_September_2026_20:45:1_CST;org.label-schema.schema-version: 1.0;org.label-schema.usage.apptainer.version: 1.4.5;org.label-schema.usage.singularity.deffile.bootstrap: docker;org.label-schema.usage.singularity.deffile.from: gelhausr/deepribo:latest;

@@ -1,0 +1,12 @@
+recorded	2026-09-15T15:22:07Z
+kernel	Linux 6.18.33.2-microsoft-standard-WSL2
+os	Ubuntu 26.04 LTS
+platform	WSL 2 on Windows
+cpu	13th Gen Intel(R) Core(TM) i7-13620H
+cpu_threads	16
+memory_total_gb	7.8
+conda	conda 26.7.2
+conda_solver	libmamba
+apptainer	apptainer version 1.4.5
+hribo	1.8.1
+snakemake	8.10.7
