@@ -63,13 +63,26 @@ the 50 nt read. A low value here means the wrong adapter sequence.
   sequence alone, weigh over 40 MB together, and are listed in
   manifest.tsv but not copied.
 
-## 5. Sample structure
+## 5. Figures
 
-- figures/heatmap_SpearmanCorr_readCounts.pdf. Spearman correlation of
-  read counts between the two libraries. With one RIBO and one RNA library
-  it shows that the two are different, and nothing more.
-- pca/. Absent. The PCA step needs at least four samples; see
-  docs/troubleshooting.md in the repository root.
+Four PNG files drawn by scripts/10_plot_figures.py from the tables in this
+directory, so they can be redrawn from the repository alone:
+
+- figures/read_processing.png. Reads per library at each processing stage.
+- figures/read_length_distribution.png. Footprint length distribution of
+  the Ribo-seq library, with the 25 to 34 nt metagene window marked.
+- figures/metagene_profile.png. 5' ends of 25 to 34 nt footprints around
+  the start codon and 3' ends around the stop codon, counts per million,
+  summed over the genes HRIBO kept.
+- figures/orf_predictions.png. Length, start codon, annotation status and
+  agreement of the Reparation and DeepRibo calls. The numbers are in
+  summary/orf_agreement.tsv and summary/read_length_window.tsv.
+
+HRIBO's own figure, figures/heatmap_SpearmanCorr_readCounts.pdf, is the
+Spearman correlation of read counts between the two libraries. With one
+RIBO and one RNA library it shows that the two are different, and nothing
+more. pca/ is absent: the PCA step needs at least four samples, see
+docs/troubleshooting.md in the repository root.
 
 ## 6. Counts
 

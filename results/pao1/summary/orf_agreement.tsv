@@ -1,0 +1,3 @@
+caller	orfs	stop_shared_with_annotated_cds	novel_stop	identical_in_other_caller	same_stop_different_start	only_this_caller	ATG	GTG	TTG
+Reparation	1965	1853	112	466	94	1405	1514	351	100
+DeepRibo	3209	599	2610	466	94	2649	1605	1089	515
