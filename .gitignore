@@ -1,0 +1,28 @@
+# The analysis directory. It holds HRIBO, the conda environments, the
+# container image, raw reads and every intermediate. It is rebuilt by the
+# scripts and is far too large for version control.
+work/
+
+# Sequencing data and alignments, wherever they end up.
+*.sra
+*.sra.part*
+*.fastq
+*.fastq.gz
+*.fq
+*.fq.gz
+*.bam
+*.bam.bai
+*.sam
+*.bw
+
+# Snakemake state and conda caches.
+.snakemake/
+.conda_pkgs/
+.singularity_cache/
+
+# Editor and operating system leftovers.
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*~
