@@ -16,7 +16,7 @@ any shortcut in the workflow.
 
 ## What is in the repository
 
-```
+```text
 .
 |-- README.md                  this file
 |-- LICENSE                    MIT, covers the scripts and text in this repository
@@ -35,16 +35,20 @@ any shortcut in the workflow.
 |   |-- 07_summarise_results.py  summary tables from the logs and result files
 |   |-- 08_record_environment.sh  resolved package lists and container identity
 |   `-- 09_cleanup.sh          removes leftovers, caches, or the whole analysis directory
+|-- patches/
+|   |-- README.md              why two HRIBO environment files are replaced
+|   `-- HRIBO/envs/            the replacement files, copied over HRIBO by the install script
 |-- docs/
 |   |-- methods.md             what was done, parameters, deviations from the guide
 |   |-- system_constraints.md  the machine, its limits, and the decisions they forced
 |   `-- troubleshooting.md     every problem met on the way, with cause and fix
 |-- environment/               package lists of every environment used, host details
-`-- results/pao1/              HRIBO outputs small enough to keep, logs, manifest
+`-- results/pao1/              HRIBO outputs small enough to keep, logs, summaries, manifest
+    `-- README.md              a reader's guide to the result files
 ```
 
-The analysis directory itself (WORK_DIR, about 25 GB) is not part of the
-repository. It is rebuilt by the scripts.
+The analysis directory itself (WORK_DIR, 36 GB at the end of the run) is
+not part of the repository. It is rebuilt by the scripts.
 
 ## Background in brief
 
@@ -91,13 +95,88 @@ The full account is in docs/methods.md. In short:
 5. The small outputs were copied into results/ with a manifest, and the
    resolved package list of every environment was written to environment/.
 
+## Results
+
+The complete tables are in results/pao1/summary/, the files they were
+built from are in results/pao1/, and results/pao1/README.md explains what
+each file is. What follows is the short version.
+
+### Reads
+
+| | RIBO-GLY-1 | RNA-GLY-1 |
+| --- | ---: | ---: |
+| Reads in the SRA archive | 73,952,429 | 98,145,010 |
+| Reads kept (random 10 percent, seed 11) | 7,394,173 | 9,811,418 |
+| Reads with adapter (cutadapt) | 95.6 percent | 91.5 percent |
+| Reads too short after trimming | 0.7 percent | 0.5 percent |
+| Bases retained after trimming | 53.5 percent | 68.0 percent |
+| Reads surviving trimming | 7,341,712 | 9,764,868 |
+| Reads mapping uniquely (segemehl) | 900,858 | 1,405,641 |
+| Unique mappers after rRNA and tRNA removal | 639,010 | 382,107 |
+| Mean read length of the final alignments | 32.0 nt | 33.2 nt |
+
+The trimming statistics reproduce the guide's full-depth values to the
+first decimal (95.7 and 91.5 percent adapter content, 53.5 and 68.0
+percent of bases retained), which is what one expects from a random
+subsample: adapter content and insert length are properties of the
+library, not of the depth. The Ribo-seq library retains far fewer bases
+because footprints of 25 to 34 nt are much shorter than the 50 nt read.
+
+Only 12 percent of the Ribo-seq reads and 14 percent of the RNA-seq reads
+map uniquely. Both libraries are dominated by rRNA, which maps to four
+near-identical operons in PAO1 and is discarded with the other
+multi-mappers; the explicit rRNA and tRNA filter removes a further third
+of the Ribo-seq and three quarters of the RNA-seq unique mappers.
+
+### ORF predictions
+
+| Caller | ORFs | File |
+| --- | ---: | --- |
+| Reparation | 1,965 | auxiliary/predictions_reparation.xlsx |
+| DeepRibo (of 14,001 candidates scored) | 3,209 | auxiliary/predictions_deepribo.xlsx |
+| Merged overview, all rows | 8,775 | auxiliary/overview.xlsx |
+| Merged overview, annotated genes | 5,677 | auxiliary/overview.xlsx, sheet annotated |
+
+Both callers ran to completion, with their diagnostic plots (P-site
+offsets, metagene profile, precision-recall and ROC curves for
+Reparation; estimated coverage parameters for DeepRibo). At a tenth of the
+depth these are not the calls the full library would give, and the guide
+does not report counts for its full-depth run, so no comparison is
+offered here. The metagene profiles and the read length distribution of
+the footprint library are in results/pao1/metageneprofiling/.
+
+### What did not run
+
+Three of the 163 jobs did not complete: runDeseqPreprocessing, plotPCA
+and the top-level all target. This is the outcome the guide describes for
+this two-sample design; HRIBO's PCA script asks for a third principal
+component that two samples cannot provide. Every other output was
+produced.
+
+### Time and space
+
+| Item | Measured |
+| --- | --- |
+| Jobs completed | 160 of 163 |
+| Snakemake wall clock, all invocations | 2 h 4 min (8 cores) |
+| Reparation alone | 44 min, almost all of it BLAST against Swiss-Prot |
+| segemehl mapping, both libraries | 12.7 min (7.9 min for the RNA-seq library) |
+| DeepRibo, parsing to prediction | 13 min |
+| Analysis directory at the end | 36 GB: 9.9 GB tool environments, 1.3 GB Snakemake and helper environments, 1.8 GB DeepRibo image, 8.6 GB of uncompressed SAM leftovers HRIBO never deletes, 4.5 GB and 865,913 files under deepribo/ |
+| Growth of the WSL virtual disk file | none; drive C ended with 9.3 GB free |
+
+The wall clock includes one failed Reparation attempt of 40 minutes that
+had to be repeated after the environment fix described in
+docs/troubleshooting.md. The run was completed in three Snakemake
+invocations; results/pao1/summary/run_overview.tsv lists each one.
+
 ## Reproducing it
 
 Requirements: Linux or WSL 2, conda (Miniconda or Miniforge), Apptainer or
 Singularity for DeepRibo, about 25 GB of disk for the subsampled run or
 about 100 GB for the full libraries, and an internet connection.
 
-```
+```bash
 git clone https://github.com/Qasim-Hussain-Code/HRIBO_Ribo_Seq_Analysis.git
 cd HRIBO_Ribo_Seq_Analysis
 
@@ -129,12 +208,12 @@ first.
 | --- | --- |
 | SRA archives downloaded | 4.4 GB, about 5 minutes with six streams |
 | Subsampled FASTQ | 153 MB (RIBO) and 281 MB (RNA) |
-| Conda environments (18 tool environments plus Snakemake and helpers) | 9.8 GB |
+| Conda environments (18 tool environments plus Snakemake and helpers) | 11.2 GB |
 | DeepRibo container image | 1.8 GB |
-| Peak memory inside WSL | under the 8 GB cap, no swap needed |
+| Memory inside WSL | stayed under the 8 GB cap, swap unused |
 
 The timing and disk figures of the workflow itself are in the results
-section below and in results/pao1/logs.
+section above and in results/pao1/logs.
 
 ## Limitations
 
