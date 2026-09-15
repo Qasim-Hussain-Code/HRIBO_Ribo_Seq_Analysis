@@ -1,0 +1,20 @@
+# Replacement for HRIBO/envs/reparation.yaml (HRIBO 1.8.1).
+#
+# Two lines are added: the "nodefaults" channel entry and an explicit
+# conda-forge::pillow dependency. Without them conda also consulted
+# Anaconda's defaults channel, which my own conda configuration lists, and
+# took a Pillow build from there that links libtiff.so.5, while conda-forge
+# supplied libtiff 4.5 with libtiff.so.6. Reparation then died in its P-site
+# estimation step (plastid imports matplotlib, which imports Pillow) with
+# "ImportError: libtiff.so.5: cannot open shared object file". Naming the
+# channel on the Pillow spec makes conda take Pillow 9.2 from conda-forge
+# together with a matching libtiff 4.4. See docs/troubleshooting.md.
+channels:
+ - conda-forge
+ - bioconda
+ - nodefaults
+dependencies:
+ - python=3.7.12
+ - reparation_blast=1.0.9
+ - blast=2.15.0
+ - conda-forge::pillow

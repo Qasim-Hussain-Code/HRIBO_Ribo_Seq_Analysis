@@ -9,6 +9,7 @@ HRIBO's own source is not modified in any other way.
 | File | What it changes | Why |
 | --- | --- | --- |
 | HRIBO/envs/metageneprofiling.yaml | pins python below 3.13, pandas 2, plotly 5, python-kaleido 0.2.1 | unpinned, conda resolved free-threaded Python 3.14 and Kaleido 1.3 in September 2026; pysam then segfaulted and Kaleido demanded a system Chrome. Details in docs/troubleshooting.md. |
+| HRIBO/envs/reparation.yaml | adds the nodefaults channel entry and pins Pillow to conda-forge | a conda configuration that lists the defaults channel let a Pillow build from that channel into the environment; it links libtiff.so.5 while conda-forge's libtiff provides .so.6, and Reparation died importing it. Details in docs/troubleshooting.md. |
 
 The pins are the loosest that fix the problem; they do not change what the
 scripts compute, only which builds of the libraries run them.
