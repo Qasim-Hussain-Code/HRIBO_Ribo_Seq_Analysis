@@ -1,0 +1,79 @@
+cff-version: 1.2.0
+message: "If you use these scripts or results, please cite this repository together with HRIBO and the sources of the data listed under references."
+title: "HRIBO Ribo-Seq Analysis: a resource-limited reproduction of the Pseudomonas aeruginosa PAO1 case study"
+type: software
+authors:
+  - family-names: Hussain
+    given-names: Qasim
+repository-code: "https://github.com/Qasim-Hussain-Code/HRIBO_Ribo_Seq_Analysis"
+license: MIT
+date-released: "2026-09-15"
+keywords:
+  - ribosome profiling
+  - Ribo-seq
+  - HRIBO
+  - Snakemake
+  - Pseudomonas aeruginosa
+  - bacterial translation
+references:
+  - type: article
+    title: "HRIBO: high-throughput analysis of bacterial ribosome profiling data"
+    authors:
+      - family-names: Gelhausen
+        given-names: Rick
+      - family-names: Svensson
+        given-names: Sarah L.
+      - family-names: Froschauer
+        given-names: Kathrin
+      - family-names: Heyl
+        given-names: Florian
+      - family-names: Hadjeras
+        given-names: Lydia
+      - family-names: Sharma
+        given-names: Cynthia M.
+      - family-names: Eggenhofer
+        given-names: Florian
+      - family-names: Backofen
+        given-names: Rolf
+    journal: Bioinformatics
+    volume: 37
+    issue: 14
+    start: 2061
+    end: 2063
+    year: 2021
+    doi: 10.1093/bioinformatics/btaa959
+  - type: article
+    title: "A comprehensive multi-omics approach uncovers adaptations for growth and survival of Pseudomonas aeruginosa on n-alkanes"
+    authors:
+      - family-names: Grady
+        given-names: Sarah L.
+      - family-names: Malfatti
+        given-names: Stephanie A.
+      - family-names: Gunasekera
+        given-names: Thusitha S.
+      - family-names: Dalley
+        given-names: Brian K.
+      - family-names: Lyman
+        given-names: Matt G.
+      - family-names: Striebich
+        given-names: Richard C.
+      - family-names: Mayhew
+        given-names: Michael B.
+      - family-names: Zhou
+        given-names: Carol L.
+      - family-names: Ruiz
+        given-names: Oscar N.
+      - family-names: Dugan
+        given-names: Larry C.
+    journal: BMC Genomics
+    volume: 18
+    start: 334
+    year: 2017
+    doi: 10.1186/s12864-017-3708-4
+  - type: generic
+    title: "Ribo-seq Guide using the HRIBO Pipeline"
+    authors:
+      - family-names: Tufail
+        given-names: Muhammad Aammar
+    year: 2026
+    url: "https://codanics.com/books/bioinfo/riboseq/HRIBO/"
