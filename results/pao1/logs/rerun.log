@@ -1,0 +1,70 @@
+[2026-09-15 22:19:54] project  : /home/qasim/hribo_work/pao1
+[2026-09-15 22:19:55] snakemake: 8.10.7   conda: conda 26.7.2   container: apptainer version 1.4.5
+[2026-09-15 22:19:55] limits   : 8 cores, 6000 MB budget, 1500 MB per job, stop below 2000 MB free on: /mnt/c /home/qasim/hribo_work/pao1
+[2026-09-15 22:19:55] log      : /home/qasim/hribo_work/pao1/logs/snakemake_20260915_221954.log
+Assuming unrestricted shared filesystem usage.
+Building DAG of jobs...
+Your conda installation is not configured to use strict channel priorities. This is however crucial for having robust and correct environments (for details, see https://conda-forge.org/docs/user/tipsandtricks.html). Please consider to configure strict priorities by executing 'conda config --set channel_priority strict'.
+Creating conda environment HRIBO/envs/metageneprofiling.yaml...
+Downloading and installing remote packages.
+Environment for /home/qasim/hribo_work/pao1/HRIBO/rules/../envs/metageneprofiling.yaml created (location: .snakemake/conda/db9397abbde3d1ea1d4eb273df148f22_)
+Using shell: /usr/bin/bash
+Provided cores: 8
+Rules claiming more threads will be scaled down.
+Provided resources: mem_mb=6000, reparation_instances=1
+Job stats:
+job                               count
+------------------------------  -------
+all                                   1
+concatReparation                      1
+createExcelSummary                    1
+createOverviewTablePredictions        1
+filterAll                             1
+generateReparationReadCounts          1
+mapReparationReads                    1
+mergeAll                              1
+mergeConditions                       1
+metageneProfiling                     1
+plotPCA                               1
+readLengthStatistics                  1
+reannotatedORFs                       1
+reparation                            1
+reparationGFF                         1
+runDeseqPreprocessing                 1
+total                                16
+
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Sep 15 22:21:04 2026]
+localrule reparation:
+    input: genomes/genome.fa, annotation/annotation_processed.gff, uniprotDB/uniprot_sprot.fasta, bam/RIBO-GLY-1.bam, maplink/RIBO-GLY-1.bam.bai
+    output: reparation/GLY-1/Predicted_ORFs.txt, reparation/GLY-1/metagene_profile.pdf, reparation/GLY-1/PR_and_ROC_curve.pdf, reparation/GLY-1/p_site_offset.png, reparation/GLY-1/S_Curve.pdf
+    log: logs/GLY-1_reparation.log
+    jobid: 145
+    reason: Missing output files: reparation/GLY-1/Predicted_ORFs.txt
+    wildcards: condition=GLY, replicate=1
+    threads: 8
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=/home/qasim/hribo_work/pao1/tmp, reparation_instances=1
+
+
+        mkdir -p reparation/GLY-1
+        mkdir -p reparation/GLY-1/tmp
+        reparation.pl -bam bam/RIBO-GLY-1.bam -g genomes/genome.fa -gtf annotation/annotation_processed.gff -db uniprotDB/uniprot_sprot.fasta -out reparation/GLY-1 -threads 8
+        
+Activating conda environment: .snakemake/conda/bea3d2a99e54e9db38f29827e5fa7e57_
+/home/qasim/hribo_work/pao1/.snakemake/conda/bea3d2a99e54e9db38f29827e5fa7e57_/bin/prodigal
+
+BAM index file located. Advancing...
+Generate positive set...
+perl /home/qasim/hribo_work/pao1/.snakemake/conda/bea3d2a99e54e9db38f29827e5fa7e57_/bin/scripts/positive_set.pl genomes/genome.fa uniprotDB/uniprot_sprot.fasta /home/qasim/hribo_work/pao1/reparation/GLY-1//tmp/positive_set.txt 22 40 30 0.75 1e-05 ATG,GTG,TTG 1 /home/qasim/hribo_work/pao1/reparation/GLY-1/ /home/qasim/hribo_work/pao1/.snakemake/conda/bea3d2a99e54e9db38f29827e5fa7e57_/bin/scripts 8 N 11
+
+Generating positive samples training set using Prodigal...
+Temporary folder /home/qasim/hribo_work/pao1/reparation/GLY-1//tmp already created.
+Creating database using makeblastdb...
+Generating positive_set_unprocessed.bls using blastp...
+Will exit after finishing currently running jobs (scheduler).
+Error running blastp search. Please ensure BLAST is properly installed
+scripts/05_run_hribo.sh: line 143: 705376 Killed                     env TMPDIR="$PROJECT_TMP" SINGULARITY_TMPDIR="$PROJECT_TMP" SINGULARITY_CACHEDIR="$PROJECT_SIF" APPTAINER_TMPDIR="$PROJECT_TMP" APPTAINER_CACHEDIR="$PROJECT_SIF" XDG_CACHE_HOME="$PROJECT_CACHE" CONDA_PKGS_DIRS="${PROJECT_PKGS}:${CONDA_ROOT}/pkgs" snakemake --snakefile HRIBO/Snakefile --directory "$WORK_DIR" --use-conda --conda-prefix "${WORK_DIR}/.snakemake/conda" --conda-frontend conda "${CONTAINER_FLAGS[@]}" --shadow-prefix "${WORK_DIR}/.snakemake/shadow" --cores "$CPUS" --max-threads "$CPUS" --resources mem_mb="$MEM_MB" reparation_instances=1 --default-resources mem_mb="$JOB_MEM_MB" disk_mb=4000 tmpdir="'${PROJECT_TMP}'" --latency-wait 60 --rerun-incomplete --printshellcmds "$@" > >(tee -a "$RUN_LOG") 2>&1
+[2026-09-15 22:22:27] snakemake finished with exit status 137
+exit=137

@@ -1,0 +1,7 @@
+2026-09-15T12:38:20 vdb-validate.3.4.1 info: Table 'SRR5356908.sra' metadata: md5 ok
+2026-09-15T12:38:20 vdb-validate.3.4.1 info: Column 'ALTREAD': md5 ok
+2026-09-15T12:38:22 vdb-validate.3.4.1 info: Column 'QUALITY': md5 ok
+2026-09-15T12:38:25 vdb-validate.3.4.1 info: Column 'READ': md5 ok
+2026-09-15T12:38:25 vdb-validate.3.4.1 info: Column 'X': md5 ok
+2026-09-15T12:38:26 vdb-validate.3.4.1 info: Column 'Y': md5 ok
+2026-09-15T12:38:26 vdb-validate.3.4.1 info: Table 'SRR5356908.sra' is consistent

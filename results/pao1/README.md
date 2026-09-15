@@ -55,10 +55,13 @@ the 50 nt read. A low value here means the wrong adapter sequence.
 - deepribo/GLY-1/. predictions.csv scores every candidate ORF in the
   genome; parameters.txt holds the coverage cut-offs HRIBO estimated for
   the library.
-- tracks/. GFF files for a genome browser: candidate start codons, stop
-  codons, alternative start codons and ribosome binding sites derived from
-  the genome sequence, and the ORF calls of each tool after filtering.
-  Files larger than 25 MB are listed in manifest.tsv but not copied.
+- tracks/. GFF files for a genome browser: the ORF calls of each tool
+  after HRIBO's filtering (reparation_annotated.gff, deepribo_merged.gff)
+  and the merged sets (GLY.merged.gff, all.gff). HRIBO also writes tracks
+  of every candidate start codon, stop codon, alternative start codon and
+  ribosome binding site in the genome; they are derived from the genome
+  sequence alone, weigh over 40 MB together, and are listed in
+  manifest.tsv but not copied.
 
 ## 5. Sample structure
 

@@ -1,0 +1,5 @@
+run_log	jobs_started	jobs_finished	rules_with_errors	wall_clock_seconds	first_timestamp	last_timestamp
+snakemake_20260915_205827.log	151	147	metageneProfiling, readLengthStatistics, reparation, runDeseqPreprocessing	4795	2026-09-15 20:59:44	2026-09-15 22:19:39
+snakemake_20260915_221954.log	1	0	none	0	2026-09-15 22:21:04	2026-09-15 22:21:04
+snakemake_20260915_222631.log	14	13	runDeseqPreprocessing	2670	2026-09-15 22:27:43	2026-09-15 23:12:13
+all invocations	166	160	runDeseqPreprocessing	7465	2026-09-15 20:59:44	2026-09-15 23:12:13

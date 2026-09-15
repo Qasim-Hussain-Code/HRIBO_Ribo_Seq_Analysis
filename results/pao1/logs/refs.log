@@ -1,0 +1,20 @@
+[2026-09-15 20:28:17] assembly : GCF_000006765.1_ASM676v1
+[2026-09-15 20:28:17] source   : https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/006/765/GCF_000006765.1_ASM676v1
+[2026-09-15 20:28:48] md5 verified: GCF_000006765.1_ASM676v1_genomic.fna.gz
+[2026-09-15 20:28:48] md5 verified: GCF_000006765.1_ASM676v1_genomic.gff.gz
+[2026-09-15 20:28:49] FASTA sequence IDs: NC_002516.2 
+[2026-09-15 20:28:49] GFF sequence IDs  : NC_002516.2 
+[2026-09-15 20:28:49] annotated features by type:
+   5678 gene
+   5573 CDS
+    532 protein_binding_site
+    106 exon
+     63 tRNA
+     28 ncRNA
+     19 pseudogene
+     13 rRNA
+      1 tmRNA
+      1 region
+      1 RNase_P_RNA
+[2026-09-15 20:28:49] done. genome.fa and annotation.gff are in /home/qasim/hribo_work/pao1
+exit=0

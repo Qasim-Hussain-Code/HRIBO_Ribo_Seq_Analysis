@@ -1,0 +1,249 @@
+path	bytes	md5	copied
+auxiliary/annotation_total.xlsx	5119471	cc156aa1ae289d59848e2739898577f6	yes
+auxiliary/annotation_unique.xlsx	5206585	7bf570ebb982d98431cfaa9b153f0f73	yes
+auxiliary/enriched_annotation.gff	3251646	58f7085118388e6565ab857cd9680021	yes
+auxiliary/overview.gff	947776	7c61d30ea47e9283e0c930a5e3ad6aa1	yes
+auxiliary/overview.tsv	11182109	599a02b8c648402c94805208f021f164	yes
+auxiliary/overview.xlsx	4959051	59133af190c11ca1c520d87cfd72c74b	yes
+auxiliary/overview_misc.gff	81078	b7a6053f774deefede663ae55809c527	yes
+auxiliary/predictions_deepribo.xlsx	836631	f15c51d88b4428e778f414ada1a6f164	yes
+auxiliary/predictions_reparation.xlsx	1195962	6913a947b8d6344b97d9f21ed16adb03	yes
+auxiliary/samples.xlsx	5646	5ea3a4cdae5f8681682eabadc31780c9	yes
+auxiliary/total_read_counts.xlsx	5914	dc85f9d20948c9f25e411257db4d5c55	yes
+auxiliary/unambigous_annotation.gff	696598	0242d6e3ee0c2bb615ed8a1dd85a4b55	yes
+auxiliary/unique_read_counts.xlsx	5882	ee669607ec613aaf85bc4e0e57c9f5e2	yes
+figures/heatmap_SpearmanCorr_readCounts.pdf	13764	0ebd4012358df047cd4a71dad0210ffb	yes
+figures/results.npz	3434	760ab2c8ba81345a5e2d6ab520243510	yes
+readcounts/annotation_independant_read_counts.raw	632392	427a3f6868eb877c3f6a3651fa4dfcc1	yes
+readcounts/annotation_independant_read_counts.tmp	395	8d5f05ce37f8670905c0238e3f7e435a	yes
+readcounts/annotation_independant_read_counts.tmp.summary	419	5d3ce4ecae64c43a0c86126105dd2c6e	yes
+readcounts/annotation_total_reads.raw	700118	bba0860eb48a2c36ef121a4e475f3663	yes
+readcounts/annotation_total_reads.tmp	408	451b8c2e33ae5b272bc7e42d7e5ecc62	yes
+readcounts/annotation_total_reads.tmp.summary	435	b50eb72700053a3302eb89f08ec3dd3b	yes
+readcounts/annotation_unique_reads.raw	680302	fa9157c494f55797b9ffc6216b82b8de	yes
+readcounts/annotation_unique_reads.tmp	397	d7cdc62473e2f41c5f6fb686346e87e6	yes
+readcounts/annotation_unique_reads.tmp.summary	420	8beba7b5ebd015a0d2602b0907c2a9b2	yes
+readcounts/bam_average_read_lengths.txt	83	2bddddde6b981274188917e9a900da8c	yes
+readcounts/bam_mapped_reads.txt	59	7cf68a1bdde29eb9045a61d729b576e4	yes
+readcounts/deepribo_annotation.gff	527839	66089b7c15f7de8b8a5e34f7666dda91	yes
+readcounts/deepribo_read_counts.raw	236061	2fd56f721a0ad107b263359056ac4fe8	yes
+readcounts/deepribo_read_counts.tmp	223543	538985538375a143028f8736eac95e0a	yes
+readcounts/deepribo_read_counts.tmp.summary	429	658d629c73129949f56bb994aae7e6bf	yes
+readcounts/differential_expression_read_counts.csv	195503	a5f81a2789536a2130de5a0237a7f710	yes
+readcounts/differential_expression_read_counts.tmp	265279	7002f4b68eff6adf0312eaf43a64cca3	yes
+readcounts/differential_expression_read_counts.tmp.summary	428	27a46b4c8c9452c9fd229ca5be032e81	yes
+readcounts/independant_annotation.gff	3307409	0ee207d14c94700c5c09fb6d44cbf91c	yes
+readcounts/reparation_annotation.gff	368237	0c5fece1e57d77b4ffb95a7cb0b678b1	yes
+readcounts/reparation_read_counts.raw	145736	b82250c8b46d0e17a1ec0bfe02d2305c	yes
+readcounts/reparation_read_counts.tmp	138201	5a2b97a86364c941e4177ebdf597f5ff	yes
+readcounts/reparation_read_counts.tmp.summary	429	70cab2de4a2024bde26362bc759c25e3	yes
+readcounts/total_annotation.gtf	3383652	c9a56486776c0b9926f8e8d039961d56	yes
+readcounts/total_average_read_lengths.txt	83	be316fcddbba53b3df8477d3ace4cc52	yes
+readcounts/total_mapped_reads.txt	63	86f32e30aad554e128f4a26f5fb52d34	yes
+readcounts/unique_annotation.gtf	3364424	071ef8a81e4ba7952ad7676aea815c16	yes
+readcounts/unique_average_read_lengths.txt	82	21e9f1898e9040446da3b3851c7ecc71	yes
+readcounts/unique_mapped_reads.txt	60	d28a92f4a3b80dbca9599e5a8a50eae7	yes
+tracks/GLY.deepribo.gff	502482	0e961c671172b9addef4f5156ef15e19	yes
+tracks/GLY.merged.gff	724234	dfd09ec40598393eb323465b826ec3d1	yes
+tracks/GLY.reparation.gff	724234	0e4f1b6962a1895049963ce780dbd26f	yes
+tracks/all.gff	724234	dfd09ec40598393eb323465b826ec3d1	yes
+tracks/deepribo_all.gff	506373	06d3867b1dc33a33c4d5ee39217ec1d1	yes
+tracks/deepribo_merged.gff	507085	51bd7d024f7b7f373c003b0bb6f7b54f	yes
+tracks/deepribo_merged_plus.gff	103849	16419806fd40cd77ff4db1841de078f0	yes
+tracks/reparation.gff	364108	d43f57534a6e56990f18d38d0c7e5f76	yes
+tracks/reparation_annotated.gff	355508	4abd4ba4c35f7758676b71fa523889d6	yes
+tracks/potentialAlternativeStartCodons.gff	66702104	b7348be51bbc83f476287e787680c339	no (not collected)
+tracks/potentialRibosomeBindingSite.gff	4978748	671e84bc9f9726e8a1d4e2b57edbe3ef	no (not collected)
+tracks/potentialStartCodons.gff	15260636	d054a591dc523068d41a786e0c110c83	no (not collected)
+tracks/potentialStopCodons.gff	21495338	e4c7d8dd0b4c6a512ee9bd7b9678dce7	no (not collected)
+qc/multi/multiqc_data.zip	51307	dc189ea561dde6516edc9bd9bcb8508f	yes
+qc/multi/multiqc_report.html	1417928	24916c22eca7b700dbebb4eba88b4d83	yes
+qc/1raw/RIBO-GLY-1-raw_fastqc.html	824177	741ee40d082564f4537a08ffb87a454a	yes
+qc/1raw/RNA-GLY-1-raw_fastqc.html	569722	6240553febfd448bd8bcd2155f20a148	yes
+qc/2trimmed/RIBO-GLY-1-trimmed_fastqc.html	802555	a3c6fec9c35319485ce1c1955dfebdab	yes
+qc/2trimmed/RNA-GLY-1-trimmed_fastqc.html	631636	170a745d8b0aa83932866fbf34a35308	yes
+qc/3mapped/RIBO-GLY-1-map_fastqc.html	830052	eb1f2ec554ef6024eb69563c27dfdaa1	yes
+qc/3mapped/RNA-GLY-1-map_fastqc.html	629175	94fc563f5aa1ed7be3a88b42295790f9	yes
+qc/4unique/RIBO-GLY-1-map_fastqc.html	693147	7fdd26942c59614102e26c30486aca49	yes
+qc/4unique/RNA-GLY-1-map_fastqc.html	648210	ba9798d5f056c124b5c731c0a8b3b76a	yes
+qc/5removedrRNA/RIBO-GLY-1-norRNA_fastqc.html	658013	75495efd2b54c73acc0aab9995ae8f5a	yes
+qc/5removedrRNA/RNA-GLY-1-norRNA_fastqc.html	607749	1c24a323a0b0aecf41eae953af9b1e8a	yes
+metageneprofiling/RIBO-GLY-1/.snakemake_timestamp	0	d41d8cd98f00b204e9800998ecf8427e	yes
+metageneprofiling/RIBO-GLY-1/cpm/NC_002516.2_fiveprime.svg	87177	d1673fefbc24acfec5f036caaccc9a0b	yes
+metageneprofiling/RIBO-GLY-1/cpm/NC_002516.2_threeprime.svg	89997	39cf7900cfc08f879f42b7d52888fb7b	yes
+metageneprofiling/RIBO-GLY-1/cpm/fiveprime_readcounts_start.xlsx	51083	583b1cd086888d85654d47a7d9e32ef8	yes
+metageneprofiling/RIBO-GLY-1/cpm/fiveprime_readcounts_stop.xlsx	48719	73ff8a57115e3d5438eb3c2d5da7331f	yes
+metageneprofiling/RIBO-GLY-1/cpm/interactive_metagene_profiling.html	235139	dbc1bd0d7615240d0521a36222acf4d9	yes
+metageneprofiling/RIBO-GLY-1/cpm/threeprime_readcounts_start.xlsx	50296	543ceb3e43c7af9e4d8bd6c8b7361898	yes
+metageneprofiling/RIBO-GLY-1/cpm/threeprime_readcounts_stop.xlsx	48339	8fb515d651b8a73a67e5fd8cfe6fde75	yes
+metageneprofiling/RIBO-GLY-1/raw/NC_002516.2_fiveprime.svg	88955	33e225b37e7733422c9f7989639b75ba	yes
+metageneprofiling/RIBO-GLY-1/raw/NC_002516.2_threeprime.svg	91683	0b91661b7496b34c13613b2d7e3013de	yes
+metageneprofiling/RIBO-GLY-1/raw/fiveprime_readcounts_start.xlsx	41720	4b5dd954526b10bd6f03c318c2d01737	yes
+metageneprofiling/RIBO-GLY-1/raw/fiveprime_readcounts_stop.xlsx	40667	a00fe22938c5dc4c12fd3ba1cc0088b3	yes
+metageneprofiling/RIBO-GLY-1/raw/interactive_metagene_profiling.html	84898	f907b811052db85702d6f3aa70ca2da8	yes
+metageneprofiling/RIBO-GLY-1/raw/threeprime_readcounts_start.xlsx	41179	7532161bf1cbce681b54b326eb2b3ae6	yes
+metageneprofiling/RIBO-GLY-1/raw/threeprime_readcounts_stop.xlsx	40721	e71f2b48719ccac642c6dd6a788fd877	yes
+metageneprofiling/RIBO-GLY-1/window/NC_002516.2_fiveprime.svg	91539	7ae63caee2ce3344b1f0ccf6eda48868	yes
+metageneprofiling/RIBO-GLY-1/window/NC_002516.2_threeprime.svg	91495	1e25bd5e914a49db632745226fb067c6	yes
+metageneprofiling/RIBO-GLY-1/window/fiveprime_readcounts_start.xlsx	78930	28cf214cd1fc0378013c46eeca47a47b	yes
+metageneprofiling/RIBO-GLY-1/window/fiveprime_readcounts_stop.xlsx	72316	05ee45dc742eb8025e8b785d374dc0d1	yes
+metageneprofiling/RIBO-GLY-1/window/interactive_metagene_profiling.html	242990	159eeedb3cdd998c9085596117785eaf	yes
+metageneprofiling/RIBO-GLY-1/window/threeprime_readcounts_start.xlsx	76594	7748c1839c86d3147f54491c708a696d	yes
+metageneprofiling/RIBO-GLY-1/window/threeprime_readcounts_stop.xlsx	73006	a633cbdaa364bab60e91ca7a0dadc163	yes
+metageneprofiling/read_length_counts.xlsx	6218	68b6ddf4c4b080024caa8117ad6cb9fb	yes
+metageneprofiling/read_length_fractions.html	4568432	5eb24145d26df143aa9c6cf10998332f	yes
+metageneprofiling/read_length_fractions.xlsx	6494	47c23e7c7296986b53a43a926c8705cb	yes
+reparation/GLY-1/PR_and_ROC_curve.pdf	101217	35a0a9e51006d8e223566a5b158056bb	yes
+reparation/GLY-1/Predicted_ORFs.bed	163040	bad5437c91d703acc5d8fae9a11809bb	yes
+reparation/GLY-1/Predicted_ORFs.fasta	791784	efb068b3b6132d1b0a56a79f9c705b07	yes
+reparation/GLY-1/Predicted_ORFs.txt	269945	a1b2ed1eae0f2d80f9909deb2947edea	yes
+reparation/GLY-1/S_Curve.pdf	131136	53b80b91a61921dcf2acc98f69864ed2	yes
+reparation/GLY-1/metagene_profile.pdf	9682	d36b3065cc75ce32d3e0926d42e41fbc	yes
+reparation/GLY-1/p_site_offset.png	120523	932792abc984cf8910689e8581334128	yes
+reparation/GLY-1/p_site_offsets.txt	1647	cd413ea8276c81e0882eaca454fc1d69	yes
+reparation/GLY-1/variable_importance.pdf	5010	c9074f21aba465faf6365b57555c1a40	yes
+deepribo/GLY-1/parameters.txt	27	d7da73117845207a749c5e6e227b3af1	yes
+deepribo/GLY-1/predictions.csv	6260195	e26c0fb88cc4fb56c9e88cbddbdfa305	yes
+pca/meta.csv	63	89a13a2ca7d38d5fa2dd884c76d13362	yes
+pca/raw_reads.csv	195503	6bf1f04ebcbbeb48224d479bd403ab61	yes
+logs/GLY-1_reparation.log	0	d41d8cd98f00b204e9800998ecf8427e	yes
+logs/RIBO-GLY-1.dumped_reads.txt	9	e813277dc52f965c6a329dd0b9376ad2	yes
+logs/RIBO-GLY-1_metageneprofiling.log	0	d41d8cd98f00b204e9800998ecf8427e	yes
+logs/RIBO-GLY-1_segemehl.log	1882	b9f10798ce77b6bbd226840766a38457	yes
+logs/RNA-GLY-1.dumped_reads.txt	9	626034e8ea97756f5d4ad52cc3eb505f	yes
+logs/RNA-GLY-1_segemehl.log	1870	29d8299aea1ec946671b0042ba622659	yes
+logs/SRR5356907.vdb-validate.log	502	1d9b9853aac728827d83f3d546510bbe	yes
+logs/SRR5356908.vdb-validate.log	502	072cceafaddb07a801038545ba070726	yes
+logs/collect.log	438	cc13164daa8ed6f700bcea5895e6b07d	yes
+logs/configure.log	501	e7bd6ea70e92f3f56d84fcf94e7f134e	yes
+logs/convert.log	1307	01db02ec279424f81263999b8b0557ba	yes
+logs/create_envs.log	5399	b09127ad6276beb0f7ef727f689ef59b	yes
+logs/download.log	474	3cc4db724a94813d5644413b52a7be3c	yes
+logs/dryrun.log	141783	187ba98f3e6447559e3193b9e2f4aa04	yes
+logs/env_readtools_packages.txt	2173	5437b45789061dba8fc2234039b08955	yes
+logs/env_snakemake_packages.txt	5525	911158564389480ce6cbf5d8952d9230	yes
+logs/full_run.log	377794	a37fe6b37403f704b902b5af665a40ea	yes
+logs/genomeIndex.log	28274	ab721550bcf6d901ecad9dc2a39eadb0	yes
+logs/genomeSamToolsIndex.log	0	d41d8cd98f00b204e9800998ecf8427e	yes
+logs/install.log	45416	56e4aeec3a31242bf17fd15449dc0edd	yes
+logs/multiqc.log	1376	1e49d219ed4f1661b71fd55499964bba	yes
+logs/patch_apply.log	511	4332e47cb293880c5f281409fea54b2d	yes
+logs/patch_apply2.log	568	8b67089e8b0f71cf6cdd376e9103dd2c	yes
+logs/read_download_stats.tsv	289	50bb95797305f5a2acfd98935878aac2	yes
+logs/read_length_statistics.log	0	d41d8cd98f00b204e9800998ecf8427e	yes
+logs/record_env.log	313	3dfac5e19bce70fd4b11dcf7a881bdfb	yes
+logs/reference_provenance.tsv	303	c1142410d5b5f5f4139529b5b2ca89f2	yes
+logs/refs.log	759	73b891cf615617d2f4e7c33bf8e75ec7	yes
+logs/rerun.log	4847	54725a8a51b2c9e6711f40a48a8c0cf5	yes
+logs/rerun2.log	31162	87cc6779c5d5f4e05a9fc2d0280f2745	yes
+logs/snakemake_20260915_204124.log	141322	a2426b3482f706a668ab3a5b7cf9abeb	yes
+logs/snakemake_20260915_204150.log	4938	f74c90d3d993d427259b2894bdb1c566	yes
+logs/snakemake_20260915_205827.log	377333	cf7636ae411ab7a24df59f5d8f77f670	yes
+logs/snakemake_20260915_221954.log	3594	3091f51df717aa2c27bb4f91017b7337	yes
+logs/snakemake_20260915_222609.log	133	5c9509f37f7b35e209492c1b6a0a6c1c	yes
+logs/snakemake_20260915_222631.log	30701	af5b038a20eb53d1b66fb20584487351	yes
+logs/unlock.log	580	34a10b3d3833bc79169714b9f54844f8	yes
+.snakemake/log/2026-09-15T205832.217015.snakemake.log	154346	4e61a95e968e618a4314cb5507b6fee6	yes
+.snakemake/log/2026-09-15T221959.311203.snakemake.log	2677	4b0c4c9a9eff0c9c87e9e3f266cf854c	yes
+.snakemake/log/2026-09-15T222634.834651.snakemake.log	15117	37d506519a3706809bef09a52fb5ad3d	yes
+bam/RIBO-GLY-1.bam	23086119	89bb3186c80a862664562560ca3ac052	no (not collected)
+bam/RIBO-GLY-1.bam.bai	7592	310d5ab45693b73e7b2de100dc708415	no (not collected)
+bam/RNA-GLY-1.bam	14864039	634abb0e4703eb36b2af85ae48e33719	no (not collected)
+maplink/RIBO-GLY-1.bam.bai	7592	310d5ab45693b73e7b2de100dc708415	no (not collected)
+maplink/RNA-GLY-1.bam.bai	5904	6fe1d4e2344e414fe76f4866a65ad6f0	no (not collected)
+globaltracks/mil/RIBO-GLY-1.mil.forward.global.bw	3836912	aebeb481a44aba817f96aeacf231ba97	no (not collected)
+globaltracks/mil/RIBO-GLY-1.mil.forward.wig	31300488	bf418fc65c468b0617f7a62591988a1a	no (not collected)
+globaltracks/mil/RIBO-GLY-1.mil.reverse.global.bw	4479860	44d46a3620455d966c8db76d3e711d61	no (not collected)
+globaltracks/mil/RIBO-GLY-1.mil.reverse.wig	37724183	74af44bb60d238739f4fc001e2c32322	no (not collected)
+globaltracks/mil/RNA-GLY-1.mil.forward.global.bw	3430557	1a402c9cc0aadfd4320dd185af9156ee	no (not collected)
+globaltracks/mil/RNA-GLY-1.mil.forward.wig	29705573	061e8a25c69938ea7c0dfcaff4e4a508	no (not collected)
+globaltracks/mil/RNA-GLY-1.mil.reverse.global.bw	4026764	c4e17d78b762ed47ca4b33ab3a8b6190	no (not collected)
+globaltracks/mil/RNA-GLY-1.mil.reverse.wig	35981543	3dae6a5a761877225fc8208cbadcf200	no (not collected)
+globaltracks/min/RIBO-GLY-1.min.forward.global.bw	3811039	df315588d081531d1aba581067e4d8af	no (not collected)
+globaltracks/min/RIBO-GLY-1.min.forward.wig	32117449	4180253662177ff93345f59c85c8d987	no (not collected)
+globaltracks/min/RIBO-GLY-1.min.reverse.global.bw	4451687	ebc65c9efb4fbe0b0e032cce53662eb7	no (not collected)
+globaltracks/min/RIBO-GLY-1.min.reverse.wig	38593243	1f6a9d902a43f66bd2ae80cc7b05df6f	no (not collected)
+globaltracks/min/RNA-GLY-1.min.forward.global.bw	3240183	6cf1a4120a344d91f17ec37646e8982d	no (not collected)
+globaltracks/min/RNA-GLY-1.min.forward.wig	13259814	dc15c465044e2d2f289103a837ff64f5	no (not collected)
+globaltracks/min/RNA-GLY-1.min.reverse.global.bw	3799040	5af9ac7f4087fc1532fe0561238f947e	no (not collected)
+globaltracks/min/RNA-GLY-1.min.reverse.wig	16916842	a39a8b049056fc2041883334d7821866	no (not collected)
+globaltracks/raw/RIBO-GLY-1.raw.forward.global.bw	3588562	da21a8b86593b43d727d574a59e129c1	no (not collected)
+globaltracks/raw/RIBO-GLY-1.raw.forward.wig	14374664	e6d5e362ea5b78c2333ad944d0f5facb	no (not collected)
+globaltracks/raw/RIBO-GLY-1.raw.reverse.global.bw	4181721	b578e6a94287157d6c6fa27fbbbedc26	no (not collected)
+globaltracks/raw/RIBO-GLY-1.raw.reverse.wig	18180709	2f71b7494ce409d904f045e4dc6568ad	no (not collected)
+globaltracks/raw/RNA-GLY-1.raw.forward.global.bw	3240183	6cf1a4120a344d91f17ec37646e8982d	no (not collected)
+globaltracks/raw/RNA-GLY-1.raw.forward.wig	13259814	dc15c465044e2d2f289103a837ff64f5	no (not collected)
+globaltracks/raw/RNA-GLY-1.raw.reverse.global.bw	3799040	5af9ac7f4087fc1532fe0561238f947e	no (not collected)
+globaltracks/raw/RNA-GLY-1.raw.reverse.wig	16916842	a39a8b049056fc2041883334d7821866	no (not collected)
+fiveprimetracks/mil/RIBO-GLY-1.mil.forward.fiveprime.bw	358670	79ffe5f088ad3942e16628b5603788fb	no (not collected)
+fiveprimetracks/mil/RIBO-GLY-1.mil.forward.wig	2672679	d4d5e440b305249a7d1ba84d2eb6ae82	no (not collected)
+fiveprimetracks/mil/RIBO-GLY-1.mil.reverse.fiveprime.bw	514814	c3ae7bafbe0c3ba56c8f7329aa420959	no (not collected)
+fiveprimetracks/mil/RIBO-GLY-1.mil.reverse.wig	3686440	08991faa969f68b253c01b00202cf4a0	no (not collected)
+fiveprimetracks/mil/RNA-GLY-1.mil.forward.fiveprime.bw	278550	21eb51dac4acc548f80dc4829c9c2361	no (not collected)
+fiveprimetracks/mil/RNA-GLY-1.mil.forward.wig	2203755	93a8b46e61f903536fee5aae80820714	no (not collected)
+fiveprimetracks/mil/RNA-GLY-1.mil.reverse.fiveprime.bw	378935	c4388c75d35391d732226efb97770eae	no (not collected)
+fiveprimetracks/mil/RNA-GLY-1.mil.reverse.wig	3282844	b15a81c455cca8c1ce3aec747ef06ada	no (not collected)
+fiveprimetracks/min/RIBO-GLY-1.min.forward.fiveprime.bw	357621	98ee2cdd13a61950027348dd234bfd98	no (not collected)
+fiveprimetracks/min/RIBO-GLY-1.min.forward.wig	2762500	c458178df185d89680a80195635cc4a9	no (not collected)
+fiveprimetracks/min/RIBO-GLY-1.min.reverse.fiveprime.bw	513071	557cd1f9e7de2a673b3894583bd7fac9	no (not collected)
+fiveprimetracks/min/RIBO-GLY-1.min.reverse.wig	3801033	0e0fd3be6253f70adebeca9fa69244b1	no (not collected)
+fiveprimetracks/min/RNA-GLY-1.min.forward.fiveprime.bw	272740	97462dd4a6a85bec2481f6c8bdda6a08	no (not collected)
+fiveprimetracks/min/RNA-GLY-1.min.forward.wig	974921	026f6409852d08ca94e0bf6e06d38fda	no (not collected)
+fiveprimetracks/min/RNA-GLY-1.min.reverse.fiveprime.bw	371205	3afe13e2d4f53e7b44eb5ac68ba43a7a	no (not collected)
+fiveprimetracks/min/RNA-GLY-1.min.reverse.wig	1528861	aec4fb1119940973f5d9d19b9401833c	no (not collected)
+fiveprimetracks/raw/RIBO-GLY-1.raw.forward.fiveprime.bw	347926	45c4b69041479918d962b5bc6fa16a51	no (not collected)
+fiveprimetracks/raw/RIBO-GLY-1.raw.forward.wig	1222974	6034f7e16dadce4f167d7397714ebb67	no (not collected)
+fiveprimetracks/raw/RIBO-GLY-1.raw.reverse.fiveprime.bw	496878	12fe7462c2a3eecbd1bc78def1fd6226	no (not collected)
+fiveprimetracks/raw/RIBO-GLY-1.raw.reverse.wig	1768800	eed35f094b4494852a37a4bba71f2407	no (not collected)
+fiveprimetracks/raw/RNA-GLY-1.raw.forward.fiveprime.bw	272740	97462dd4a6a85bec2481f6c8bdda6a08	no (not collected)
+fiveprimetracks/raw/RNA-GLY-1.raw.forward.wig	974921	026f6409852d08ca94e0bf6e06d38fda	no (not collected)
+fiveprimetracks/raw/RNA-GLY-1.raw.reverse.fiveprime.bw	371205	3afe13e2d4f53e7b44eb5ac68ba43a7a	no (not collected)
+fiveprimetracks/raw/RNA-GLY-1.raw.reverse.wig	1528861	aec4fb1119940973f5d9d19b9401833c	no (not collected)
+threeprimetracks/mil/RIBO-GLY-1.mil.forward.threeprime.bw	375510	c74604c5f1b676159cf69a1e502310bb	no (not collected)
+threeprimetracks/mil/RIBO-GLY-1.mil.forward.wig	2814165	caa8c1e83793fd6dab7155e87931dd42	no (not collected)
+threeprimetracks/mil/RIBO-GLY-1.mil.reverse.threeprime.bw	531682	241cc112ca719d05258e8bd2a7ad0342	no (not collected)
+threeprimetracks/mil/RIBO-GLY-1.mil.reverse.wig	3880937	0ac55f1adf1ee4411754811ec1c8bc21	no (not collected)
+threeprimetracks/mil/RNA-GLY-1.mil.forward.threeprime.bw	277546	451a3aaec4d18b6c8f4cc9bf8eeff715	no (not collected)
+threeprimetracks/mil/RNA-GLY-1.mil.forward.wig	2199485	adb29d398d225a61a6d8ddb2b41de948	no (not collected)
+threeprimetracks/mil/RNA-GLY-1.mil.reverse.threeprime.bw	377968	9c3699977507d65eb7e6a07d8f7dd636	no (not collected)
+threeprimetracks/mil/RNA-GLY-1.mil.reverse.wig	3259344	cf08309b8a28a790a2167b420568b2e0	no (not collected)
+threeprimetracks/min/RIBO-GLY-1.min.forward.threeprime.bw	374413	c662629d70196962b69c70b4163a56b1	no (not collected)
+threeprimetracks/min/RIBO-GLY-1.min.forward.wig	2910107	8ec5333b1796d52539c27c7a6276a28e	no (not collected)
+threeprimetracks/min/RIBO-GLY-1.min.reverse.threeprime.bw	529572	1490a49469bdb81a24383edc64e0b72d	no (not collected)
+threeprimetracks/min/RIBO-GLY-1.min.reverse.wig	4003719	9d7e1528617ef8ba4000f1eaa9422520	no (not collected)
+threeprimetracks/min/RNA-GLY-1.min.forward.threeprime.bw	271826	ca12e2de9f175c10a1801a9436a258e6	no (not collected)
+threeprimetracks/min/RNA-GLY-1.min.forward.wig	972951	8080b73f049a24ae9c533b895cccb76d	no (not collected)
+threeprimetracks/min/RNA-GLY-1.min.reverse.threeprime.bw	370254	456d8aa58b0ce1be0cdae7e2bdc11759	no (not collected)
+threeprimetracks/min/RNA-GLY-1.min.reverse.wig	1518016	4722bad98996607b7d7b54cffd119075	no (not collected)
+threeprimetracks/raw/RIBO-GLY-1.raw.forward.threeprime.bw	364465	8193a2de87b943f3a49ac5d8da65d594	no (not collected)
+threeprimetracks/raw/RIBO-GLY-1.raw.forward.wig	1287690	395cc6cf4f35adf99dc19862c6910f29	no (not collected)
+threeprimetracks/raw/RIBO-GLY-1.raw.reverse.threeprime.bw	513044	77812baba22e453ce872b31a27aacdb7	no (not collected)
+threeprimetracks/raw/RIBO-GLY-1.raw.reverse.wig	1861871	6b9afa28089c0effd1083afab2f18395	no (not collected)
+threeprimetracks/raw/RNA-GLY-1.raw.forward.threeprime.bw	271826	ca12e2de9f175c10a1801a9436a258e6	no (not collected)
+threeprimetracks/raw/RNA-GLY-1.raw.forward.wig	972951	8080b73f049a24ae9c533b895cccb76d	no (not collected)
+threeprimetracks/raw/RNA-GLY-1.raw.reverse.threeprime.bw	370254	456d8aa58b0ce1be0cdae7e2bdc11759	no (not collected)
+threeprimetracks/raw/RNA-GLY-1.raw.reverse.wig	1518016	4722bad98996607b7d7b54cffd119075	no (not collected)
+centeredtracks/mil/RIBO-GLY-1.mil.forward.centered.bw	2262103	36767599b0b8fdcc150dcca29ab604ac	no (not collected)
+centeredtracks/mil/RIBO-GLY-1.mil.forward.wig	14911365	743c98ef8b63e2d1717e81bb1b03e718	no (not collected)
+centeredtracks/mil/RIBO-GLY-1.mil.reverse.centered.bw	2829278	7e7e2f194eb58c16bcd450a826ac8914	no (not collected)
+centeredtracks/mil/RIBO-GLY-1.mil.reverse.wig	19263772	525b3677f0295d3165b5e2b7f8a7e101	no (not collected)
+centeredtracks/mil/RNA-GLY-1.mil.forward.centered.bw	2007073	c922a37fc8ac38c052c3c107698b7091	no (not collected)
+centeredtracks/mil/RNA-GLY-1.mil.forward.wig	13853454	843425918b1a76bdd8b2702cc3f1b927	no (not collected)
+centeredtracks/mil/RNA-GLY-1.mil.reverse.centered.bw	2592125	e3111e388ccd6887be61ad0370d11efd	no (not collected)
+centeredtracks/mil/RNA-GLY-1.mil.reverse.wig	18331829	d31630e8df529c9022486655033c4634	no (not collected)
+centeredtracks/min/RIBO-GLY-1.min.forward.centered.bw	2262382	63d3b9b8a31627d16ab5714392e3006f	no (not collected)
+centeredtracks/min/RIBO-GLY-1.min.forward.wig	15193379	807638bc21c19fb90f5f4f3398725c0a	no (not collected)
+centeredtracks/min/RIBO-GLY-1.min.reverse.centered.bw	2829398	0c74024d633279d8a4bb384eb922bb60	no (not collected)
+centeredtracks/min/RIBO-GLY-1.min.reverse.wig	19613819	e455e85fd964bcf502d7f5f9224e99d8	no (not collected)
+centeredtracks/min/RNA-GLY-1.min.forward.centered.bw	1997090	f6b6bd20dcdfbb1812fcc44acff6cb67	no (not collected)
+centeredtracks/min/RNA-GLY-1.min.forward.wig	12900487	e9e460bac8584e627116c43bd3c6ee60	no (not collected)
+centeredtracks/min/RNA-GLY-1.min.reverse.centered.bw	2580847	4c849fb759e06078bf2db0c25af151f3	no (not collected)
+centeredtracks/min/RNA-GLY-1.min.reverse.wig	17267475	9c01c12dceebc38d39b250932cf58dde	no (not collected)
+centeredtracks/raw/RIBO-GLY-1.raw.forward.centered.bw	2248784	0ae220a0fbdfaf9743b232faea0621a8	no (not collected)
+centeredtracks/raw/RIBO-GLY-1.raw.forward.wig	13800997	ed3cccb051a1e1334b621a0dcc2dcc05	no (not collected)
+centeredtracks/raw/RIBO-GLY-1.raw.reverse.centered.bw	2814688	9215bb1d6d48d207edcfdc41b91baef4	no (not collected)
+centeredtracks/raw/RIBO-GLY-1.raw.reverse.wig	18011256	d05c3261111018700ec844dbabaffc83	no (not collected)
+centeredtracks/raw/RNA-GLY-1.raw.forward.centered.bw	1997090	f6b6bd20dcdfbb1812fcc44acff6cb67	no (not collected)
+centeredtracks/raw/RNA-GLY-1.raw.forward.wig	12900487	e9e460bac8584e627116c43bd3c6ee60	no (not collected)
+centeredtracks/raw/RNA-GLY-1.raw.reverse.centered.bw	2580847	4c849fb759e06078bf2db0c25af151f3	no (not collected)
+centeredtracks/raw/RNA-GLY-1.raw.reverse.wig	17267475	9c01c12dceebc38d39b250932cf58dde	no (not collected)

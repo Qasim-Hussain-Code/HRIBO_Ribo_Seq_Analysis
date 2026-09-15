@@ -1,0 +1,9 @@
+[2026-09-15 22:26:09] project  : /home/qasim/hribo_work/pao1
+[2026-09-15 22:26:10] snakemake: 8.10.7   conda: conda 26.7.2   container: apptainer version 1.4.5
+[2026-09-15 22:26:10] limits   : 8 cores, 6000 MB budget, 1500 MB per job, stop below 3000 MB free on: /home/qasim/hribo_work/pao1
+[2026-09-15 22:26:10] log      : /home/qasim/hribo_work/pao1/logs/snakemake_20260915_222609.log
+Building DAG of jobs...
+Unlocked working directory.
+Sample sheet validated! No errors found!
+Config file validated! No errors found!
+[2026-09-15 22:26:31] snakemake finished with exit status 0

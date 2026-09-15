@@ -1,0 +1,7 @@
+assembly	GCF_000006765.1_ASM676v1
+source	https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/006/765/GCF_000006765.1_ASM676v1
+retrieved	2026-09-15T12:28:49Z
+genome_md5_gz	c859ec5a25506367506bce972788aca8
+annotation_md5_gz	4cabca061c8da3de375bc80ee19101c2
+genome_length_bp	6264404
+sequence_ids	NC_002516.2,

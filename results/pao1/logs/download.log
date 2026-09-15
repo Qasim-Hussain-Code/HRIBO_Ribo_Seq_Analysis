@@ -1,0 +1,9 @@
+[2026-09-15 20:28:17] === SRR5356907 -> RIBO-GLY-1 (RIBO, GLY, replicate 1) ===
+[2026-09-15 20:28:17] SRR5356907: downloading 1778133075 bytes with 6 streams
+[2026-09-15 20:30:10] SRR5356907: download complete
+[2026-09-15 20:30:11] === SRR5356908 -> RNA-GLY-1 (RNA, GLY, replicate 1) ===
+[2026-09-15 20:30:13] SRR5356908: downloading 2767686670 bytes with 6 streams
+[2026-09-15 20:33:02] SRR5356908: download complete
+[2026-09-15 20:33:02] done. FASTQ files:
+total 0
+exit=0

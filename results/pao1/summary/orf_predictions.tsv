@@ -1,0 +1,15 @@
+caller	sample	stage	orfs
+Reparation	GLY-1	raw output (Predicted_ORFs.txt)	1965
+DeepRibo	GLY-1	raw output (predictions.csv, every candidate ORF scored)	14001
+Reparation	all	filtered track (reparation_annotated.gff)	1965
+DeepRibo	all	filtered track (deepribo_merged.gff)	3209
+both callers, merged per condition	all	filtered track (GLY.merged.gff)	1965
+both callers, all conditions	all	filtered track (all.gff)	1965
+Reparation	all	predictions_reparation.xlsx, sheet CDS	1965
+DeepRibo	all	predictions_deepribo.xlsx, sheet CDS	3209
+overview table	all	overview.xlsx, sheet all	8775
+overview table	all	overview.xlsx, sheet annotated	5677
+overview table	all	overview.xlsx, sheet misc	535
+overview table	all	overview.xlsx, sheet tRNA	63
+overview table	all	overview.xlsx, sheet ncRNA	28
+overview table	all	overview.xlsx, sheet rRNA	13

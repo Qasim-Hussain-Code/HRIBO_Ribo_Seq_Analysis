@@ -1,0 +1,27 @@
+[SEGEMEHL] Tue Sep 15 21:00:16 2026: reading queries in 'trimmed/RNA-GLY-1.fastq'.
+[SEGEMEHL] Tue Sep 15 21:00:22 2026: 9764868 query sequences found.
+[SEGEMEHL] Tue Sep 15 21:00:22 2026: reading database sequences.
+[SEGEMEHL] Tue Sep 15 21:00:22 2026: 1 database sequences found.
+[SEGEMEHL] Tue Sep 15 21:00:22 2026: total length of db sequences: 6264404
+[SEGEMEHL] Tue Sep 15 21:00:22 2026: assigning all reads to default read group 'A1'.
+[SEGEMEHL] Tue Sep 15 21:00:22 2026: additional read group default values '	SM:sample1	LB:library1	PU:unit1	PL:illumina'
+[SEGEMEHL] Tue Sep 15 21:00:22 2026: reads assigned to read group 'A1'
+[SEGEMEHL] Tue Sep 15 21:00:22 2026: compiled sam header.
+[SEGEMEHL] Tue Sep 15 21:00:22 2026: reading suffix array 'genomeSegemehlIndex/genome.idx' from disk.
+[SEGEMEHL] Tue Sep 15 21:00:22 2026: reading lcpc/vtab.
+[SEGEMEHL] Tue Sep 15 21:00:22 2026: reading childtab.
+[SEGEMEHL] Tue Sep 15 21:00:22 2026: reading suflinks.
+[SEGEMEHL] Tue Sep 15 21:00:22 2026: reading lsint id.
+[SEGEMEHL] Tue Sep 15 21:00:22 2026: read suffix array 'genomeSegemehlIndex/genome.idx' with 6264405 elements.
+[SEGEMEHL] Tue Sep 15 21:00:22 2026: md5 keys of index and db match.
+[SEGEMEHL] Tue Sep 15 21:00:22 2026: reading the suffix array has taken 0.000000 seconds.
+[SEGEMEHL] Tue Sep 15 21:00:22 2026: opening sam file 'sammulti/RNA-GLY-1.sam'.
+[SEGEMEHL] Tue Sep 15 21:00:22 2026: starting 8 threads.
+[SEGEMEHL] Tue Sep 15 21:08:12 2026: threaded matching w/ suffixarray has taken 470.000000 seconds.
+[SEGEMEHL] Tue Sep 15 21:08:12 2026: closing output file 'sammulti/RNA-GLY-1.sam'.
+[SEGEMEHL] Tue Sep 15 21:08:12 2026: Mapping stats:
+	total	mapped	(%)	unique	(%)	multi	(%)	split	(%)
+all	9764868	9314322	95.39%	1200130	12.29%	8114192	83.10%	0	0.00%
+[SEGEMEHL] Tue Sep 15 21:08:12 2026: 
+Goodbye.
+ "Wir sind hier nicht in Seattle Dirk!" (Tocotronic)

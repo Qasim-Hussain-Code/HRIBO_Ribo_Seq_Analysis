@@ -1,0 +1,9 @@
+[2026-09-15 23:12:14] collecting into /mnt/c/Users/User/Documents/HRIBO_Ribo_Seq_Analysis/results/pao1
+[2026-09-15 23:12:17] skip (absent): qc/multi/multiqc_data
+[2026-09-15 23:12:21] skip (absent): contrasts
+[2026-09-15 23:12:21] skip (absent): xtail
+[2026-09-15 23:12:21] skip (absent): riborex
+[2026-09-15 23:12:21] skip (absent): deltate
+[2026-09-15 23:12:49] manifest: 226 entries, 125 files copied
+[2026-09-15 23:12:49] done
+exit=0

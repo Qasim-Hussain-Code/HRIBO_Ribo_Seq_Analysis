@@ -1,0 +1,19 @@
+[2026-09-15 20:36:21] === SRR5356907 -> RIBO-GLY-1 (RIBO, GLY, replicate 1) ===
+[2026-09-15 20:36:21] SRR5356907: validating the archive
+[2026-09-15 20:36:24] SRR5356907: converting and keeping a random fraction of 0.10 (seed 11)
+Read 73952429 spots for /home/qasim/hribo_work/pao1/sra/SRR5356907.sra
+Written 73952429 spots for /home/qasim/hribo_work/pao1/sra/SRR5356907.sra
+[2026-09-15 20:38:20] RIBO-GLY-1: 73952429 reads in the archive, 7394173 reads written, md5 e943f5139ce2afc1395c525ae58350da
+[2026-09-15 20:38:20] SRR5356907: archive removed to save disk
+[2026-09-15 20:38:20] === SRR5356908 -> RNA-GLY-1 (RNA, GLY, replicate 1) ===
+[2026-09-15 20:38:20] SRR5356908: validating the archive
+[2026-09-15 20:38:26] SRR5356908: converting and keeping a random fraction of 0.10 (seed 11)
+Read 98145010 spots for /home/qasim/hribo_work/pao1/sra/SRR5356908.sra
+Written 98145010 spots for /home/qasim/hribo_work/pao1/sra/SRR5356908.sra
+[2026-09-15 20:41:09] RNA-GLY-1: 98145010 reads in the archive, 9811418 reads written, md5 7e3578ac0a2be245ad1ef4fa48f5abaa
+[2026-09-15 20:41:09] SRR5356908: archive removed to save disk
+[2026-09-15 20:41:09] done. FASTQ files:
+total 434M
+-rw-r--r-- 1 qasim qasim 153M Sep 15 20:38 RIBO-GLY-1.fastq.gz
+-rw-r--r-- 1 qasim qasim 281M Sep 15 20:41 RNA-GLY-1.fastq.gz
+exit=0

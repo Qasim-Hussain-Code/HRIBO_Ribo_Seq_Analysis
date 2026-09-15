@@ -1,0 +1,22 @@
+
+  /// MultiQC 🔍 | v1.18
+
+|           multiqc | MultiQC Version v1.35 now available!
+|           multiqc | Prepending directory to sample names
+|           multiqc | Excluding modules 'picard', 'gatk'
+|           multiqc | Search path : /home/qasim/hribo_work/pao1/qc/1raw
+|           multiqc | Search path : /home/qasim/hribo_work/pao1/qc/2trimmed
+|           multiqc | Search path : /home/qasim/hribo_work/pao1/qc/3mapped
+|           multiqc | Search path : /home/qasim/hribo_work/pao1/qc/4unique
+|           multiqc | Search path : /home/qasim/hribo_work/pao1/qc/5removedrRNA
+|           multiqc | Search path : /home/qasim/hribo_work/pao1/qc/all
+|           multiqc | Search path : /home/qasim/hribo_work/pao1/qc/trnainall
+|           multiqc | Search path : /home/qasim/hribo_work/pao1/qc/rrnainallaligned
+|           multiqc | Search path : /home/qasim/hribo_work/pao1/qc/rrnainuniquelyaligned
+|           multiqc | Search path : /home/qasim/hribo_work/pao1/qc/rrnainall
+|         searching | ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% 40/40  
+|    feature_counts | Found 10 reports
+|            fastqc | Found 10 reports
+|           multiqc | Report      : qc/multi/multiqc_report.html
+|           multiqc | Data        : qc/multi/multiqc_data
+|           multiqc | MultiQC complete

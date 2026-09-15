@@ -1,0 +1,9 @@
+[2026-09-15 20:41:24] configuration copied to /home/qasim/hribo_work/pao1/HRIBO/config.yaml
+[2026-09-15 20:41:24] sample sheet written to /home/qasim/hribo_work/pao1/HRIBO/samples.tsv:
+method^Icondition^Ireplicate^IfastqFile^IfastqFile2
+RIBO^IGLY^I1^Ifastq/RIBO-GLY-1.fastq.gz^I
+RNA^IGLY^I1^Ifastq/RNA-GLY-1.fastq.gz^I
+[2026-09-15 20:41:24]   OK   fastq/RIBO-GLY-1.fastq.gz
+[2026-09-15 20:41:24]   OK   fastq/RNA-GLY-1.fastq.gz
+[2026-09-15 20:41:24] done. Next: bash scripts/05_run_hribo.sh -n
+exit=0

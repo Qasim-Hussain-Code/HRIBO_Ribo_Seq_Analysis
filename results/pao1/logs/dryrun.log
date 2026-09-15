@@ -1,0 +1,2319 @@
+[2026-09-15 20:41:24] project  : /home/qasim/hribo_work/pao1
+[2026-09-15 20:41:26] snakemake: 8.10.7   conda: conda 26.7.2   container: apptainer version 1.4.5
+[2026-09-15 20:41:26] limits   : 8 cores, 6000 MB budget, 1500 MB per job, stop below 3000 MB free on: /mnt/c /home/qasim/hribo_work/pao1
+[2026-09-15 20:41:26] log      : /home/qasim/hribo_work/pao1/logs/snakemake_20260915_204124.log
+Sample sheet validated! No errors found!
+Config file validated! No errors found!
+Building DAG of jobs...
+Singularity image docker://gelhausr/deepribo:latest will be pulled.
+Your conda installation is not configured to use strict channel priorities. This is however crucial for having robust and correct environments (for details, see https://conda-forge.org/docs/user/tipsandtricks.html). Please consider to configure strict priorities by executing 'conda config --set channel_priority strict'.
+Conda environment HRIBO/envs/samtools.yaml will be created.
+Conda environment HRIBO/envs/segemehl.yaml will be created.
+Conda environment HRIBO/envs/wig.yaml will be created.
+Conda environment HRIBO/envs/metageneprofiling.yaml will be created.
+Conda environment HRIBO/envs/plotly.yaml will be created.
+Conda environment HRIBO/envs/reparation.yaml will be created.
+Conda environment HRIBO/envs/biopython.yaml will be created.
+Conda environment HRIBO/envs/cutadapt.yaml will be created.
+Conda environment HRIBO/envs/multiqc.yaml will be created.
+Conda environment HRIBO/envs/gawk.yaml will be created.
+Conda environment HRIBO/envs/bedtools.yaml will be created.
+Conda environment HRIBO/envs/excel.yaml will be created.
+Conda environment HRIBO/envs/pytools.yaml will be created.
+Conda environment HRIBO/envs/deseq2.yaml will be created.
+Conda environment HRIBO/envs/coverage.yaml will be created.
+Conda environment HRIBO/envs/subread.yaml will be created.
+Conda environment HRIBO/envs/mergetools.yaml will be created.
+Conda environment HRIBO/envs/fastqc.yaml will be created.
+Job stats:
+job                                         count
+----------------------------------------  -------
+all                                             1
+allDeepRibo                                     1
+alternativeStartCodonTrack                      1
+asiteOccupancy                                  1
+bamcompare                                      1
+bamindex                                        2
+centeredwig                                     2
+centeredwigtobigwigmilforward                   2
+centeredwigtobigwigmilreverse                   2
+centeredwigtobigwigminforward                   2
+centeredwigtobigwigminrawreverse                2
+centeredwigtobigwigminreverse                   2
+centeredwigtobigwigrawforward                   2
+checkAnnotation                                 1
+concatDeepRibo                                  1
+concatReparation                                1
+coverage                                        1
+createExcelSummary                              1
+createExcelSummaryDeepRibo                      1
+createExcelTotalAnnotation                      1
+createExcelTotalAnnotationReadCount             1
+createExcelUniqueAnnotation                     1
+createExcelUniqueAnnotationReadCount            1
+createOverviewTablePredictions                  1
+deepriboGFF                                     1
+deepriboGetModel                                1
+enrichAnnotation                                1
+fastqcmulti                                     2
+fastqcraw_single                                2
+fastqcrrnafilter                                2
+fastqctrimmed_single                            2
+fastqcunique                                    2
+featurescounts                                  2
+filterAll                                       1
+filterDeepRibo                                  1
+fiveprimewig                                    2
+fiveprimewigtobigwigmilforward                  2
+fiveprimewigtobigwigminforward                  2
+fiveprimewigtobigwigminreverse                  2
+fiveprimewigtobigwigrawforward                  2
+fiveprimewigtobigwigrawreverse                  2
+fiveprimewigtobigwimilgreverse                  2
+generateAnnotationIndependantReadCounts         1
+generateAnnotationTotalReadCounts               1
+generateAnnotationUniqueReadCounts              1
+generateDeepRiboReadCounts                      1
+generateDifferentialExpressionReadCounts        1
+generateReparationReadCounts                    1
+genomeSamToolsIndex                             1
+genomeSegemehlIndex                             1
+genomeSize                                      1
+globalwig                                       2
+globalwigtobigwigmilforward                     2
+globalwigtobigwigmilreverse                     2
+globalwigtobigwigminforward                     2
+globalwigtobigwigminrawreverse                  2
+globalwigtobigwigminreverse                     2
+globalwigtobigwigrawforward                     2
+link_single                                     2
+map                                             2
+mapDeepRiboReads                                1
+mapIndependantReads                             1
+mapReparationReads                              1
+mapTotalReads                                   1
+mapUniqueReads                                  1
+maplink                                         2
+maplinkMappedReads                              1
+mergeAll                                        1
+mergeConditions                                 1
+metageneProfiling                               1
+multiqc                                         1
+norrnafeaturescounts                            2
+parameterEstimation                             1
+parseDeepRibo                                   1
+plotCorrelation                                 1
+plotPCA                                         1
+predictDeepRibo                                 1
+preparePCAinput                                 1
+rbsTrack                                        1
+readLengthStatistics                            1
+reannotatedORFs                                 1
+reparation                                      1
+reparationGFF                                   1
+retrieveAnnotation                              1
+retrieveGenome                                  1
+reversecomplementGenome                         1
+rrnaannotation                                  1
+rrnafilter2                                     2
+rrnatotalfeaturescounts                         2
+rrnauniquefeaturescounts                        2
+runDeseqPreprocessing                           1
+sammultitobam                                   2
+samplesToExcel                                  1
+samstrandswap                                   2
+samtobam                                        2
+samuniq                                         2
+startCodonTrack                                 1
+stopCodonTrack                                  1
+threeprimewig                                   2
+threeprimewigtobigwigmilforward                 2
+threeprimewigtobigwigmilreverse                 2
+threeprimewigtobigwigminforward                 2
+threeprimewigtobigwigminreverse                 2
+threeprimewigtobigwigrawforward                 2
+threeprimewigtobigwigrawreverse                 2
+totalMappedReads                                1
+totalmappedbamindex                             2
+trim_single                                     2
+trnafeaturescounts                              2
+unambigousAnnotation                            1
+uniprotDBRetrieve                               1
+uniqueMappedReads                               1
+uniquemappedbamindex                            2
+total                                         163
+
+Execute 7 jobs...
+
+[Tue Sep 15 20:41:50 2026]
+localrule retrieveAnnotation:
+    input: annotation.gff
+    output: annotation/annotation.gff
+    jobid: 14
+    reason: Missing output files: annotation/annotation.gff
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+mkdir -p annotation; cp annotation.gff annotation/annotation.gff
+
+[Tue Sep 15 20:41:50 2026]
+localrule link_single:
+    input: fastq/RNA-GLY-1.fastq.gz
+    output: trimlink/RNA-GLY-1.fastq.gz
+    jobid: 23
+    reason: Missing output files: trimlink/RNA-GLY-1.fastq.gz
+    wildcards: method=RNA, condition=GLY, replicate=1
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+mkdir -p trimlink; ln -s /home/qasim/hribo_work/pao1/fastq/RNA-GLY-1.fastq.gz /home/qasim/hribo_work/pao1/trimlink/RNA-GLY-1.fastq.gz;
+
+[Tue Sep 15 20:41:50 2026]
+localrule deepriboGetModel:
+    input: https://github.com/Biobix/DeepRibo/blob/master/models/DeepRibo_model_v1.pt?raw=true (retrieve from storage)
+    output: deepribo/DeepRibo_model_v1.pt
+    jobid: 155
+    reason: Missing output files: deepribo/DeepRibo_model_v1.pt
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+mkdir -p deepribo; mv .snakemake/storage/http/github.com/Biobix/DeepRibo/blob/master/models/DeepRibo_model_v1.pt deepribo/DeepRibo_model_v1.pt
+
+[Tue Sep 15 20:41:50 2026]
+localrule uniprotDBRetrieve:
+    input: ftp://ftp.ebi.ac.uk/pub/databases/uniprot/knowledgebase/uniprot_sprot.fasta.gz (retrieve from storage)
+    output: uniprotDB/uniprot_sprot.fasta
+    jobid: 146
+    reason: Missing output files: uniprotDB/uniprot_sprot.fasta
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+
+        mkdir -p uniprotDB
+        mv .snakemake/storage/ftp/ftp.ebi.ac.uk/pub/databases/uniprot/knowledgebase/uniprot_sprot.fasta.gz uniprotDB/uniprot_sprot.fasta.gz
+        gunzip uniprotDB/uniprot_sprot.fasta.gz
+        
+
+[Tue Sep 15 20:41:50 2026]
+localrule retrieveGenome:
+    input: genome.fa
+    output: genomes/genome.fa
+    jobid: 10
+    reason: Missing output files: genomes/genome.fa
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+mkdir -p genomes; cp genome.fa genomes/genome.fa
+
+[Tue Sep 15 20:41:50 2026]
+localrule samplesToExcel:
+    input: HRIBO/samples.tsv
+    output: auxiliary/samples.xlsx
+    jobid: 70
+    reason: Missing output files: auxiliary/samples.xlsx
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+mkdir -p auxiliary; HRIBO/scripts/samples_to_xlsx.py -i HRIBO/samples.tsv -o auxiliary/samples.xlsx
+
+[Tue Sep 15 20:41:50 2026]
+localrule link_single:
+    input: fastq/RIBO-GLY-1.fastq.gz
+    output: trimlink/RIBO-GLY-1.fastq.gz
+    jobid: 9
+    reason: Missing output files: trimlink/RIBO-GLY-1.fastq.gz
+    wildcards: method=RIBO, condition=GLY, replicate=1
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+mkdir -p trimlink; ln -s /home/qasim/hribo_work/pao1/fastq/RIBO-GLY-1.fastq.gz /home/qasim/hribo_work/pao1/trimlink/RIBO-GLY-1.fastq.gz;
+Execute 8 jobs...
+
+[Tue Sep 15 20:41:50 2026]
+localrule trim_single:
+    input: trimlink/RNA-GLY-1.fastq.gz
+    output: trimmed/RNA-GLY-1.fastq
+    jobid: 25
+    reason: Missing output files: trimmed/RNA-GLY-1.fastq; Input files updated by another job: trimlink/RNA-GLY-1.fastq.gz
+    wildcards: method=RNA, condition=GLY, replicate=1
+    threads: 8
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+mkdir -p trimmed; cutadapt -j 8  -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC   -q 20 --trim-n   -m 10  -o trimmed/RNA-GLY-1.fastq trimlink/RNA-GLY-1.fastq.gz
+
+[Tue Sep 15 20:41:50 2026]
+localrule genomeSegemehlIndex:
+    input: genomes/genome.fa
+    output: genomeSegemehlIndex/genome.idx
+    log: logs/genomeIndex.log
+    jobid: 11
+    reason: Missing output files: genomeSegemehlIndex/genome.idx; Input files updated by another job: genomes/genome.fa
+    threads: 8
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+mkdir -p genomeSegemehlIndex; echo "Computing Segemehl index"; segemehl.x --threads 8 -x genomeSegemehlIndex/genome.idx -d genomes/genome.fa 2> logs/genomeIndex.log
+
+[Tue Sep 15 20:41:50 2026]
+localrule checkAnnotation:
+    input: annotation/annotation.gff
+    output: annotation/annotation_processed.gff
+    jobid: 13
+    reason: Missing output files: annotation/annotation_processed.gff; Input files updated by another job: annotation/annotation.gff
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+mkdir -p annotation; HRIBO/scripts/gtf2gff3.py -a annotation/annotation.gff -o annotation/annotation_processed.gff
+
+[Tue Sep 15 20:41:50 2026]
+localrule fastqcraw_single:
+    input: trimlink/RNA-GLY-1.fastq.gz
+    output: qc/1raw/RNA-GLY-1-raw_fastqc.html, qc/1raw/RNA-GLY-1-raw_fastqc.zip
+    jobid: 22
+    reason: Missing output files: qc/1raw/RNA-GLY-1-raw_fastqc.html; Input files updated by another job: trimlink/RNA-GLY-1.fastq.gz
+    wildcards: method=RNA, condition=GLY, replicate=1
+    threads: 8
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+mkdir -p qc/1raw; fastqc -o qc/1raw -t 8 trimlink/RNA-GLY-1.fastq.gz; mv qc/1raw/RNA-GLY-1_fastqc.html qc/1raw/RNA-GLY-1-raw_fastqc.html; mv qc/1raw/RNA-GLY-1_fastqc.zip qc/1raw/RNA-GLY-1-raw_fastqc.zip
+
+[Tue Sep 15 20:41:50 2026]
+localrule trim_single:
+    input: trimlink/RIBO-GLY-1.fastq.gz
+    output: trimmed/RIBO-GLY-1.fastq
+    jobid: 8
+    reason: Missing output files: trimmed/RIBO-GLY-1.fastq; Input files updated by another job: trimlink/RIBO-GLY-1.fastq.gz
+    wildcards: method=RIBO, condition=GLY, replicate=1
+    threads: 8
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+mkdir -p trimmed; cutadapt -j 8  -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC   -q 20 --trim-n   -m 10  -o trimmed/RIBO-GLY-1.fastq trimlink/RIBO-GLY-1.fastq.gz
+
+[Tue Sep 15 20:41:50 2026]
+localrule reversecomplementGenome:
+    input: genomes/genome.fa
+    output: genomes/genome.rev.fa
+    jobid: 52
+    reason: Missing output files: genomes/genome.rev.fa; Input files updated by another job: genomes/genome.fa
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+mkdir -p genomes; HRIBO/scripts/reverse_complement.py --input_fasta_filepath genomes/genome.fa --output_fasta_filepath genomes/genome.rev.fa
+
+[Tue Sep 15 20:41:50 2026]
+localrule fastqcraw_single:
+    input: trimlink/RIBO-GLY-1.fastq.gz
+    output: qc/1raw/RIBO-GLY-1-raw_fastqc.html, qc/1raw/RIBO-GLY-1-raw_fastqc.zip
+    jobid: 20
+    reason: Missing output files: qc/1raw/RIBO-GLY-1-raw_fastqc.html; Input files updated by another job: trimlink/RIBO-GLY-1.fastq.gz
+    wildcards: method=RIBO, condition=GLY, replicate=1
+    threads: 8
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+mkdir -p qc/1raw; fastqc -o qc/1raw -t 8 trimlink/RIBO-GLY-1.fastq.gz; mv qc/1raw/RIBO-GLY-1_fastqc.html qc/1raw/RIBO-GLY-1-raw_fastqc.html; mv qc/1raw/RIBO-GLY-1_fastqc.zip qc/1raw/RIBO-GLY-1-raw_fastqc.zip
+
+[Tue Sep 15 20:41:50 2026]
+localrule genomeSamToolsIndex:
+    input: genomes/genome.fa
+    output: genomes/genome.fa.fai
+    jobid: 17
+    reason: Missing output files: genomes/genome.fa.fai; Input files updated by another job: genomes/genome.fa
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+samtools faidx genomes/genome.fa
+Execute 11 jobs...
+
+[Tue Sep 15 20:41:50 2026]
+localrule alternativeStartCodonTrack:
+    input: genomes/genome.fa, genomes/genome.rev.fa
+    output: tracks/potentialAlternativeStartCodons.gff
+    jobid: 55
+    reason: Missing output files: tracks/potentialAlternativeStartCodons.gff; Input files updated by another job: genomes/genome.fa, genomes/genome.rev.fa
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+mkdir -p tracks; HRIBO/scripts/motif_to_gff.py --input_genome_fasta_filepath genomes/genome.fa --input_reverse_genome_fasta_filepath genomes/genome.rev.fa --motif_string GTG,TTG,CTG --output_gff3_filepath tracks/potentialAlternativeStartCodons.gff
+
+[Tue Sep 15 20:41:50 2026]
+localrule map:
+    input: trimmed/RNA-GLY-1.fastq, genomes/genome.fa, genomeSegemehlIndex/genome.idx
+    output: sammulti/RNA-GLY-1.sam
+    log: logs/RNA-GLY-1_segemehl.log
+    jobid: 28
+    reason: Missing output files: sammulti/RNA-GLY-1.sam; Input files updated by another job: genomes/genome.fa, genomeSegemehlIndex/genome.idx, trimmed/RNA-GLY-1.fastq
+    wildcards: method=RNA, condition=GLY, replicate=1
+    threads: 8
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+
+        mkdir -p sammulti; segemehl.x -e -d genomes/genome.fa -i genomeSegemehlIndex/genome.idx -q trimmed/RNA-GLY-1.fastq --threads 8 -o sammulti/RNA-GLY-1.sam 2> logs/RNA-GLY-1_segemehl.log
+        
+
+[Tue Sep 15 20:41:50 2026]
+localrule genomeSize:
+    input: genomes/genome.fa.fai
+    output: genomes/sizes.genome
+    log: logs/genomeSamToolsIndex.log
+    jobid: 16
+    reason: Missing output files: genomes/sizes.genome; Input files updated by another job: genomes/genome.fa.fai
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+mkdir -p genomes; cut -f1,2 genomes/genome.fa.fai > genomes/sizes.genome
+
+[Tue Sep 15 20:41:50 2026]
+localrule fastqctrimmed_single:
+    input: trimmed/RIBO-GLY-1.fastq
+    output: qc/2trimmed/RIBO-GLY-1-trimmed_fastqc.html, qc/2trimmed/RIBO-GLY-1-trimmed_fastqc.zip
+    jobid: 21
+    reason: Missing output files: qc/2trimmed/RIBO-GLY-1-trimmed_fastqc.html; Input files updated by another job: trimmed/RIBO-GLY-1.fastq
+    wildcards: method=RIBO, condition=GLY, replicate=1
+    threads: 8
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+mkdir -p qc/2trimmed; fastqc -o qc/2trimmed -t 8 trimmed/RIBO-GLY-1.fastq; mv qc/2trimmed/RIBO-GLY-1_fastqc.html qc/2trimmed/RIBO-GLY-1-trimmed_fastqc.html; mv qc/2trimmed/RIBO-GLY-1_fastqc.zip qc/2trimmed/RIBO-GLY-1-trimmed_fastqc.zip
+
+[Tue Sep 15 20:41:50 2026]
+localrule enrichAnnotation:
+    input: annotation/annotation_processed.gff
+    output: auxiliary/enriched_annotation.gff
+    jobid: 39
+    reason: Missing output files: auxiliary/enriched_annotation.gff; Input files updated by another job: annotation/annotation_processed.gff
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+mkdir -p auxiliary; HRIBO/scripts/enrich_annotation.py -a annotation/annotation_processed.gff -o auxiliary/enriched_annotation.gff
+
+[Tue Sep 15 20:41:50 2026]
+localrule stopCodonTrack:
+    input: genomes/genome.fa, genomes/genome.rev.fa
+    output: tracks/potentialStopCodons.gff
+    jobid: 51
+    reason: Missing output files: tracks/potentialStopCodons.gff; Input files updated by another job: genomes/genome.fa, genomes/genome.rev.fa
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+mkdir -p tracks; HRIBO/scripts/motif_to_gff.py --input_genome_fasta_filepath genomes/genome.fa --input_reverse_genome_fasta_filepath genomes/genome.rev.fa --motif_string TAG,TGA,TAA --output_gff3_filepath tracks/potentialStopCodons.gff
+
+[Tue Sep 15 20:41:50 2026]
+localrule map:
+    input: trimmed/RIBO-GLY-1.fastq, genomes/genome.fa, genomeSegemehlIndex/genome.idx
+    output: sammulti/RIBO-GLY-1.sam
+    log: logs/RIBO-GLY-1_segemehl.log
+    jobid: 7
+    reason: Missing output files: sammulti/RIBO-GLY-1.sam; Input files updated by another job: genomes/genome.fa, trimmed/RIBO-GLY-1.fastq, genomeSegemehlIndex/genome.idx
+    wildcards: method=RIBO, condition=GLY, replicate=1
+    threads: 8
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+
+        mkdir -p sammulti; segemehl.x -e -d genomes/genome.fa -i genomeSegemehlIndex/genome.idx -q trimmed/RIBO-GLY-1.fastq --threads 8 -o sammulti/RIBO-GLY-1.sam 2> logs/RIBO-GLY-1_segemehl.log
+        
+
+[Tue Sep 15 20:41:50 2026]
+localrule startCodonTrack:
+    input: genomes/genome.fa, genomes/genome.rev.fa
+    output: tracks/potentialStartCodons.gff
+    jobid: 53
+    reason: Missing output files: tracks/potentialStartCodons.gff; Input files updated by another job: genomes/genome.fa, genomes/genome.rev.fa
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+mkdir -p tracks; HRIBO/scripts/motif_to_gff.py --input_genome_fasta_filepath genomes/genome.fa --input_reverse_genome_fasta_filepath genomes/genome.rev.fa --motif_string ATG --output_gff3_filepath tracks/potentialStartCodons.gff
+
+[Tue Sep 15 20:41:50 2026]
+localrule rrnaannotation:
+    input: annotation/annotation_processed.gff
+    output: annotation/rrna.bed
+    jobid: 12
+    reason: Missing output files: annotation/rrna.bed; Input files updated by another job: annotation/annotation_processed.gff
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+
+        mkdir -p annotation; awk -F'\t' '$3 == "rRNA" || $3 == "tRNA"' annotation/annotation_processed.gff | awk -F'\t' '{print $1 FS $4-1 FS $5 FS "." FS "." FS $7}' > annotation/rrna.bed
+        
+
+[Tue Sep 15 20:41:50 2026]
+localrule rbsTrack:
+    input: genomes/genome.fa, genomes/genome.rev.fa
+    output: tracks/potentialRibosomeBindingSite.gff
+    jobid: 54
+    reason: Missing output files: tracks/potentialRibosomeBindingSite.gff; Input files updated by another job: genomes/genome.fa, genomes/genome.rev.fa
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+mkdir -p tracks; HRIBO/scripts/motif_to_gff.py --input_genome_fasta_filepath genomes/genome.fa --input_reverse_genome_fasta_filepath genomes/genome.rev.fa --motif_string AAGG --output_gff3_filepath tracks/potentialRibosomeBindingSite.gff
+
+[Tue Sep 15 20:41:50 2026]
+localrule fastqctrimmed_single:
+    input: trimmed/RNA-GLY-1.fastq
+    output: qc/2trimmed/RNA-GLY-1-trimmed_fastqc.html, qc/2trimmed/RNA-GLY-1-trimmed_fastqc.zip
+    jobid: 24
+    reason: Missing output files: qc/2trimmed/RNA-GLY-1-trimmed_fastqc.html; Input files updated by another job: trimmed/RNA-GLY-1.fastq
+    wildcards: method=RNA, condition=GLY, replicate=1
+    threads: 8
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+mkdir -p qc/2trimmed; fastqc -o qc/2trimmed -t 8 trimmed/RNA-GLY-1.fastq; mv qc/2trimmed/RNA-GLY-1_fastqc.html qc/2trimmed/RNA-GLY-1-trimmed_fastqc.html; mv qc/2trimmed/RNA-GLY-1_fastqc.zip qc/2trimmed/RNA-GLY-1-trimmed_fastqc.zip
+Would remove temporary output genomeSegemehlIndex/genome.idx
+Execute 7 jobs...
+
+[Tue Sep 15 20:41:50 2026]
+localrule samuniq:
+    input: sammulti/RNA-GLY-1.sam
+    output: sam/RNA-GLY-1.rawsam
+    jobid: 32
+    reason: Missing output files: sam/RNA-GLY-1.rawsam; Input files updated by another job: sammulti/RNA-GLY-1.sam
+    wildcards: method=RNA, condition=GLY, replicate=1
+    threads: 8
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+
+        set +e
+        mkdir -p sam
+        awk '$2 != "4"' sammulti/RNA-GLY-1.sam > sammulti/RNA-GLY-1.sam.mapped
+        samtools view -H <(cat sammulti/RNA-GLY-1.sam) | grep '@HD' > sam/RNA-GLY-1.rawsam
+        samtools view -H <(cat sammulti/RNA-GLY-1.sam) | grep '@SQ' | sort -t$'	' -k1,1 -k2,2V >> sam/RNA-GLY-1.rawsam
+        samtools view -H <(cat sammulti/RNA-GLY-1.sam) | grep '@RG' >> sam/RNA-GLY-1.rawsam
+        samtools view -H <(cat sammulti/RNA-GLY-1.sam) | grep '@PG' >> sam/RNA-GLY-1.rawsam
+        cat sammulti/RNA-GLY-1.sam.mapped |grep -v '^@' | grep -w 'NH:i:1' >> sam/RNA-GLY-1.rawsam
+        exitcode=$?
+        if [ $exitcode -eq 1 ]
+        then
+            exit 1
+        else
+            exit 0
+        fi
+        
+
+[Tue Sep 15 20:41:50 2026]
+localrule fastqcmulti:
+    input: sammulti/RNA-GLY-1.sam
+    output: qc/3mapped/RNA-GLY-1-map_fastqc.html, qc/3mapped/RNA-GLY-1-map_fastqc.zip
+    jobid: 27
+    reason: Missing output files: qc/3mapped/RNA-GLY-1-map_fastqc.html; Input files updated by another job: sammulti/RNA-GLY-1.sam
+    wildcards: method=RNA, condition=GLY, replicate=1
+    threads: 8
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+mkdir -p qc/3mapped; fastqc -o qc/3mapped -t 8 -f sam_mapped sammulti/RNA-GLY-1.sam; mv qc/3mapped/RNA-GLY-1_fastqc.html qc/3mapped/RNA-GLY-1-map_fastqc.html; mv qc/3mapped/RNA-GLY-1_fastqc.zip qc/3mapped/RNA-GLY-1-map_fastqc.zip
+
+[Tue Sep 15 20:41:50 2026]
+localrule fastqcmulti:
+    input: sammulti/RIBO-GLY-1.sam
+    output: qc/3mapped/RIBO-GLY-1-map_fastqc.html, qc/3mapped/RIBO-GLY-1-map_fastqc.zip
+    jobid: 26
+    reason: Missing output files: qc/3mapped/RIBO-GLY-1-map_fastqc.html; Input files updated by another job: sammulti/RIBO-GLY-1.sam
+    wildcards: method=RIBO, condition=GLY, replicate=1
+    threads: 8
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+mkdir -p qc/3mapped; fastqc -o qc/3mapped -t 8 -f sam_mapped sammulti/RIBO-GLY-1.sam; mv qc/3mapped/RIBO-GLY-1_fastqc.html qc/3mapped/RIBO-GLY-1-map_fastqc.html; mv qc/3mapped/RIBO-GLY-1_fastqc.zip qc/3mapped/RIBO-GLY-1-map_fastqc.zip
+
+[Tue Sep 15 20:41:50 2026]
+localrule unambigousAnnotation:
+    input: auxiliary/enriched_annotation.gff
+    output: auxiliary/unambigous_annotation.gff
+    jobid: 38
+    reason: Missing output files: auxiliary/unambigous_annotation.gff; Input files updated by another job: auxiliary/enriched_annotation.gff
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+
+        mkdir -p auxiliary;
+        awk -F'\t' '/^[^#]/ {printf "%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\tID=uid%s;\n", $1, $2, $3, $4, $5, $6, $7, $8, NR-1}' auxiliary/enriched_annotation.gff > auxiliary/unambigous_annotation.gff
+        
+
+[Tue Sep 15 20:41:50 2026]
+localrule sammultitobam:
+    input: sammulti/RNA-GLY-1.sam
+    output: bammulti/RNA-GLY-1.bam
+    jobid: 46
+    reason: Missing output files: bammulti/RNA-GLY-1.bam; Input files updated by another job: sammulti/RNA-GLY-1.sam
+    wildcards: method=RNA, condition=GLY, replicate=1
+    threads: 8
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+mkdir -p bammulti; samtools view -@ 8 -bh sammulti/RNA-GLY-1.sam | samtools sort -@ 8 -o bammulti/RNA-GLY-1.bam -O bam
+
+[Tue Sep 15 20:41:50 2026]
+localrule sammultitobam:
+    input: sammulti/RIBO-GLY-1.sam
+    output: bammulti/RIBO-GLY-1.bam
+    jobid: 44
+    reason: Missing output files: bammulti/RIBO-GLY-1.bam; Input files updated by another job: sammulti/RIBO-GLY-1.sam
+    wildcards: method=RIBO, condition=GLY, replicate=1
+    threads: 8
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+mkdir -p bammulti; samtools view -@ 8 -bh sammulti/RIBO-GLY-1.sam | samtools sort -@ 8 -o bammulti/RIBO-GLY-1.bam -O bam
+
+[Tue Sep 15 20:41:50 2026]
+localrule samuniq:
+    input: sammulti/RIBO-GLY-1.sam
+    output: sam/RIBO-GLY-1.rawsam
+    jobid: 6
+    reason: Missing output files: sam/RIBO-GLY-1.rawsam; Input files updated by another job: sammulti/RIBO-GLY-1.sam
+    wildcards: method=RIBO, condition=GLY, replicate=1
+    threads: 8
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+
+        set +e
+        mkdir -p sam
+        awk '$2 != "4"' sammulti/RIBO-GLY-1.sam > sammulti/RIBO-GLY-1.sam.mapped
+        samtools view -H <(cat sammulti/RIBO-GLY-1.sam) | grep '@HD' > sam/RIBO-GLY-1.rawsam
+        samtools view -H <(cat sammulti/RIBO-GLY-1.sam) | grep '@SQ' | sort -t$'	' -k1,1 -k2,2V >> sam/RIBO-GLY-1.rawsam
+        samtools view -H <(cat sammulti/RIBO-GLY-1.sam) | grep '@RG' >> sam/RIBO-GLY-1.rawsam
+        samtools view -H <(cat sammulti/RIBO-GLY-1.sam) | grep '@PG' >> sam/RIBO-GLY-1.rawsam
+        cat sammulti/RIBO-GLY-1.sam.mapped |grep -v '^@' | grep -w 'NH:i:1' >> sam/RIBO-GLY-1.rawsam
+        exitcode=$?
+        if [ $exitcode -eq 1 ]
+        then
+            exit 1
+        else
+            exit 0
+        fi
+        
+Would remove temporary output sammulti/RNA-GLY-1.sam
+Would remove temporary output sammulti/RIBO-GLY-1.sam
+Execute 6 jobs...
+
+[Tue Sep 15 20:41:50 2026]
+localrule samstrandswap:
+    input: sam/RIBO-GLY-1.rawsam
+    output: sam/RIBO-GLY-1.sam
+    jobid: 5
+    reason: Missing output files: sam/RIBO-GLY-1.sam; Input files updated by another job: sam/RIBO-GLY-1.rawsam
+    wildcards: method=RIBO, condition=GLY, replicate=1
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+if [ "RIBO" == "NOTSET" ]; then HRIBO/scripts/sam_strand_inverter.py --sam_in_filepath=sam/RIBO-GLY-1.rawsam --sam_out_filepath=sam/RIBO-GLY-1.sam; else cp sam/RIBO-GLY-1.rawsam sam/RIBO-GLY-1.sam; fi
+
+[Tue Sep 15 20:41:50 2026]
+localrule totalmappedbamindex:
+    input: bammulti/RIBO-GLY-1.bam, genomes/sizes.genome
+    output: bammulti/RIBO-GLY-1.bam.bai
+    jobid: 58
+    reason: Missing output files: bammulti/RIBO-GLY-1.bam.bai; Input files updated by another job: bammulti/RIBO-GLY-1.bam, genomes/sizes.genome
+    wildcards: method=RIBO, condition=GLY, replicate=1
+    threads: 8
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+samtools index -@ 8 bammulti/RIBO-GLY-1.bam
+
+[Tue Sep 15 20:41:50 2026]
+localrule rrnatotalfeaturescounts:
+    input: auxiliary/unambigous_annotation.gff, bammulti/RIBO-GLY-1.bam
+    output: qc/rrnainallaligned/RIBO-GLY-1.txt
+    jobid: 43
+    reason: Missing output files: qc/rrnainallaligned/RIBO-GLY-1.txt; Input files updated by another job: auxiliary/unambigous_annotation.gff, bammulti/RIBO-GLY-1.bam
+    wildcards: method=RIBO, condition=GLY, replicate=1
+    threads: 8
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+
+        mkdir -p qc/rrnainallaligned;
+        column3=$(cut -f3 auxiliary/unambigous_annotation.gff | sort | uniq)
+        if [[ " ${column3[@]} " =~ "rRNA" ]];
+        then
+            featureCounts -T 8 -t rRNA -g ID -a auxiliary/unambigous_annotation.gff -o qc/rrnainallaligned/RIBO-GLY-1.txt bammulti/RIBO-GLY-1.bam;
+        else
+            touch qc/rrnainallaligned/RIBO-GLY-1.txt;
+        fi
+        
+
+[Tue Sep 15 20:41:50 2026]
+localrule rrnatotalfeaturescounts:
+    input: auxiliary/unambigous_annotation.gff, bammulti/RNA-GLY-1.bam
+    output: qc/rrnainallaligned/RNA-GLY-1.txt
+    jobid: 45
+    reason: Missing output files: qc/rrnainallaligned/RNA-GLY-1.txt; Input files updated by another job: auxiliary/unambigous_annotation.gff, bammulti/RNA-GLY-1.bam
+    wildcards: method=RNA, condition=GLY, replicate=1
+    threads: 8
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+
+        mkdir -p qc/rrnainallaligned;
+        column3=$(cut -f3 auxiliary/unambigous_annotation.gff | sort | uniq)
+        if [[ " ${column3[@]} " =~ "rRNA" ]];
+        then
+            featureCounts -T 8 -t rRNA -g ID -a auxiliary/unambigous_annotation.gff -o qc/rrnainallaligned/RNA-GLY-1.txt bammulti/RNA-GLY-1.bam;
+        else
+            touch qc/rrnainallaligned/RNA-GLY-1.txt;
+        fi
+        
+
+[Tue Sep 15 20:41:50 2026]
+localrule samstrandswap:
+    input: sam/RNA-GLY-1.rawsam
+    output: sam/RNA-GLY-1.sam
+    jobid: 31
+    reason: Missing output files: sam/RNA-GLY-1.sam; Input files updated by another job: sam/RNA-GLY-1.rawsam
+    wildcards: method=RNA, condition=GLY, replicate=1
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+if [ "RNA" == "NOTSET" ]; then HRIBO/scripts/sam_strand_inverter.py --sam_in_filepath=sam/RNA-GLY-1.rawsam --sam_out_filepath=sam/RNA-GLY-1.sam; else cp sam/RNA-GLY-1.rawsam sam/RNA-GLY-1.sam; fi
+
+[Tue Sep 15 20:41:50 2026]
+localrule totalmappedbamindex:
+    input: bammulti/RNA-GLY-1.bam, genomes/sizes.genome
+    output: bammulti/RNA-GLY-1.bam.bai
+    jobid: 59
+    reason: Missing output files: bammulti/RNA-GLY-1.bam.bai; Input files updated by another job: bammulti/RNA-GLY-1.bam, genomes/sizes.genome
+    wildcards: method=RNA, condition=GLY, replicate=1
+    threads: 8
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+samtools index -@ 8 bammulti/RNA-GLY-1.bam
+Would remove temporary output sam/RIBO-GLY-1.rawsam
+Would remove temporary output sam/RNA-GLY-1.rawsam
+Execute 6 jobs...
+
+[Tue Sep 15 20:41:50 2026]
+localrule samtobam:
+    input: sam/RIBO-GLY-1.sam
+    output: rRNAbam/RIBO-GLY-1.bam
+    jobid: 4
+    reason: Missing output files: rRNAbam/RIBO-GLY-1.bam; Input files updated by another job: sam/RIBO-GLY-1.sam
+    wildcards: method=RIBO, condition=GLY, replicate=1
+    threads: 8
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+mkdir -p rRNAbam; samtools view -@ 8 -bh sam/RIBO-GLY-1.sam | samtools sort -@ 8 -o rRNAbam/RIBO-GLY-1.bam -O bam
+
+[Tue Sep 15 20:41:50 2026]
+localrule generateAnnotationTotalReadCounts:
+    input: bammulti/RIBO-GLY-1.bam, bammulti/RNA-GLY-1.bam, bammulti/RIBO-GLY-1.bam.bai, bammulti/RNA-GLY-1.bam.bai, auxiliary/unambigous_annotation.gff
+    output: readcounts/annotation_total_reads.raw
+    jobid: 61
+    reason: Missing output files: readcounts/annotation_total_reads.raw; Input files updated by another job: bammulti/RIBO-GLY-1.bam.bai, bammulti/RNA-GLY-1.bam.bai, bammulti/RNA-GLY-1.bam, bammulti/RIBO-GLY-1.bam, auxiliary/unambigous_annotation.gff
+    threads: 5
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+
+        mkdir -p readcounts
+        HRIBO/scripts/call_featurecounts.py -b bammulti/RIBO-GLY-1.bam bammulti/RNA-GLY-1.bam -s 1 --with_O --with_M --fraction -o readcounts/annotation_total_reads.raw -t 5 -a auxiliary/unambigous_annotation.gff
+        
+
+[Tue Sep 15 20:41:50 2026]
+localrule fastqcunique:
+    input: sam/RIBO-GLY-1.sam
+    output: qc/4unique/RIBO-GLY-1-map_fastqc.html, qc/4unique/RIBO-GLY-1-map_fastqc.zip
+    jobid: 29
+    reason: Missing output files: qc/4unique/RIBO-GLY-1-map_fastqc.html; Input files updated by another job: sam/RIBO-GLY-1.sam
+    wildcards: method=RIBO, condition=GLY, replicate=1
+    threads: 8
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+mkdir -p qc/4unique; fastqc -o qc/4unique -t 8 -f sam_mapped sam/RIBO-GLY-1.sam; mv qc/4unique/RIBO-GLY-1_fastqc.html qc/4unique/RIBO-GLY-1-map_fastqc.html; mv qc/4unique/RIBO-GLY-1_fastqc.zip qc/4unique/RIBO-GLY-1-map_fastqc.zip
+
+[Tue Sep 15 20:41:50 2026]
+localrule samtobam:
+    input: sam/RNA-GLY-1.sam
+    output: rRNAbam/RNA-GLY-1.bam
+    jobid: 36
+    reason: Missing output files: rRNAbam/RNA-GLY-1.bam; Input files updated by another job: sam/RNA-GLY-1.sam
+    wildcards: method=RNA, condition=GLY, replicate=1
+    threads: 8
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+mkdir -p rRNAbam; samtools view -@ 8 -bh sam/RNA-GLY-1.sam | samtools sort -@ 8 -o rRNAbam/RNA-GLY-1.bam -O bam
+
+[Tue Sep 15 20:41:50 2026]
+localrule totalMappedReads:
+    input: bammulti/RIBO-GLY-1.bam, bammulti/RNA-GLY-1.bam, bammulti/RIBO-GLY-1.bam.bai, bammulti/RNA-GLY-1.bam.bai
+    output: readcounts/total_mapped_reads.txt, readcounts/total_average_read_lengths.txt
+    jobid: 57
+    reason: Missing output files: readcounts/total_mapped_reads.txt; Input files updated by another job: bammulti/RIBO-GLY-1.bam.bai, bammulti/RNA-GLY-1.bam.bai, bammulti/RNA-GLY-1.bam, bammulti/RIBO-GLY-1.bam
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+mkdir -p readcounts; HRIBO/scripts/total_mapped_reads.py -b bammulti/RIBO-GLY-1.bam bammulti/RNA-GLY-1.bam -m readcounts/total_mapped_reads.txt -l readcounts/total_average_read_lengths.txt
+
+[Tue Sep 15 20:41:50 2026]
+localrule fastqcunique:
+    input: sam/RNA-GLY-1.sam
+    output: qc/4unique/RNA-GLY-1-map_fastqc.html, qc/4unique/RNA-GLY-1-map_fastqc.zip
+    jobid: 30
+    reason: Missing output files: qc/4unique/RNA-GLY-1-map_fastqc.html; Input files updated by another job: sam/RNA-GLY-1.sam
+    wildcards: method=RNA, condition=GLY, replicate=1
+    threads: 8
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+mkdir -p qc/4unique; fastqc -o qc/4unique -t 8 -f sam_mapped sam/RNA-GLY-1.sam; mv qc/4unique/RNA-GLY-1_fastqc.html qc/4unique/RNA-GLY-1-map_fastqc.html; mv qc/4unique/RNA-GLY-1_fastqc.zip qc/4unique/RNA-GLY-1-map_fastqc.zip
+Would remove temporary output sam/RIBO-GLY-1.sam
+Would remove temporary output bammulti/RIBO-GLY-1.bam
+Would remove temporary output bammulti/RNA-GLY-1.bam
+Would remove temporary output bammulti/RIBO-GLY-1.bam.bai
+Would remove temporary output bammulti/RNA-GLY-1.bam.bai
+Would remove temporary output sam/RNA-GLY-1.sam
+Execute 7 jobs...
+
+[Tue Sep 15 20:41:50 2026]
+localrule rrnafilter2:
+    input: rRNAbam/RIBO-GLY-1.bam, annotation/rrna.bed
+    output: bam/RIBO-GLY-1.bam
+    jobid: 3
+    reason: Missing output files: bam/RIBO-GLY-1.bam; Input files updated by another job: annotation/rrna.bed, rRNAbam/RIBO-GLY-1.bam
+    wildcards: method=RIBO, condition=GLY, replicate=1
+    threads: 8
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+mkdir -p norRNA; mkdir -p mapuniqnorrna; bedtools intersect -v -a rRNAbam/RIBO-GLY-1.bam -b annotation/rrna.bed > bam/RIBO-GLY-1.bam
+
+[Tue Sep 15 20:41:50 2026]
+localrule rrnafilter2:
+    input: rRNAbam/RNA-GLY-1.bam, annotation/rrna.bed
+    output: bam/RNA-GLY-1.bam
+    jobid: 35
+    reason: Missing output files: bam/RNA-GLY-1.bam; Input files updated by another job: rRNAbam/RNA-GLY-1.bam, annotation/rrna.bed
+    wildcards: method=RNA, condition=GLY, replicate=1
+    threads: 8
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+mkdir -p norRNA; mkdir -p mapuniqnorrna; bedtools intersect -v -a rRNAbam/RNA-GLY-1.bam -b annotation/rrna.bed > bam/RNA-GLY-1.bam
+
+[Tue Sep 15 20:41:50 2026]
+localrule rrnauniquefeaturescounts:
+    input: auxiliary/unambigous_annotation.gff, rRNAbam/RIBO-GLY-1.bam
+    output: qc/rrnainuniquelyaligned/RIBO-GLY-1.txt
+    jobid: 47
+    reason: Missing output files: qc/rrnainuniquelyaligned/RIBO-GLY-1.txt; Input files updated by another job: auxiliary/unambigous_annotation.gff, rRNAbam/RIBO-GLY-1.bam
+    wildcards: method=RIBO, condition=GLY, replicate=1
+    threads: 8
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+
+        mkdir -p qc/rrnainuniquelyaligned;
+        column3=$(cut -f3 auxiliary/unambigous_annotation.gff | sort | uniq)
+        if [[ " ${column3[@]} " =~ "rRNA" ]];
+        then
+            featureCounts -T 8 -t rRNA -g ID -a auxiliary/unambigous_annotation.gff -o qc/rrnainuniquelyaligned/RIBO-GLY-1.txt rRNAbam/RIBO-GLY-1.bam;
+        else
+            touch qc/rrnainuniquelyaligned/RIBO-GLY-1.txt;
+        fi
+        
+
+[Tue Sep 15 20:41:50 2026]
+localrule uniquemappedbamindex:
+    input: rRNAbam/RIBO-GLY-1.bam, genomes/sizes.genome
+    output: rRNAbam/RIBO-GLY-1.bam.bai
+    jobid: 64
+    reason: Missing output files: rRNAbam/RIBO-GLY-1.bam.bai; Input files updated by another job: rRNAbam/RIBO-GLY-1.bam, genomes/sizes.genome
+    wildcards: method=RIBO, condition=GLY, replicate=1
+    threads: 8
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+samtools index -@ 8 rRNAbam/RIBO-GLY-1.bam
+
+[Tue Sep 15 20:41:50 2026]
+localrule rrnauniquefeaturescounts:
+    input: auxiliary/unambigous_annotation.gff, rRNAbam/RNA-GLY-1.bam
+    output: qc/rrnainuniquelyaligned/RNA-GLY-1.txt
+    jobid: 48
+    reason: Missing output files: qc/rrnainuniquelyaligned/RNA-GLY-1.txt; Input files updated by another job: rRNAbam/RNA-GLY-1.bam, auxiliary/unambigous_annotation.gff
+    wildcards: method=RNA, condition=GLY, replicate=1
+    threads: 8
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+
+        mkdir -p qc/rrnainuniquelyaligned;
+        column3=$(cut -f3 auxiliary/unambigous_annotation.gff | sort | uniq)
+        if [[ " ${column3[@]} " =~ "rRNA" ]];
+        then
+            featureCounts -T 8 -t rRNA -g ID -a auxiliary/unambigous_annotation.gff -o qc/rrnainuniquelyaligned/RNA-GLY-1.txt rRNAbam/RNA-GLY-1.bam;
+        else
+            touch qc/rrnainuniquelyaligned/RNA-GLY-1.txt;
+        fi
+        
+
+[Tue Sep 15 20:41:50 2026]
+localrule mapTotalReads:
+    input: readcounts/annotation_total_reads.raw, auxiliary/enriched_annotation.gff
+    output: readcounts/total_annotation.gtf
+    jobid: 60
+    reason: Missing output files: readcounts/total_annotation.gtf; Input files updated by another job: readcounts/annotation_total_reads.raw, auxiliary/enriched_annotation.gff
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+
+        mkdir -p readcounts; HRIBO/scripts/map_reads_to_annotation.py -i readcounts/annotation_total_reads.raw -a auxiliary/enriched_annotation.gff -o readcounts/total_annotation.gtf
+        
+
+[Tue Sep 15 20:41:50 2026]
+localrule uniquemappedbamindex:
+    input: rRNAbam/RNA-GLY-1.bam, genomes/sizes.genome
+    output: rRNAbam/RNA-GLY-1.bam.bai
+    jobid: 65
+    reason: Missing output files: rRNAbam/RNA-GLY-1.bam.bai; Input files updated by another job: rRNAbam/RNA-GLY-1.bam, genomes/sizes.genome
+    wildcards: method=RNA, condition=GLY, replicate=1
+    threads: 8
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+samtools index -@ 8 rRNAbam/RNA-GLY-1.bam
+Execute 14 jobs...
+
+[Tue Sep 15 20:41:50 2026]
+localrule norrnafeaturescounts:
+    input: auxiliary/unambigous_annotation.gff, bam/RIBO-GLY-1.bam
+    output: qc/rrnainall/RIBO-GLY-1.txt
+    jobid: 49
+    reason: Missing output files: qc/rrnainall/RIBO-GLY-1.txt; Input files updated by another job: auxiliary/unambigous_annotation.gff, bam/RIBO-GLY-1.bam
+    wildcards: method=RIBO, condition=GLY, replicate=1
+    threads: 8
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+
+        mkdir -p qc/rrnainall;
+        column3=$(cut -f3 auxiliary/unambigous_annotation.gff | sort | uniq)
+        if [[ " ${column3[@]} " =~ "rRNA" ]];
+        then
+            featureCounts -T 8 -t rRNA -g ID -a auxiliary/unambigous_annotation.gff -o qc/rrnainall/RIBO-GLY-1.txt bam/RIBO-GLY-1.bam;
+        else
+            touch qc/rrnainall/RIBO-GLY-1.txt;
+        fi
+        
+
+[Tue Sep 15 20:41:50 2026]
+localrule fastqcrrnafilter:
+    input: bam/RNA-GLY-1.bam
+    output: qc/5removedrRNA/RNA-GLY-1-norRNA_fastqc.html, qc/5removedrRNA/RNA-GLY-1-norRNA_fastqc.zip
+    jobid: 34
+    reason: Missing output files: qc/5removedrRNA/RNA-GLY-1-norRNA_fastqc.html; Input files updated by another job: bam/RNA-GLY-1.bam
+    wildcards: method=RNA, condition=GLY, replicate=1
+    threads: 8
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+mkdir -p qc/5removedrRNA; fastqc -o qc/5removedrRNA -t 8 bam/RNA-GLY-1.bam; mv qc/5removedrRNA/RNA-GLY-1_fastqc.html qc/5removedrRNA/RNA-GLY-1-norRNA_fastqc.html; mv qc/5removedrRNA/RNA-GLY-1_fastqc.zip qc/5removedrRNA/RNA-GLY-1-norRNA_fastqc.zip
+
+[Tue Sep 15 20:41:50 2026]
+localrule trnafeaturescounts:
+    input: auxiliary/unambigous_annotation.gff, bam/RNA-GLY-1.bam
+    output: qc/trnainall/RNA-GLY-1.txt
+    jobid: 42
+    reason: Missing output files: qc/trnainall/RNA-GLY-1.txt; Input files updated by another job: auxiliary/unambigous_annotation.gff, bam/RNA-GLY-1.bam
+    wildcards: method=RNA, condition=GLY, replicate=1
+    threads: 8
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+
+        mkdir -p qc/trnainall;
+        column3=$(cut -f3 auxiliary/unambigous_annotation.gff | sort | uniq)
+        if [[ " ${column3[@]} " =~ "tRNA" ]];
+        then
+            featureCounts -T 8 -t tRNA -g ID -a auxiliary/unambigous_annotation.gff -o qc/trnainall/RNA-GLY-1.txt bam/RNA-GLY-1.bam;
+        else
+            touch qc/trnainall/RNA-GLY-1.txt;
+        fi
+        
+
+[Tue Sep 15 20:41:50 2026]
+localrule norrnafeaturescounts:
+    input: auxiliary/unambigous_annotation.gff, bam/RNA-GLY-1.bam
+    output: qc/rrnainall/RNA-GLY-1.txt
+    jobid: 50
+    reason: Missing output files: qc/rrnainall/RNA-GLY-1.txt; Input files updated by another job: auxiliary/unambigous_annotation.gff, bam/RNA-GLY-1.bam
+    wildcards: method=RNA, condition=GLY, replicate=1
+    threads: 8
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+
+        mkdir -p qc/rrnainall;
+        column3=$(cut -f3 auxiliary/unambigous_annotation.gff | sort | uniq)
+        if [[ " ${column3[@]} " =~ "rRNA" ]];
+        then
+            featureCounts -T 8 -t rRNA -g ID -a auxiliary/unambigous_annotation.gff -o qc/rrnainall/RNA-GLY-1.txt bam/RNA-GLY-1.bam;
+        else
+            touch qc/rrnainall/RNA-GLY-1.txt;
+        fi
+        
+
+[Tue Sep 15 20:41:50 2026]
+localrule uniqueMappedReads:
+    input: rRNAbam/RIBO-GLY-1.bam, rRNAbam/RNA-GLY-1.bam, rRNAbam/RIBO-GLY-1.bam.bai, rRNAbam/RNA-GLY-1.bam.bai
+    output: readcounts/unique_mapped_reads.txt, readcounts/unique_average_read_lengths.txt
+    jobid: 63
+    reason: Missing output files: readcounts/unique_mapped_reads.txt; Input files updated by another job: rRNAbam/RNA-GLY-1.bam, rRNAbam/RNA-GLY-1.bam.bai, rRNAbam/RIBO-GLY-1.bam.bai, rRNAbam/RIBO-GLY-1.bam
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+mkdir -p readcounts; HRIBO/scripts/total_mapped_reads.py -b rRNAbam/RIBO-GLY-1.bam rRNAbam/RNA-GLY-1.bam -m readcounts/unique_mapped_reads.txt -l readcounts/unique_average_read_lengths.txt
+
+[Tue Sep 15 20:41:50 2026]
+localrule maplink:
+    input: bam/RIBO-GLY-1.bam
+    output: maplink/RIBO-GLY-1.bam
+    jobid: 2
+    reason: Missing output files: maplink/RIBO-GLY-1.bam; Input files updated by another job: bam/RIBO-GLY-1.bam
+    wildcards: method=RIBO, condition=GLY, replicate=1
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+mkdir -p maplink; ln -s /home/qasim/hribo_work/pao1/bam/RIBO-GLY-1.bam /home/qasim/hribo_work/pao1/maplink/RIBO-GLY-1.bam
+
+[Tue Sep 15 20:41:50 2026]
+localrule createExcelTotalAnnotationReadCount:
+    input: readcounts/total_annotation.gtf, readcounts/total_mapped_reads.txt
+    output: auxiliary/total_read_counts.xlsx
+    jobid: 68
+    reason: Missing output files: auxiliary/total_read_counts.xlsx; Input files updated by another job: readcounts/total_annotation.gtf, readcounts/total_mapped_reads.txt
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+mkdir -p auxiliary; HRIBO/scripts/generate_read_table.py -r readcounts/total_annotation.gtf -t readcounts/total_mapped_reads.txt -o auxiliary/total_read_counts.xlsx
+
+[Tue Sep 15 20:41:50 2026]
+localrule featurescounts:
+    input: auxiliary/unambigous_annotation.gff, bam/RIBO-GLY-1.bam
+    output: qc/all/RIBO-GLY-1.txt
+    jobid: 37
+    reason: Missing output files: qc/all/RIBO-GLY-1.txt; Input files updated by another job: auxiliary/unambigous_annotation.gff, bam/RIBO-GLY-1.bam
+    wildcards: method=RIBO, condition=GLY, replicate=1
+    threads: 8
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+
+        mkdir -p qc/all;
+        column3=$(cut -f3 auxiliary/unambigous_annotation.gff | sort | uniq)
+        if [[ " ${column3[@]} " =~ "gene" ]];
+        then
+            featureCounts -T 8 -t gene -g ID -a auxiliary/unambigous_annotation.gff -o qc/all/RIBO-GLY-1.txt bam/RIBO-GLY-1.bam;
+        else
+            touch qc/all/RIBO-GLY-1.txt;
+        fi
+        
+
+[Tue Sep 15 20:41:50 2026]
+localrule createExcelTotalAnnotation:
+    input: readcounts/total_mapped_reads.txt, readcounts/total_annotation.gtf, genomes/genome.fa
+    output: auxiliary/annotation_total.xlsx
+    jobid: 56
+    reason: Missing output files: auxiliary/annotation_total.xlsx; Input files updated by another job: genomes/genome.fa, readcounts/total_annotation.gtf, readcounts/total_mapped_reads.txt
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+mkdir -p auxiliary; HRIBO/scripts/generate_excel.py -t readcounts/total_mapped_reads.txt -r readcounts/total_annotation.gtf -g genomes/genome.fa -o auxiliary/annotation_total.xlsx
+
+[Tue Sep 15 20:41:50 2026]
+localrule featurescounts:
+    input: auxiliary/unambigous_annotation.gff, bam/RNA-GLY-1.bam
+    output: qc/all/RNA-GLY-1.txt
+    jobid: 40
+    reason: Missing output files: qc/all/RNA-GLY-1.txt; Input files updated by another job: auxiliary/unambigous_annotation.gff, bam/RNA-GLY-1.bam
+    wildcards: method=RNA, condition=GLY, replicate=1
+    threads: 8
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+
+        mkdir -p qc/all;
+        column3=$(cut -f3 auxiliary/unambigous_annotation.gff | sort | uniq)
+        if [[ " ${column3[@]} " =~ "gene" ]];
+        then
+            featureCounts -T 8 -t gene -g ID -a auxiliary/unambigous_annotation.gff -o qc/all/RNA-GLY-1.txt bam/RNA-GLY-1.bam;
+        else
+            touch qc/all/RNA-GLY-1.txt;
+        fi
+        
+
+[Tue Sep 15 20:41:50 2026]
+localrule maplink:
+    input: bam/RNA-GLY-1.bam
+    output: maplink/RNA-GLY-1.bam
+    jobid: 73
+    reason: Missing output files: maplink/RNA-GLY-1.bam; Input files updated by another job: bam/RNA-GLY-1.bam
+    wildcards: method=RNA, condition=GLY, replicate=1
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+mkdir -p maplink; ln -s /home/qasim/hribo_work/pao1/bam/RNA-GLY-1.bam /home/qasim/hribo_work/pao1/maplink/RNA-GLY-1.bam
+
+[Tue Sep 15 20:41:50 2026]
+localrule trnafeaturescounts:
+    input: auxiliary/unambigous_annotation.gff, bam/RIBO-GLY-1.bam
+    output: qc/trnainall/RIBO-GLY-1.txt
+    jobid: 41
+    reason: Missing output files: qc/trnainall/RIBO-GLY-1.txt; Input files updated by another job: auxiliary/unambigous_annotation.gff, bam/RIBO-GLY-1.bam
+    wildcards: method=RIBO, condition=GLY, replicate=1
+    threads: 8
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+
+        mkdir -p qc/trnainall;
+        column3=$(cut -f3 auxiliary/unambigous_annotation.gff | sort | uniq)
+        if [[ " ${column3[@]} " =~ "tRNA" ]];
+        then
+            featureCounts -T 8 -t tRNA -g ID -a auxiliary/unambigous_annotation.gff -o qc/trnainall/RIBO-GLY-1.txt bam/RIBO-GLY-1.bam;
+        else
+            touch qc/trnainall/RIBO-GLY-1.txt;
+        fi
+        
+
+[Tue Sep 15 20:41:50 2026]
+localrule generateAnnotationUniqueReadCounts:
+    input: rRNAbam/RIBO-GLY-1.bam, rRNAbam/RNA-GLY-1.bam, rRNAbam/RIBO-GLY-1.bam.bai, rRNAbam/RNA-GLY-1.bam.bai, auxiliary/unambigous_annotation.gff
+    output: readcounts/annotation_unique_reads.raw
+    jobid: 67
+    reason: Missing output files: readcounts/annotation_unique_reads.raw; Input files updated by another job: rRNAbam/RNA-GLY-1.bam.bai, rRNAbam/RIBO-GLY-1.bam.bai, rRNAbam/RIBO-GLY-1.bam, rRNAbam/RNA-GLY-1.bam, auxiliary/unambigous_annotation.gff
+    threads: 5
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+
+        mkdir -p auxiliary
+        HRIBO/scripts/call_featurecounts.py -b rRNAbam/RIBO-GLY-1.bam rRNAbam/RNA-GLY-1.bam -s 1 --with_O --fraction -o readcounts/annotation_unique_reads.raw -t 5 -a auxiliary/unambigous_annotation.gff
+        
+
+[Tue Sep 15 20:41:50 2026]
+localrule fastqcrrnafilter:
+    input: bam/RIBO-GLY-1.bam
+    output: qc/5removedrRNA/RIBO-GLY-1-norRNA_fastqc.html, qc/5removedrRNA/RIBO-GLY-1-norRNA_fastqc.zip
+    jobid: 33
+    reason: Missing output files: qc/5removedrRNA/RIBO-GLY-1-norRNA_fastqc.html; Input files updated by another job: bam/RIBO-GLY-1.bam
+    wildcards: method=RIBO, condition=GLY, replicate=1
+    threads: 8
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+mkdir -p qc/5removedrRNA; fastqc -o qc/5removedrRNA -t 8 bam/RIBO-GLY-1.bam; mv qc/5removedrRNA/RIBO-GLY-1_fastqc.html qc/5removedrRNA/RIBO-GLY-1-norRNA_fastqc.html; mv qc/5removedrRNA/RIBO-GLY-1_fastqc.zip qc/5removedrRNA/RIBO-GLY-1-norRNA_fastqc.zip
+Would remove temporary output rRNAbam/RIBO-GLY-1.bam
+Would remove temporary output rRNAbam/RNA-GLY-1.bam
+Would remove temporary output rRNAbam/RIBO-GLY-1.bam.bai
+Would remove temporary output rRNAbam/RNA-GLY-1.bam.bai
+Execute 4 jobs...
+
+[Tue Sep 15 20:41:50 2026]
+localrule multiqc:
+    input: qc/1raw/RIBO-GLY-1-raw_fastqc.html, qc/2trimmed/RIBO-GLY-1-trimmed_fastqc.html, trimmed/RIBO-GLY-1.fastq, qc/1raw/RNA-GLY-1-raw_fastqc.html, qc/2trimmed/RNA-GLY-1-trimmed_fastqc.html, trimmed/RNA-GLY-1.fastq, qc/3mapped/RIBO-GLY-1-map_fastqc.html, qc/3mapped/RNA-GLY-1-map_fastqc.html, qc/4unique/RIBO-GLY-1-map_fastqc.html, qc/4unique/RNA-GLY-1-map_fastqc.html, qc/5removedrRNA/RIBO-GLY-1-norRNA_fastqc.html, qc/5removedrRNA/RNA-GLY-1-norRNA_fastqc.html, qc/all/RIBO-GLY-1.txt, qc/all/RNA-GLY-1.txt, qc/trnainall/RIBO-GLY-1.txt, qc/trnainall/RNA-GLY-1.txt, qc/rrnainallaligned/RIBO-GLY-1.txt, qc/rrnainallaligned/RNA-GLY-1.txt, qc/rrnainuniquelyaligned/RIBO-GLY-1.txt, qc/rrnainuniquelyaligned/RNA-GLY-1.txt, qc/rrnainall/RIBO-GLY-1.txt, qc/rrnainall/RNA-GLY-1.txt
+    output: qc/multi/multiqc_report.html
+    log: logs/multiqc.log
+    jobid: 19
+    reason: Missing output files: qc/multi/multiqc_report.html; Input files updated by another job: qc/rrnainuniquelyaligned/RIBO-GLY-1.txt, qc/rrnainuniquelyaligned/RNA-GLY-1.txt, qc/all/RIBO-GLY-1.txt, qc/4unique/RIBO-GLY-1-map_fastqc.html, qc/4unique/RNA-GLY-1-map_fastqc.html, qc/rrnainallaligned/RNA-GLY-1.txt, qc/3mapped/RIBO-GLY-1-map_fastqc.html, qc/5removedrRNA/RNA-GLY-1-norRNA_fastqc.html, trimmed/RNA-GLY-1.fastq, qc/all/RNA-GLY-1.txt, qc/trnainall/RNA-GLY-1.txt, qc/2trimmed/RIBO-GLY-1-trimmed_fastqc.html, qc/1raw/RNA-GLY-1-raw_fastqc.html, trimmed/RIBO-GLY-1.fastq, qc/2trimmed/RNA-GLY-1-trimmed_fastqc.html, qc/3mapped/RNA-GLY-1-map_fastqc.html, qc/trnainall/RIBO-GLY-1.txt, qc/5removedrRNA/RIBO-GLY-1-norRNA_fastqc.html, qc/1raw/RIBO-GLY-1-raw_fastqc.html, qc/rrnainall/RNA-GLY-1.txt, qc/rrnainallaligned/RIBO-GLY-1.txt, qc/rrnainall/RIBO-GLY-1.txt
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+export LC_ALL=en_US.utf8; export LANG=en_US.utf8; multiqc -f -d --exclude picard --exclude gatk -z -o qc/multi qc/1raw qc/2trimmed qc/3mapped qc/4unique qc/5removedrRNA qc/all qc/trnainall qc/rrnainallaligned qc/rrnainuniquelyaligned qc/rrnainall 2> logs/multiqc.log
+
+[Tue Sep 15 20:41:50 2026]
+localrule bamindex:
+    input: maplink/RIBO-GLY-1.bam, genomes/sizes.genome
+    output: maplink/RIBO-GLY-1.bam.bai
+    jobid: 15
+    reason: Missing output files: maplink/RIBO-GLY-1.bam.bai; Input files updated by another job: maplink/RIBO-GLY-1.bam, genomes/sizes.genome
+    wildcards: method=RIBO, condition=GLY, replicate=1
+    threads: 8
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+samtools index -@ 8 maplink/RIBO-GLY-1.bam
+
+[Tue Sep 15 20:41:50 2026]
+localrule mapUniqueReads:
+    input: readcounts/annotation_unique_reads.raw, auxiliary/enriched_annotation.gff
+    output: readcounts/unique_annotation.gtf
+    jobid: 66
+    reason: Missing output files: readcounts/unique_annotation.gtf; Input files updated by another job: auxiliary/enriched_annotation.gff, readcounts/annotation_unique_reads.raw
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+
+        mkdir -p readcounts; HRIBO/scripts/map_reads_to_annotation.py -i readcounts/annotation_unique_reads.raw -a auxiliary/enriched_annotation.gff -o readcounts/unique_annotation.gtf
+        
+
+[Tue Sep 15 20:41:50 2026]
+localrule bamindex:
+    input: maplink/RNA-GLY-1.bam, genomes/sizes.genome
+    output: maplink/RNA-GLY-1.bam.bai
+    jobid: 74
+    reason: Missing output files: maplink/RNA-GLY-1.bam.bai; Input files updated by another job: maplink/RNA-GLY-1.bam, genomes/sizes.genome
+    wildcards: method=RNA, condition=GLY, replicate=1
+    threads: 8
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+samtools index -@ 8 maplink/RNA-GLY-1.bam
+Would remove temporary output trimmed/RIBO-GLY-1.fastq
+Would remove temporary output trimmed/RNA-GLY-1.fastq
+Execute 11 jobs...
+
+[Tue Sep 15 20:41:50 2026]
+localrule createExcelUniqueAnnotationReadCount:
+    input: readcounts/unique_annotation.gtf, readcounts/unique_mapped_reads.txt
+    output: auxiliary/unique_read_counts.xlsx
+    jobid: 69
+    reason: Missing output files: auxiliary/unique_read_counts.xlsx; Input files updated by another job: readcounts/unique_annotation.gtf, readcounts/unique_mapped_reads.txt
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+mkdir -p auxiliary; HRIBO/scripts/generate_read_table.py -r readcounts/unique_annotation.gtf -t readcounts/unique_mapped_reads.txt -o auxiliary/unique_read_counts.xlsx
+
+[Tue Sep 15 20:41:50 2026]
+localrule asiteOccupancy:
+    input: maplink/RIBO-GLY-1.bam, maplink/RIBO-GLY-1.bam.bai
+    output: coverage_deepribo/GLY-1_asite_fwd.bedgraph, coverage_deepribo/GLY-1_asite_rev.bedgraph
+    jobid: 158
+    reason: Missing output files: coverage_deepribo/GLY-1_asite_fwd.bedgraph, coverage_deepribo/GLY-1_asite_rev.bedgraph; Input files updated by another job: maplink/RIBO-GLY-1.bam.bai, maplink/RIBO-GLY-1.bam
+    wildcards: condition=GLY, replicate=1
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+mkdir -p coverage_deepribo; HRIBO/scripts/coverage_deepribo.py --alignment_file maplink/RIBO-GLY-1.bam --output_file_prefix coverage_deepribo/GLY-1
+
+[Tue Sep 15 20:41:50 2026]
+localrule readLengthStatistics:
+    input: maplink/RIBO-GLY-1.bam, maplink/RIBO-GLY-1.bam.bai
+    output: metageneprofiling/read_length_fractions.html, metageneprofiling/read_length_fractions.xlsx, metageneprofiling/read_length_counts.xlsx
+    log: logs/read_length_statistics.log
+    jobid: 18
+    reason: Missing output files: metageneprofiling/read_length_fractions.html; Input files updated by another job: maplink/RIBO-GLY-1.bam.bai, maplink/RIBO-GLY-1.bam
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+
+        mkdir -p metageneprofiling;
+        HRIBO/scripts/read_length_statistics.py -a maplink/RIBO-GLY-1.bam -r 10-80 -o metageneprofiling/ > logs/read_length_statistics.log
+        
+
+[Tue Sep 15 20:41:50 2026]
+localrule bamcompare:
+    input: maplink/RIBO-GLY-1.bam, maplink/RNA-GLY-1.bam, genomes/sizes.genome, maplink/RIBO-GLY-1.bam.bai, maplink/RNA-GLY-1.bam.bai
+    output: figures/results.npz
+    jobid: 72
+    reason: Missing output files: figures/results.npz; Input files updated by another job: maplink/RIBO-GLY-1.bam.bai, maplink/RIBO-GLY-1.bam, maplink/RNA-GLY-1.bam, maplink/RNA-GLY-1.bam.bai, genomes/sizes.genome
+    threads: 5
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+mkdir -p tracks; multiBamSummary bins --smartLabels --bamfiles maplink/RIBO-GLY-1.bam maplink/RNA-GLY-1.bam -o figures/results.npz -p 5;
+
+[Tue Sep 15 20:41:50 2026]
+localrule coverage:
+    input: maplink/RIBO-GLY-1.bam, maplink/RIBO-GLY-1.bam.bai
+    output: coverage_deepribo/GLY-1_cov_fwd.bedgraph, coverage_deepribo/GLY-1_cov_rev.bedgraph
+    jobid: 157
+    reason: Missing output files: coverage_deepribo/GLY-1_cov_rev.bedgraph, coverage_deepribo/GLY-1_cov_fwd.bedgraph; Input files updated by another job: maplink/RIBO-GLY-1.bam.bai, maplink/RIBO-GLY-1.bam
+    wildcards: condition=GLY, replicate=1
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+
+        mkdir -p coverage_deepribo
+        bedtools genomecov -bg -ibam maplink/RIBO-GLY-1.bam -strand + > coverage_deepribo/GLY-1_cov_fwd.bedgraph
+        bedtools genomecov -bg -ibam maplink/RIBO-GLY-1.bam -strand - > coverage_deepribo/GLY-1_cov_rev.bedgraph
+        
+
+[Tue Sep 15 20:41:50 2026]
+localrule maplinkMappedReads:
+    input: maplink/RIBO-GLY-1.bam, maplink/RNA-GLY-1.bam, maplink/RIBO-GLY-1.bam.bai, maplink/RNA-GLY-1.bam.bai
+    output: readcounts/bam_mapped_reads.txt, readcounts/bam_average_read_lengths.txt
+    jobid: 81
+    reason: Missing output files: readcounts/bam_mapped_reads.txt; Input files updated by another job: maplink/RIBO-GLY-1.bam.bai, maplink/RIBO-GLY-1.bam, maplink/RNA-GLY-1.bam, maplink/RNA-GLY-1.bam.bai
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+mkdir -p readcounts; HRIBO/scripts/total_mapped_reads.py -b maplink/RIBO-GLY-1.bam maplink/RNA-GLY-1.bam -m readcounts/bam_mapped_reads.txt -l readcounts/bam_average_read_lengths.txt
+
+[Tue Sep 15 20:41:50 2026]
+localrule generateDifferentialExpressionReadCounts:
+    input: maplink/RIBO-GLY-1.bam, maplink/RNA-GLY-1.bam, maplink/RIBO-GLY-1.bam.bai, maplink/RNA-GLY-1.bam.bai, auxiliary/unambigous_annotation.gff
+    output: readcounts/differential_expression_read_counts.csv
+    jobid: 78
+    reason: Missing output files: readcounts/differential_expression_read_counts.csv; Input files updated by another job: maplink/RIBO-GLY-1.bam.bai, maplink/RIBO-GLY-1.bam, maplink/RNA-GLY-1.bam, auxiliary/unambigous_annotation.gff, maplink/RNA-GLY-1.bam.bai
+    threads: 5
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+
+        if [ "CDS sRNA" == None ]; then
+            features="";
+        else
+            features="--use_features CDS sRNA";
+        fi;
+        mkdir -p readcounts
+        HRIBO/scripts/call_featurecounts.py -b maplink/RIBO-GLY-1.bam maplink/RNA-GLY-1.bam -s 1 --with_O --for_diff_expr -o readcounts/differential_expression_read_counts.csv -t 5 -a auxiliary/unambigous_annotation.gff ${features}
+        
+
+[Tue Sep 15 20:41:50 2026]
+localrule reparation:
+    input: genomes/genome.fa, annotation/annotation_processed.gff, uniprotDB/uniprot_sprot.fasta, bam/RIBO-GLY-1.bam, maplink/RIBO-GLY-1.bam.bai
+    output: reparation/GLY-1/Predicted_ORFs.txt, reparation/GLY-1/metagene_profile.pdf, reparation/GLY-1/PR_and_ROC_curve.pdf, reparation/GLY-1/p_site_offset.png, reparation/GLY-1/S_Curve.pdf
+    log: logs/GLY-1_reparation.log
+    jobid: 145
+    reason: Missing output files: reparation/GLY-1/Predicted_ORFs.txt; Input files updated by another job: maplink/RIBO-GLY-1.bam.bai, genomes/genome.fa, uniprotDB/uniprot_sprot.fasta, bam/RIBO-GLY-1.bam, annotation/annotation_processed.gff
+    wildcards: condition=GLY, replicate=1
+    threads: 8
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>, reparation_instances=1
+
+
+        mkdir -p reparation/GLY-1
+        mkdir -p reparation/GLY-1/tmp
+        reparation.pl -bam bam/RIBO-GLY-1.bam -g genomes/genome.fa -gtf annotation/annotation_processed.gff -db uniprotDB/uniprot_sprot.fasta -out reparation/GLY-1 -threads 8
+        
+
+[Tue Sep 15 20:41:50 2026]
+localrule generateAnnotationIndependantReadCounts:
+    input: maplink/RIBO-GLY-1.bam, maplink/RNA-GLY-1.bam, maplink/RIBO-GLY-1.bam.bai, maplink/RNA-GLY-1.bam.bai, auxiliary/unambigous_annotation.gff
+    output: readcounts/annotation_independant_read_counts.raw
+    jobid: 162
+    reason: Missing output files: readcounts/annotation_independant_read_counts.raw; Input files updated by another job: maplink/RIBO-GLY-1.bam.bai, maplink/RIBO-GLY-1.bam, maplink/RNA-GLY-1.bam, auxiliary/unambigous_annotation.gff, maplink/RNA-GLY-1.bam.bai
+    threads: 5
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+
+        mkdir -p readcounts
+        HRIBO/scripts/call_featurecounts.py -b maplink/RIBO-GLY-1.bam maplink/RNA-GLY-1.bam -s 1 --with_O -o readcounts/annotation_independant_read_counts.raw -t 5 -a auxiliary/unambigous_annotation.gff
+        
+
+[Tue Sep 15 20:41:50 2026]
+localrule metageneProfiling:
+    input: maplink/RIBO-GLY-1.bam, maplink/RIBO-GLY-1.bam.bai, genomes/genome.fa, annotation/annotation_processed.gff
+    output: metageneprofiling/RIBO-GLY-1
+    log: logs/RIBO-GLY-1_metageneprofiling.log
+    jobid: 1
+    reason: Missing output files: metageneprofiling/RIBO-GLY-1; Input files updated by another job: maplink/RIBO-GLY-1.bam.bai, maplink/RIBO-GLY-1.bam, genomes/genome.fa, annotation/annotation_processed.gff
+    wildcards: method=RIBO, condition=GLY, replicate=1
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+
+        mkdir -p metageneprofiling;
+        if [ nocolor == nocolor ]; then
+            colorList="";
+        else
+            colorList="--color_list nocolor";
+        fi;
+        HRIBO/scripts/metagene_profiling.py -b maplink/RIBO-GLY-1.bam -g genomes/genome.fa -a annotation/annotation_processed.gff -o metageneprofiling/RIBO-GLY-1             --read_lengths 25-34             --normalization_methods raw cpm window             --mapping_methods fiveprime threeprime             --positions_in_ORF 150             --positions_out_ORF 100             --filtering_method overlap length rpkm             --neighboring_genes_distance 50             --rpkm_threshold 10.0             --length_cutoff 50             --output_formats interactive svg             --include_plotly_js online             ${colorList}; > logs/RIBO-GLY-1_metageneprofiling.log
+        
+
+[Tue Sep 15 20:41:50 2026]
+localrule createExcelUniqueAnnotation:
+    input: readcounts/unique_mapped_reads.txt, readcounts/unique_annotation.gtf, genomes/genome.fa
+    output: auxiliary/annotation_unique.xlsx
+    jobid: 62
+    reason: Missing output files: auxiliary/annotation_unique.xlsx; Input files updated by another job: readcounts/unique_annotation.gtf, genomes/genome.fa, readcounts/unique_mapped_reads.txt
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+mkdir -p auxiliary; HRIBO/scripts/generate_excel.py -t readcounts/unique_mapped_reads.txt -r readcounts/unique_annotation.gtf -g genomes/genome.fa -o auxiliary/annotation_unique.xlsx
+Execute 13 jobs...
+
+[Tue Sep 15 20:41:50 2026]
+localrule threeprimewig:
+    input: maplink/RNA-GLY-1.bam, genomes/sizes.genome, maplink/RNA-GLY-1.bam.bai, readcounts/bam_mapped_reads.txt
+    output: threeprimetracks/raw/RNA-GLY-1.raw.forward.wig, threeprimetracks/raw/RNA-GLY-1.raw.reverse.wig, threeprimetracks/mil/RNA-GLY-1.mil.forward.wig, threeprimetracks/mil/RNA-GLY-1.mil.reverse.wig, threeprimetracks/min/RNA-GLY-1.min.forward.wig, threeprimetracks/min/RNA-GLY-1.min.reverse.wig
+    jobid: 125
+    reason: Missing output files: threeprimetracks/mil/RNA-GLY-1.mil.forward.wig, threeprimetracks/min/RNA-GLY-1.min.reverse.wig, threeprimetracks/mil/RNA-GLY-1.mil.reverse.wig, threeprimetracks/raw/RNA-GLY-1.raw.forward.wig, threeprimetracks/min/RNA-GLY-1.min.forward.wig, threeprimetracks/raw/RNA-GLY-1.raw.reverse.wig; Input files updated by another job: maplink/RNA-GLY-1.bam, maplink/RNA-GLY-1.bam.bai, readcounts/bam_mapped_reads.txt, genomes/sizes.genome
+    wildcards: method=RNA, condition=GLY, replicate=1
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+mkdir -p threeprimetracks; mkdir -p threeprimetracks/raw; mkdir -p threeprimetracks/mil; mkdir -p threeprimetracks/min; HRIBO/scripts/mapping.py --mapping_style last_base_only --bam_path maplink/RNA-GLY-1.bam --wiggle_file_path threeprimetracks/ --no_of_aligned_reads_file_path readcounts/bam_mapped_reads.txt --library_name RNA-GLY-1;
+
+[Tue Sep 15 20:41:50 2026]
+localrule parseDeepRibo:
+    input: coverage_deepribo/GLY-1_cov_fwd.bedgraph, coverage_deepribo/GLY-1_cov_rev.bedgraph, coverage_deepribo/GLY-1_asite_fwd.bedgraph, coverage_deepribo/GLY-1_asite_rev.bedgraph, genomes/genome.fa, annotation/annotation_processed.gff
+    output: deepribo/GLY-1/data_list.csv
+    jobid: 156
+    reason: Missing output files: deepribo/GLY-1/data_list.csv; Input files updated by another job: genomes/genome.fa, coverage_deepribo/GLY-1_asite_rev.bedgraph, coverage_deepribo/GLY-1_asite_fwd.bedgraph, annotation/annotation_processed.gff, coverage_deepribo/GLY-1_cov_rev.bedgraph, coverage_deepribo/GLY-1_cov_fwd.bedgraph
+    wildcards: condition=GLY, replicate=1
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+
+        mkdir -p deepribo/GLY-1/0/;
+        mkdir -p deepribo/GLY-1/1/;
+        DataParser.py coverage_deepribo/GLY-1_cov_fwd.bedgraph coverage_deepribo/GLY-1_cov_rev.bedgraph coverage_deepribo/GLY-1_asite_fwd.bedgraph coverage_deepribo/GLY-1_asite_rev.bedgraph genomes/genome.fa deepribo/GLY-1 -g annotation/annotation_processed.gff
+        
+
+[Tue Sep 15 20:41:50 2026]
+localrule fiveprimewig:
+    input: maplink/RNA-GLY-1.bam, genomes/sizes.genome, maplink/RNA-GLY-1.bam.bai, readcounts/bam_mapped_reads.txt
+    output: fiveprimetracks/raw/RNA-GLY-1.raw.forward.wig, fiveprimetracks/raw/RNA-GLY-1.raw.reverse.wig, fiveprimetracks/mil/RNA-GLY-1.mil.forward.wig, fiveprimetracks/mil/RNA-GLY-1.mil.reverse.wig, fiveprimetracks/min/RNA-GLY-1.min.forward.wig, fiveprimetracks/min/RNA-GLY-1.min.reverse.wig
+    jobid: 111
+    reason: Missing output files: fiveprimetracks/min/RNA-GLY-1.min.forward.wig, fiveprimetracks/mil/RNA-GLY-1.mil.forward.wig, fiveprimetracks/mil/RNA-GLY-1.mil.reverse.wig, fiveprimetracks/raw/RNA-GLY-1.raw.reverse.wig, fiveprimetracks/raw/RNA-GLY-1.raw.forward.wig, fiveprimetracks/min/RNA-GLY-1.min.reverse.wig; Input files updated by another job: maplink/RNA-GLY-1.bam, maplink/RNA-GLY-1.bam.bai, readcounts/bam_mapped_reads.txt, genomes/sizes.genome
+    wildcards: method=RNA, condition=GLY, replicate=1
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+mkdir -p fiveprimetracks; mkdir -p fiveprimetracks/raw; mkdir -p fiveprimetracks/mil; mkdir -p fiveprimetracks/min; HRIBO/scripts/mapping.py --mapping_style first_base_only --bam_path maplink/RNA-GLY-1.bam --wiggle_file_path fiveprimetracks/ --no_of_aligned_reads_file_path readcounts/bam_mapped_reads.txt --library_name RNA-GLY-1;
+
+[Tue Sep 15 20:41:50 2026]
+localrule mapIndependantReads:
+    input: readcounts/annotation_independant_read_counts.raw, annotation/annotation_processed.gff
+    output: readcounts/independant_annotation.gff
+    jobid: 161
+    reason: Missing output files: readcounts/independant_annotation.gff; Input files updated by another job: readcounts/annotation_independant_read_counts.raw, annotation/annotation_processed.gff
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+
+        mkdir -p readcounts; HRIBO/scripts/map_reads_to_annotation.py -i readcounts/annotation_independant_read_counts.raw -a annotation/annotation_processed.gff -o readcounts/independant_annotation.gff
+        
+
+[Tue Sep 15 20:41:50 2026]
+localrule plotCorrelation:
+    input: figures/results.npz
+    output: figures/heatmap_SpearmanCorr_readCounts.pdf
+    jobid: 71
+    reason: Missing output files: figures/heatmap_SpearmanCorr_readCounts.pdf; Input files updated by another job: figures/results.npz
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+mkdir -p figures; plotCorrelation -in figures/results.npz --corMethod spearman --skipZeros --plotTitle "Spearman Correlation of Read Counts" --whatToPlot heatmap --colorMap RdYlBu --plotNumbers -o figures/heatmap_SpearmanCorr_readCounts.pdf --outFileCorMatrix SpearmanCorr_readCounts.tab
+
+[Tue Sep 15 20:41:50 2026]
+localrule centeredwig:
+    input: maplink/RNA-GLY-1.bam, genomes/sizes.genome, maplink/RNA-GLY-1.bam.bai, readcounts/bam_mapped_reads.txt
+    output: centeredtracks/raw/RNA-GLY-1.raw.forward.wig, centeredtracks/raw/RNA-GLY-1.raw.reverse.wig, centeredtracks/mil/RNA-GLY-1.mil.forward.wig, centeredtracks/mil/RNA-GLY-1.mil.reverse.wig, centeredtracks/min/RNA-GLY-1.min.forward.wig, centeredtracks/min/RNA-GLY-1.min.reverse.wig
+    jobid: 97
+    reason: Missing output files: centeredtracks/min/RNA-GLY-1.min.reverse.wig, centeredtracks/mil/RNA-GLY-1.mil.forward.wig, centeredtracks/mil/RNA-GLY-1.mil.reverse.wig, centeredtracks/raw/RNA-GLY-1.raw.forward.wig, centeredtracks/raw/RNA-GLY-1.raw.reverse.wig, centeredtracks/min/RNA-GLY-1.min.forward.wig; Input files updated by another job: maplink/RNA-GLY-1.bam, maplink/RNA-GLY-1.bam.bai, readcounts/bam_mapped_reads.txt, genomes/sizes.genome
+    wildcards: method=RNA, condition=GLY, replicate=1
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+mkdir -p centeredtracks; mkdir -p centeredtracks/raw; mkdir -p centeredtracks/mil; mkdir -p centeredtracks/min; HRIBO/scripts/mapping.py --mapping_style centered --bam_path maplink/RNA-GLY-1.bam --wiggle_file_path centeredtracks/ --no_of_aligned_reads_file_path readcounts/bam_mapped_reads.txt --library_name RNA-GLY-1;
+
+[Tue Sep 15 20:41:50 2026]
+localrule threeprimewig:
+    input: maplink/RIBO-GLY-1.bam, genomes/sizes.genome, maplink/RIBO-GLY-1.bam.bai, readcounts/bam_mapped_reads.txt
+    output: threeprimetracks/raw/RIBO-GLY-1.raw.forward.wig, threeprimetracks/raw/RIBO-GLY-1.raw.reverse.wig, threeprimetracks/mil/RIBO-GLY-1.mil.forward.wig, threeprimetracks/mil/RIBO-GLY-1.mil.reverse.wig, threeprimetracks/min/RIBO-GLY-1.min.forward.wig, threeprimetracks/min/RIBO-GLY-1.min.reverse.wig
+    jobid: 123
+    reason: Missing output files: threeprimetracks/mil/RIBO-GLY-1.mil.reverse.wig, threeprimetracks/mil/RIBO-GLY-1.mil.forward.wig, threeprimetracks/min/RIBO-GLY-1.min.reverse.wig, threeprimetracks/raw/RIBO-GLY-1.raw.reverse.wig, threeprimetracks/min/RIBO-GLY-1.min.forward.wig, threeprimetracks/raw/RIBO-GLY-1.raw.forward.wig; Input files updated by another job: maplink/RIBO-GLY-1.bam.bai, maplink/RIBO-GLY-1.bam, readcounts/bam_mapped_reads.txt, genomes/sizes.genome
+    wildcards: method=RIBO, condition=GLY, replicate=1
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+mkdir -p threeprimetracks; mkdir -p threeprimetracks/raw; mkdir -p threeprimetracks/mil; mkdir -p threeprimetracks/min; HRIBO/scripts/mapping.py --mapping_style last_base_only --bam_path maplink/RIBO-GLY-1.bam --wiggle_file_path threeprimetracks/ --no_of_aligned_reads_file_path readcounts/bam_mapped_reads.txt --library_name RIBO-GLY-1;
+
+[Tue Sep 15 20:41:50 2026]
+localrule globalwig:
+    input: maplink/RIBO-GLY-1.bam, genomes/sizes.genome, maplink/RIBO-GLY-1.bam.bai, readcounts/bam_mapped_reads.txt
+    output: globaltracks/raw/RIBO-GLY-1.raw.forward.wig, globaltracks/raw/RIBO-GLY-1.raw.reverse.wig, globaltracks/mil/RIBO-GLY-1.mil.forward.wig, globaltracks/mil/RIBO-GLY-1.mil.reverse.wig, globaltracks/min/RIBO-GLY-1.min.forward.wig, globaltracks/min/RIBO-GLY-1.min.reverse.wig
+    jobid: 80
+    reason: Missing output files: globaltracks/min/RIBO-GLY-1.min.forward.wig, globaltracks/mil/RIBO-GLY-1.mil.forward.wig, globaltracks/raw/RIBO-GLY-1.raw.forward.wig, globaltracks/raw/RIBO-GLY-1.raw.reverse.wig, globaltracks/min/RIBO-GLY-1.min.reverse.wig, globaltracks/mil/RIBO-GLY-1.mil.reverse.wig; Input files updated by another job: maplink/RIBO-GLY-1.bam.bai, maplink/RIBO-GLY-1.bam, readcounts/bam_mapped_reads.txt, genomes/sizes.genome
+    wildcards: method=RIBO, condition=GLY, replicate=1
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+mkdir -p globaltracks; mkdir -p globaltracks/raw; mkdir -p globaltracks/mil; mkdir -p globaltracks/min; HRIBO/scripts/mapping.py --mapping_style global --bam_path maplink/RIBO-GLY-1.bam --wiggle_file_path globaltracks/ --no_of_aligned_reads_file_path readcounts/bam_mapped_reads.txt --library_name RIBO-GLY-1;
+
+[Tue Sep 15 20:41:50 2026]
+localrule globalwig:
+    input: maplink/RNA-GLY-1.bam, genomes/sizes.genome, maplink/RNA-GLY-1.bam.bai, readcounts/bam_mapped_reads.txt
+    output: globaltracks/raw/RNA-GLY-1.raw.forward.wig, globaltracks/raw/RNA-GLY-1.raw.reverse.wig, globaltracks/mil/RNA-GLY-1.mil.forward.wig, globaltracks/mil/RNA-GLY-1.mil.reverse.wig, globaltracks/min/RNA-GLY-1.min.forward.wig, globaltracks/min/RNA-GLY-1.min.reverse.wig
+    jobid: 83
+    reason: Missing output files: globaltracks/raw/RNA-GLY-1.raw.reverse.wig, globaltracks/mil/RNA-GLY-1.mil.forward.wig, globaltracks/min/RNA-GLY-1.min.forward.wig, globaltracks/mil/RNA-GLY-1.mil.reverse.wig, globaltracks/min/RNA-GLY-1.min.reverse.wig, globaltracks/raw/RNA-GLY-1.raw.forward.wig; Input files updated by another job: maplink/RNA-GLY-1.bam, maplink/RNA-GLY-1.bam.bai, readcounts/bam_mapped_reads.txt, genomes/sizes.genome
+    wildcards: method=RNA, condition=GLY, replicate=1
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+mkdir -p globaltracks; mkdir -p globaltracks/raw; mkdir -p globaltracks/mil; mkdir -p globaltracks/min; HRIBO/scripts/mapping.py --mapping_style global --bam_path maplink/RNA-GLY-1.bam --wiggle_file_path globaltracks/ --no_of_aligned_reads_file_path readcounts/bam_mapped_reads.txt --library_name RNA-GLY-1;
+
+[Tue Sep 15 20:41:50 2026]
+localrule preparePCAinput:
+    input: readcounts/differential_expression_read_counts.csv, HRIBO/samples.tsv
+    output: pca/raw_reads.csv, pca/meta.csv
+    jobid: 77
+    reason: Missing output files: pca/meta.csv, pca/raw_reads.csv; Input files updated by another job: readcounts/differential_expression_read_counts.csv
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+
+        mkdir -p pca;
+        sed -e '1s/-/_/g' readcounts/differential_expression_read_counts.csv > pca/raw_reads.csv;
+        HRIBO/scripts/preparePCAinput.py -s HRIBO/samples.tsv -o pca/meta.csv;
+        
+
+[Tue Sep 15 20:41:50 2026]
+localrule fiveprimewig:
+    input: maplink/RIBO-GLY-1.bam, genomes/sizes.genome, maplink/RIBO-GLY-1.bam.bai, readcounts/bam_mapped_reads.txt
+    output: fiveprimetracks/raw/RIBO-GLY-1.raw.forward.wig, fiveprimetracks/raw/RIBO-GLY-1.raw.reverse.wig, fiveprimetracks/mil/RIBO-GLY-1.mil.forward.wig, fiveprimetracks/mil/RIBO-GLY-1.mil.reverse.wig, fiveprimetracks/min/RIBO-GLY-1.min.forward.wig, fiveprimetracks/min/RIBO-GLY-1.min.reverse.wig
+    jobid: 109
+    reason: Missing output files: fiveprimetracks/min/RIBO-GLY-1.min.reverse.wig, fiveprimetracks/mil/RIBO-GLY-1.mil.forward.wig, fiveprimetracks/raw/RIBO-GLY-1.raw.forward.wig, fiveprimetracks/raw/RIBO-GLY-1.raw.reverse.wig, fiveprimetracks/mil/RIBO-GLY-1.mil.reverse.wig, fiveprimetracks/min/RIBO-GLY-1.min.forward.wig; Input files updated by another job: maplink/RIBO-GLY-1.bam.bai, maplink/RIBO-GLY-1.bam, readcounts/bam_mapped_reads.txt, genomes/sizes.genome
+    wildcards: method=RIBO, condition=GLY, replicate=1
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+mkdir -p fiveprimetracks; mkdir -p fiveprimetracks/raw; mkdir -p fiveprimetracks/mil; mkdir -p fiveprimetracks/min; HRIBO/scripts/mapping.py --mapping_style first_base_only --bam_path maplink/RIBO-GLY-1.bam --wiggle_file_path fiveprimetracks/ --no_of_aligned_reads_file_path readcounts/bam_mapped_reads.txt --library_name RIBO-GLY-1;
+
+[Tue Sep 15 20:41:50 2026]
+localrule reparationGFF:
+    input: reparation/GLY-1/Predicted_ORFs.txt
+    output: reparation/GLY-1.reparation.gff
+    jobid: 144
+    reason: Missing output files: reparation/GLY-1.reparation.gff; Input files updated by another job: reparation/GLY-1/Predicted_ORFs.txt
+    wildcards: condition=GLY, replicate=1
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+mkdir -p tracks; HRIBO/scripts/create_reparation_gff.py -c GLY -r 1 -i reparation/GLY-1/Predicted_ORFs.txt -o reparation/GLY-1.reparation.gff
+
+[Tue Sep 15 20:41:50 2026]
+localrule centeredwig:
+    input: maplink/RIBO-GLY-1.bam, genomes/sizes.genome, maplink/RIBO-GLY-1.bam.bai, readcounts/bam_mapped_reads.txt
+    output: centeredtracks/raw/RIBO-GLY-1.raw.forward.wig, centeredtracks/raw/RIBO-GLY-1.raw.reverse.wig, centeredtracks/mil/RIBO-GLY-1.mil.forward.wig, centeredtracks/mil/RIBO-GLY-1.mil.reverse.wig, centeredtracks/min/RIBO-GLY-1.min.forward.wig, centeredtracks/min/RIBO-GLY-1.min.reverse.wig
+    jobid: 95
+    reason: Missing output files: centeredtracks/min/RIBO-GLY-1.min.forward.wig, centeredtracks/mil/RIBO-GLY-1.mil.forward.wig, centeredtracks/min/RIBO-GLY-1.min.reverse.wig, centeredtracks/mil/RIBO-GLY-1.mil.reverse.wig, centeredtracks/raw/RIBO-GLY-1.raw.forward.wig, centeredtracks/raw/RIBO-GLY-1.raw.reverse.wig; Input files updated by another job: maplink/RIBO-GLY-1.bam.bai, maplink/RIBO-GLY-1.bam, readcounts/bam_mapped_reads.txt, genomes/sizes.genome
+    wildcards: method=RIBO, condition=GLY, replicate=1
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+mkdir -p centeredtracks; mkdir -p centeredtracks/raw; mkdir -p centeredtracks/mil; mkdir -p centeredtracks/min; HRIBO/scripts/mapping.py --mapping_style centered --bam_path maplink/RIBO-GLY-1.bam --wiggle_file_path centeredtracks/ --no_of_aligned_reads_file_path readcounts/bam_mapped_reads.txt --library_name RIBO-GLY-1;
+Execute 51 jobs...
+
+[Tue Sep 15 20:41:50 2026]
+localrule concatReparation:
+    input: reparation/GLY-1.reparation.gff
+    output: tracks/GLY.reparation.gff
+    jobid: 143
+    reason: Missing output files: tracks/GLY.reparation.gff; Input files updated by another job: reparation/GLY-1.reparation.gff
+    wildcards: condition=GLY
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+mkdir -p tracks; HRIBO/scripts/concatenate_gff.py reparation/GLY-1.reparation.gff -o tracks/GLY.reparation.gff
+
+[Tue Sep 15 20:41:50 2026]
+localrule centeredwigtobigwigminforward:
+    input: centeredtracks/min/RNA-GLY-1.min.forward.wig, genomes/sizes.genome
+    output: centeredtracks/min/RNA-GLY-1.min.forward.centered.bw
+    jobid: 105
+    reason: Missing output files: centeredtracks/min/RNA-GLY-1.min.forward.centered.bw; Input files updated by another job: centeredtracks/min/RNA-GLY-1.min.forward.wig, genomes/sizes.genome
+    wildcards: method=RNA, condition=GLY, replicate=1
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+wigToBigWig centeredtracks/min/RNA-GLY-1.min.forward.wig genomes/sizes.genome centeredtracks/min/RNA-GLY-1.min.forward.centered.bw
+
+[Tue Sep 15 20:41:50 2026]
+localrule threeprimewigtobigwigrawreverse:
+    input: threeprimetracks/raw/RIBO-GLY-1.raw.reverse.wig, genomes/sizes.genome
+    output: threeprimetracks/raw/RIBO-GLY-1.raw.reverse.threeprime.bw
+    jobid: 126
+    reason: Missing output files: threeprimetracks/raw/RIBO-GLY-1.raw.reverse.threeprime.bw; Input files updated by another job: threeprimetracks/raw/RIBO-GLY-1.raw.reverse.wig, genomes/sizes.genome
+    wildcards: method=RIBO, condition=GLY, replicate=1
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+wigToBigWig threeprimetracks/raw/RIBO-GLY-1.raw.reverse.wig genomes/sizes.genome threeprimetracks/raw/RIBO-GLY-1.raw.reverse.threeprime.bw
+
+[Tue Sep 15 20:41:50 2026]
+localrule threeprimewigtobigwigmilreverse:
+    input: threeprimetracks/mil/RNA-GLY-1.mil.reverse.wig, genomes/sizes.genome
+    output: threeprimetracks/mil/RNA-GLY-1.mil.reverse.threeprime.bw
+    jobid: 131
+    reason: Missing output files: threeprimetracks/mil/RNA-GLY-1.mil.reverse.threeprime.bw; Input files updated by another job: threeprimetracks/mil/RNA-GLY-1.mil.reverse.wig, genomes/sizes.genome
+    wildcards: method=RNA, condition=GLY, replicate=1
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+wigToBigWig threeprimetracks/mil/RNA-GLY-1.mil.reverse.wig genomes/sizes.genome threeprimetracks/mil/RNA-GLY-1.mil.reverse.threeprime.bw
+
+[Tue Sep 15 20:41:50 2026]
+localrule fiveprimewigtobigwigrawreverse:
+    input: fiveprimetracks/raw/RNA-GLY-1.raw.reverse.wig, genomes/sizes.genome
+    output: fiveprimetracks/raw/RNA-GLY-1.raw.reverse.fiveprime.bw
+    jobid: 113
+    reason: Missing output files: fiveprimetracks/raw/RNA-GLY-1.raw.reverse.fiveprime.bw; Input files updated by another job: genomes/sizes.genome, fiveprimetracks/raw/RNA-GLY-1.raw.reverse.wig
+    wildcards: method=RNA, condition=GLY, replicate=1
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+wigToBigWig fiveprimetracks/raw/RNA-GLY-1.raw.reverse.wig genomes/sizes.genome fiveprimetracks/raw/RNA-GLY-1.raw.reverse.fiveprime.bw
+
+[Tue Sep 15 20:41:50 2026]
+localrule centeredwigtobigwigrawforward:
+    input: centeredtracks/raw/RNA-GLY-1.raw.forward.wig, genomes/sizes.genome
+    output: centeredtracks/raw/RNA-GLY-1.raw.forward.centered.bw
+    jobid: 96
+    reason: Missing output files: centeredtracks/raw/RNA-GLY-1.raw.forward.centered.bw; Input files updated by another job: centeredtracks/raw/RNA-GLY-1.raw.forward.wig, genomes/sizes.genome
+    wildcards: method=RNA, condition=GLY, replicate=1
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+wigToBigWig centeredtracks/raw/RNA-GLY-1.raw.forward.wig genomes/sizes.genome centeredtracks/raw/RNA-GLY-1.raw.forward.centered.bw
+
+[Tue Sep 15 20:41:50 2026]
+localrule globalwigtobigwigminreverse:
+    input: globaltracks/min/RIBO-GLY-1.min.reverse.wig, genomes/sizes.genome
+    output: globaltracks/min/RIBO-GLY-1.min.reverse.global.bw
+    jobid: 92
+    reason: Missing output files: globaltracks/min/RIBO-GLY-1.min.reverse.global.bw; Input files updated by another job: globaltracks/min/RIBO-GLY-1.min.reverse.wig, genomes/sizes.genome
+    wildcards: method=RIBO, condition=GLY, replicate=1
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+wigToBigWig globaltracks/min/RIBO-GLY-1.min.reverse.wig genomes/sizes.genome globaltracks/min/RIBO-GLY-1.min.reverse.global.bw
+
+[Tue Sep 15 20:41:50 2026]
+localrule globalwigtobigwigmilforward:
+    input: globaltracks/mil/RNA-GLY-1.mil.forward.wig, genomes/sizes.genome
+    output: globaltracks/mil/RNA-GLY-1.mil.forward.global.bw
+    jobid: 87
+    reason: Missing output files: globaltracks/mil/RNA-GLY-1.mil.forward.global.bw; Input files updated by another job: globaltracks/mil/RNA-GLY-1.mil.forward.wig, genomes/sizes.genome
+    wildcards: method=RNA, condition=GLY, replicate=1
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+wigToBigWig globaltracks/mil/RNA-GLY-1.mil.forward.wig genomes/sizes.genome globaltracks/mil/RNA-GLY-1.mil.forward.global.bw
+
+[Tue Sep 15 20:41:50 2026]
+localrule fiveprimewigtobigwigminforward:
+    input: fiveprimetracks/min/RIBO-GLY-1.min.forward.wig, genomes/sizes.genome
+    output: fiveprimetracks/min/RIBO-GLY-1.min.forward.fiveprime.bw
+    jobid: 118
+    reason: Missing output files: fiveprimetracks/min/RIBO-GLY-1.min.forward.fiveprime.bw; Input files updated by another job: fiveprimetracks/min/RIBO-GLY-1.min.forward.wig, genomes/sizes.genome
+    wildcards: method=RIBO, condition=GLY, replicate=1
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+wigToBigWig fiveprimetracks/min/RIBO-GLY-1.min.forward.wig genomes/sizes.genome fiveprimetracks/min/RIBO-GLY-1.min.forward.fiveprime.bw
+
+[Tue Sep 15 20:41:50 2026]
+localrule centeredwigtobigwigmilforward:
+    input: centeredtracks/mil/RIBO-GLY-1.mil.forward.wig, genomes/sizes.genome
+    output: centeredtracks/mil/RIBO-GLY-1.mil.forward.centered.bw
+    jobid: 100
+    reason: Missing output files: centeredtracks/mil/RIBO-GLY-1.mil.forward.centered.bw; Input files updated by another job: centeredtracks/mil/RIBO-GLY-1.mil.forward.wig, genomes/sizes.genome
+    wildcards: method=RIBO, condition=GLY, replicate=1
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+wigToBigWig centeredtracks/mil/RIBO-GLY-1.mil.forward.wig genomes/sizes.genome centeredtracks/mil/RIBO-GLY-1.mil.forward.centered.bw
+
+[Tue Sep 15 20:41:50 2026]
+localrule centeredwigtobigwigminrawreverse:
+    input: centeredtracks/raw/RNA-GLY-1.raw.reverse.wig, genomes/sizes.genome
+    output: centeredtracks/raw/RNA-GLY-1.raw.reverse.centered.bw
+    jobid: 99
+    reason: Missing output files: centeredtracks/raw/RNA-GLY-1.raw.reverse.centered.bw; Input files updated by another job: centeredtracks/raw/RNA-GLY-1.raw.reverse.wig, genomes/sizes.genome
+    wildcards: method=RNA, condition=GLY, replicate=1
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+wigToBigWig centeredtracks/raw/RNA-GLY-1.raw.reverse.wig genomes/sizes.genome centeredtracks/raw/RNA-GLY-1.raw.reverse.centered.bw
+
+[Tue Sep 15 20:41:50 2026]
+localrule globalwigtobigwigmilreverse:
+    input: globaltracks/mil/RIBO-GLY-1.mil.reverse.wig, genomes/sizes.genome
+    output: globaltracks/mil/RIBO-GLY-1.mil.reverse.global.bw
+    jobid: 88
+    reason: Missing output files: globaltracks/mil/RIBO-GLY-1.mil.reverse.global.bw; Input files updated by another job: globaltracks/mil/RIBO-GLY-1.mil.reverse.wig, genomes/sizes.genome
+    wildcards: method=RIBO, condition=GLY, replicate=1
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+wigToBigWig globaltracks/mil/RIBO-GLY-1.mil.reverse.wig genomes/sizes.genome globaltracks/mil/RIBO-GLY-1.mil.reverse.global.bw
+
+[Tue Sep 15 20:41:50 2026]
+localrule threeprimewigtobigwigrawreverse:
+    input: threeprimetracks/raw/RNA-GLY-1.raw.reverse.wig, genomes/sizes.genome
+    output: threeprimetracks/raw/RNA-GLY-1.raw.reverse.threeprime.bw
+    jobid: 127
+    reason: Missing output files: threeprimetracks/raw/RNA-GLY-1.raw.reverse.threeprime.bw; Input files updated by another job: threeprimetracks/raw/RNA-GLY-1.raw.reverse.wig, genomes/sizes.genome
+    wildcards: method=RNA, condition=GLY, replicate=1
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+wigToBigWig threeprimetracks/raw/RNA-GLY-1.raw.reverse.wig genomes/sizes.genome threeprimetracks/raw/RNA-GLY-1.raw.reverse.threeprime.bw
+
+[Tue Sep 15 20:41:50 2026]
+localrule fiveprimewigtobigwigrawforward:
+    input: fiveprimetracks/raw/RNA-GLY-1.raw.forward.wig, genomes/sizes.genome
+    output: fiveprimetracks/raw/RNA-GLY-1.raw.forward.fiveprime.bw
+    jobid: 110
+    reason: Missing output files: fiveprimetracks/raw/RNA-GLY-1.raw.forward.fiveprime.bw; Input files updated by another job: fiveprimetracks/raw/RNA-GLY-1.raw.forward.wig, genomes/sizes.genome
+    wildcards: method=RNA, condition=GLY, replicate=1
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+wigToBigWig fiveprimetracks/raw/RNA-GLY-1.raw.forward.wig genomes/sizes.genome fiveprimetracks/raw/RNA-GLY-1.raw.forward.fiveprime.bw
+
+[Tue Sep 15 20:41:50 2026]
+localrule fiveprimewigtobigwigminforward:
+    input: fiveprimetracks/min/RNA-GLY-1.min.forward.wig, genomes/sizes.genome
+    output: fiveprimetracks/min/RNA-GLY-1.min.forward.fiveprime.bw
+    jobid: 119
+    reason: Missing output files: fiveprimetracks/min/RNA-GLY-1.min.forward.fiveprime.bw; Input files updated by another job: fiveprimetracks/min/RNA-GLY-1.min.forward.wig, genomes/sizes.genome
+    wildcards: method=RNA, condition=GLY, replicate=1
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+wigToBigWig fiveprimetracks/min/RNA-GLY-1.min.forward.wig genomes/sizes.genome fiveprimetracks/min/RNA-GLY-1.min.forward.fiveprime.bw
+
+[Tue Sep 15 20:41:50 2026]
+localrule centeredwigtobigwigmilforward:
+    input: centeredtracks/mil/RNA-GLY-1.mil.forward.wig, genomes/sizes.genome
+    output: centeredtracks/mil/RNA-GLY-1.mil.forward.centered.bw
+    jobid: 101
+    reason: Missing output files: centeredtracks/mil/RNA-GLY-1.mil.forward.centered.bw; Input files updated by another job: centeredtracks/mil/RNA-GLY-1.mil.forward.wig, genomes/sizes.genome
+    wildcards: method=RNA, condition=GLY, replicate=1
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+wigToBigWig centeredtracks/mil/RNA-GLY-1.mil.forward.wig genomes/sizes.genome centeredtracks/mil/RNA-GLY-1.mil.forward.centered.bw
+
+[Tue Sep 15 20:41:50 2026]
+localrule threeprimewigtobigwigminforward:
+    input: threeprimetracks/min/RIBO-GLY-1.min.forward.wig, genomes/sizes.genome
+    output: threeprimetracks/min/RIBO-GLY-1.min.forward.threeprime.bw
+    jobid: 132
+    reason: Missing output files: threeprimetracks/min/RIBO-GLY-1.min.forward.threeprime.bw; Input files updated by another job: threeprimetracks/min/RIBO-GLY-1.min.forward.wig, genomes/sizes.genome
+    wildcards: method=RIBO, condition=GLY, replicate=1
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+wigToBigWig threeprimetracks/min/RIBO-GLY-1.min.forward.wig genomes/sizes.genome threeprimetracks/min/RIBO-GLY-1.min.forward.threeprime.bw
+
+[Tue Sep 15 20:41:50 2026]
+localrule globalwigtobigwigminreverse:
+    input: globaltracks/min/RNA-GLY-1.min.reverse.wig, genomes/sizes.genome
+    output: globaltracks/min/RNA-GLY-1.min.reverse.global.bw
+    jobid: 93
+    reason: Missing output files: globaltracks/min/RNA-GLY-1.min.reverse.global.bw; Input files updated by another job: globaltracks/min/RNA-GLY-1.min.reverse.wig, genomes/sizes.genome
+    wildcards: method=RNA, condition=GLY, replicate=1
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+wigToBigWig globaltracks/min/RNA-GLY-1.min.reverse.wig genomes/sizes.genome globaltracks/min/RNA-GLY-1.min.reverse.global.bw
+
+[Tue Sep 15 20:41:50 2026]
+localrule fiveprimewigtobigwigmilforward:
+    input: fiveprimetracks/mil/RIBO-GLY-1.mil.forward.wig, genomes/sizes.genome
+    output: fiveprimetracks/mil/RIBO-GLY-1.mil.forward.fiveprime.bw
+    jobid: 114
+    reason: Missing output files: fiveprimetracks/mil/RIBO-GLY-1.mil.forward.fiveprime.bw; Input files updated by another job: fiveprimetracks/mil/RIBO-GLY-1.mil.forward.wig, genomes/sizes.genome
+    wildcards: method=RIBO, condition=GLY, replicate=1
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+wigToBigWig fiveprimetracks/mil/RIBO-GLY-1.mil.forward.wig genomes/sizes.genome fiveprimetracks/mil/RIBO-GLY-1.mil.forward.fiveprime.bw
+
+[Tue Sep 15 20:41:50 2026]
+localrule centeredwigtobigwigminreverse:
+    input: centeredtracks/min/RIBO-GLY-1.min.reverse.wig, genomes/sizes.genome
+    output: centeredtracks/min/RIBO-GLY-1.min.reverse.centered.bw
+    jobid: 106
+    reason: Missing output files: centeredtracks/min/RIBO-GLY-1.min.reverse.centered.bw; Input files updated by another job: centeredtracks/min/RIBO-GLY-1.min.reverse.wig, genomes/sizes.genome
+    wildcards: method=RIBO, condition=GLY, replicate=1
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+wigToBigWig centeredtracks/min/RIBO-GLY-1.min.reverse.wig genomes/sizes.genome centeredtracks/min/RIBO-GLY-1.min.reverse.centered.bw
+
+[Tue Sep 15 20:41:50 2026]
+localrule threeprimewigtobigwigrawforward:
+    input: threeprimetracks/raw/RIBO-GLY-1.raw.forward.wig, genomes/sizes.genome
+    output: threeprimetracks/raw/RIBO-GLY-1.raw.forward.threeprime.bw
+    jobid: 122
+    reason: Missing output files: threeprimetracks/raw/RIBO-GLY-1.raw.forward.threeprime.bw; Input files updated by another job: genomes/sizes.genome, threeprimetracks/raw/RIBO-GLY-1.raw.forward.wig
+    wildcards: method=RIBO, condition=GLY, replicate=1
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+wigToBigWig threeprimetracks/raw/RIBO-GLY-1.raw.forward.wig genomes/sizes.genome threeprimetracks/raw/RIBO-GLY-1.raw.forward.threeprime.bw
+
+[Tue Sep 15 20:41:50 2026]
+localrule threeprimewigtobigwigminreverse:
+    input: threeprimetracks/min/RNA-GLY-1.min.reverse.wig, genomes/sizes.genome
+    output: threeprimetracks/min/RNA-GLY-1.min.reverse.threeprime.bw
+    jobid: 135
+    reason: Missing output files: threeprimetracks/min/RNA-GLY-1.min.reverse.threeprime.bw; Input files updated by another job: threeprimetracks/min/RNA-GLY-1.min.reverse.wig, genomes/sizes.genome
+    wildcards: method=RNA, condition=GLY, replicate=1
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+wigToBigWig threeprimetracks/min/RNA-GLY-1.min.reverse.wig genomes/sizes.genome threeprimetracks/min/RNA-GLY-1.min.reverse.threeprime.bw
+
+[Tue Sep 15 20:41:50 2026]
+localrule threeprimewigtobigwigmilforward:
+    input: threeprimetracks/mil/RIBO-GLY-1.mil.forward.wig, genomes/sizes.genome
+    output: threeprimetracks/mil/RIBO-GLY-1.mil.forward.threeprime.bw
+    jobid: 128
+    reason: Missing output files: threeprimetracks/mil/RIBO-GLY-1.mil.forward.threeprime.bw; Input files updated by another job: threeprimetracks/mil/RIBO-GLY-1.mil.forward.wig, genomes/sizes.genome
+    wildcards: method=RIBO, condition=GLY, replicate=1
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+wigToBigWig threeprimetracks/mil/RIBO-GLY-1.mil.forward.wig genomes/sizes.genome threeprimetracks/mil/RIBO-GLY-1.mil.forward.threeprime.bw
+
+[Tue Sep 15 20:41:50 2026]
+localrule threeprimewigtobigwigminforward:
+    input: threeprimetracks/min/RNA-GLY-1.min.forward.wig, genomes/sizes.genome
+    output: threeprimetracks/min/RNA-GLY-1.min.forward.threeprime.bw
+    jobid: 133
+    reason: Missing output files: threeprimetracks/min/RNA-GLY-1.min.forward.threeprime.bw; Input files updated by another job: threeprimetracks/min/RNA-GLY-1.min.forward.wig, genomes/sizes.genome
+    wildcards: method=RNA, condition=GLY, replicate=1
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+wigToBigWig threeprimetracks/min/RNA-GLY-1.min.forward.wig genomes/sizes.genome threeprimetracks/min/RNA-GLY-1.min.forward.threeprime.bw
+
+[Tue Sep 15 20:41:50 2026]
+localrule fiveprimewigtobigwigmilforward:
+    input: fiveprimetracks/mil/RNA-GLY-1.mil.forward.wig, genomes/sizes.genome
+    output: fiveprimetracks/mil/RNA-GLY-1.mil.forward.fiveprime.bw
+    jobid: 115
+    reason: Missing output files: fiveprimetracks/mil/RNA-GLY-1.mil.forward.fiveprime.bw; Input files updated by another job: fiveprimetracks/mil/RNA-GLY-1.mil.forward.wig, genomes/sizes.genome
+    wildcards: method=RNA, condition=GLY, replicate=1
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+wigToBigWig fiveprimetracks/mil/RNA-GLY-1.mil.forward.wig genomes/sizes.genome fiveprimetracks/mil/RNA-GLY-1.mil.forward.fiveprime.bw
+
+[Tue Sep 15 20:41:50 2026]
+localrule threeprimewigtobigwigrawforward:
+    input: threeprimetracks/raw/RNA-GLY-1.raw.forward.wig, genomes/sizes.genome
+    output: threeprimetracks/raw/RNA-GLY-1.raw.forward.threeprime.bw
+    jobid: 124
+    reason: Missing output files: threeprimetracks/raw/RNA-GLY-1.raw.forward.threeprime.bw; Input files updated by another job: threeprimetracks/raw/RNA-GLY-1.raw.forward.wig, genomes/sizes.genome
+    wildcards: method=RNA, condition=GLY, replicate=1
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+wigToBigWig threeprimetracks/raw/RNA-GLY-1.raw.forward.wig genomes/sizes.genome threeprimetracks/raw/RNA-GLY-1.raw.forward.threeprime.bw
+
+[Tue Sep 15 20:41:50 2026]
+localrule centeredwigtobigwigminreverse:
+    input: centeredtracks/min/RNA-GLY-1.min.reverse.wig, genomes/sizes.genome
+    output: centeredtracks/min/RNA-GLY-1.min.reverse.centered.bw
+    jobid: 107
+    reason: Missing output files: centeredtracks/min/RNA-GLY-1.min.reverse.centered.bw; Input files updated by another job: centeredtracks/min/RNA-GLY-1.min.reverse.wig, genomes/sizes.genome
+    wildcards: method=RNA, condition=GLY, replicate=1
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+wigToBigWig centeredtracks/min/RNA-GLY-1.min.reverse.wig genomes/sizes.genome centeredtracks/min/RNA-GLY-1.min.reverse.centered.bw
+
+[Tue Sep 15 20:41:50 2026]
+localrule globalwigtobigwigminrawreverse:
+    input: globaltracks/raw/RIBO-GLY-1.raw.reverse.wig, genomes/sizes.genome
+    output: globaltracks/raw/RIBO-GLY-1.raw.reverse.global.bw
+    jobid: 84
+    reason: Missing output files: globaltracks/raw/RIBO-GLY-1.raw.reverse.global.bw; Input files updated by another job: globaltracks/raw/RIBO-GLY-1.raw.reverse.wig, genomes/sizes.genome
+    wildcards: method=RIBO, condition=GLY, replicate=1
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+wigToBigWig globaltracks/raw/RIBO-GLY-1.raw.reverse.wig genomes/sizes.genome globaltracks/raw/RIBO-GLY-1.raw.reverse.global.bw
+
+[Tue Sep 15 20:41:50 2026]
+localrule globalwigtobigwigmilreverse:
+    input: globaltracks/mil/RNA-GLY-1.mil.reverse.wig, genomes/sizes.genome
+    output: globaltracks/mil/RNA-GLY-1.mil.reverse.global.bw
+    jobid: 89
+    reason: Missing output files: globaltracks/mil/RNA-GLY-1.mil.reverse.global.bw; Input files updated by another job: globaltracks/mil/RNA-GLY-1.mil.reverse.wig, genomes/sizes.genome
+    wildcards: method=RNA, condition=GLY, replicate=1
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+wigToBigWig globaltracks/mil/RNA-GLY-1.mil.reverse.wig genomes/sizes.genome globaltracks/mil/RNA-GLY-1.mil.reverse.global.bw
+
+[Tue Sep 15 20:41:50 2026]
+localrule fiveprimewigtobigwigminreverse:
+    input: fiveprimetracks/min/RIBO-GLY-1.min.reverse.wig, genomes/sizes.genome
+    output: fiveprimetracks/min/RIBO-GLY-1.min.reverse.fiveprime.bw
+    jobid: 120
+    reason: Missing output files: fiveprimetracks/min/RIBO-GLY-1.min.reverse.fiveprime.bw; Input files updated by another job: fiveprimetracks/min/RIBO-GLY-1.min.reverse.wig, genomes/sizes.genome
+    wildcards: method=RIBO, condition=GLY, replicate=1
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+wigToBigWig fiveprimetracks/min/RIBO-GLY-1.min.reverse.wig genomes/sizes.genome fiveprimetracks/min/RIBO-GLY-1.min.reverse.fiveprime.bw
+
+[Tue Sep 15 20:41:50 2026]
+localrule centeredwigtobigwigrawforward:
+    input: centeredtracks/raw/RIBO-GLY-1.raw.forward.wig, genomes/sizes.genome
+    output: centeredtracks/raw/RIBO-GLY-1.raw.forward.centered.bw
+    jobid: 94
+    reason: Missing output files: centeredtracks/raw/RIBO-GLY-1.raw.forward.centered.bw; Input files updated by another job: centeredtracks/raw/RIBO-GLY-1.raw.forward.wig, genomes/sizes.genome
+    wildcards: method=RIBO, condition=GLY, replicate=1
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+wigToBigWig centeredtracks/raw/RIBO-GLY-1.raw.forward.wig genomes/sizes.genome centeredtracks/raw/RIBO-GLY-1.raw.forward.centered.bw
+
+[Tue Sep 15 20:41:50 2026]
+localrule runDeseqPreprocessing:
+    input: pca/raw_reads.csv, pca/meta.csv
+    output: pca/raw_count_distributions.pdf, pca/mean_vs_variance.pdf, pca/normalized_counts.tsv, pca/rld.tsv, pca/variance_percentages.tsv, pca/rld_cor.tsv
+    jobid: 76
+    reason: Missing output files: pca/rld.tsv, pca/variance_percentages.tsv, pca/rld_cor.tsv; Input files updated by another job: pca/meta.csv, pca/raw_reads.csv
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+
+        mkdir -p pca;
+        HRIBO/scripts/analyse_variance.R -r pca/raw_reads.csv -m pca/meta.csv -o pca/;
+        
+
+[Tue Sep 15 20:41:50 2026]
+localrule centeredwigtobigwigmilreverse:
+    input: centeredtracks/mil/RIBO-GLY-1.mil.reverse.wig, genomes/sizes.genome
+    output: centeredtracks/mil/RIBO-GLY-1.mil.reverse.centered.bw
+    jobid: 102
+    reason: Missing output files: centeredtracks/mil/RIBO-GLY-1.mil.reverse.centered.bw; Input files updated by another job: centeredtracks/mil/RIBO-GLY-1.mil.reverse.wig, genomes/sizes.genome
+    wildcards: method=RIBO, condition=GLY, replicate=1
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+wigToBigWig centeredtracks/mil/RIBO-GLY-1.mil.reverse.wig genomes/sizes.genome centeredtracks/mil/RIBO-GLY-1.mil.reverse.centered.bw
+
+[Tue Sep 15 20:41:50 2026]
+localrule globalwigtobigwigmilforward:
+    input: globaltracks/mil/RIBO-GLY-1.mil.forward.wig, genomes/sizes.genome
+    output: globaltracks/mil/RIBO-GLY-1.mil.forward.global.bw
+    jobid: 86
+    reason: Missing output files: globaltracks/mil/RIBO-GLY-1.mil.forward.global.bw; Input files updated by another job: genomes/sizes.genome, globaltracks/mil/RIBO-GLY-1.mil.forward.wig
+    wildcards: method=RIBO, condition=GLY, replicate=1
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+wigToBigWig globaltracks/mil/RIBO-GLY-1.mil.forward.wig genomes/sizes.genome globaltracks/mil/RIBO-GLY-1.mil.forward.global.bw
+
+[Tue Sep 15 20:41:50 2026]
+localrule globalwigtobigwigrawforward:
+    input: globaltracks/raw/RNA-GLY-1.raw.forward.wig, genomes/sizes.genome
+    output: globaltracks/raw/RNA-GLY-1.raw.forward.global.bw
+    jobid: 82
+    reason: Missing output files: globaltracks/raw/RNA-GLY-1.raw.forward.global.bw; Input files updated by another job: globaltracks/raw/RNA-GLY-1.raw.forward.wig, genomes/sizes.genome
+    wildcards: method=RNA, condition=GLY, replicate=1
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+wigToBigWig globaltracks/raw/RNA-GLY-1.raw.forward.wig genomes/sizes.genome globaltracks/raw/RNA-GLY-1.raw.forward.global.bw
+
+[Tue Sep 15 20:41:50 2026]
+localrule threeprimewigtobigwigmilforward:
+    input: threeprimetracks/mil/RNA-GLY-1.mil.forward.wig, genomes/sizes.genome
+    output: threeprimetracks/mil/RNA-GLY-1.mil.forward.threeprime.bw
+    jobid: 129
+    reason: Missing output files: threeprimetracks/mil/RNA-GLY-1.mil.forward.threeprime.bw; Input files updated by another job: threeprimetracks/mil/RNA-GLY-1.mil.forward.wig, genomes/sizes.genome
+    wildcards: method=RNA, condition=GLY, replicate=1
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+wigToBigWig threeprimetracks/mil/RNA-GLY-1.mil.forward.wig genomes/sizes.genome threeprimetracks/mil/RNA-GLY-1.mil.forward.threeprime.bw
+
+[Tue Sep 15 20:41:50 2026]
+localrule threeprimewigtobigwigminreverse:
+    input: threeprimetracks/min/RIBO-GLY-1.min.reverse.wig, genomes/sizes.genome
+    output: threeprimetracks/min/RIBO-GLY-1.min.reverse.threeprime.bw
+    jobid: 134
+    reason: Missing output files: threeprimetracks/min/RIBO-GLY-1.min.reverse.threeprime.bw; Input files updated by another job: genomes/sizes.genome, threeprimetracks/min/RIBO-GLY-1.min.reverse.wig
+    wildcards: method=RIBO, condition=GLY, replicate=1
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+wigToBigWig threeprimetracks/min/RIBO-GLY-1.min.reverse.wig genomes/sizes.genome threeprimetracks/min/RIBO-GLY-1.min.reverse.threeprime.bw
+
+[Tue Sep 15 20:41:50 2026]
+localrule fiveprimewigtobigwigminreverse:
+    input: fiveprimetracks/min/RNA-GLY-1.min.reverse.wig, genomes/sizes.genome
+    output: fiveprimetracks/min/RNA-GLY-1.min.reverse.fiveprime.bw
+    jobid: 121
+    reason: Missing output files: fiveprimetracks/min/RNA-GLY-1.min.reverse.fiveprime.bw; Input files updated by another job: genomes/sizes.genome, fiveprimetracks/min/RNA-GLY-1.min.reverse.wig
+    wildcards: method=RNA, condition=GLY, replicate=1
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+wigToBigWig fiveprimetracks/min/RNA-GLY-1.min.reverse.wig genomes/sizes.genome fiveprimetracks/min/RNA-GLY-1.min.reverse.fiveprime.bw
+
+[Tue Sep 15 20:41:50 2026]
+localrule centeredwigtobigwigmilreverse:
+    input: centeredtracks/mil/RNA-GLY-1.mil.reverse.wig, genomes/sizes.genome
+    output: centeredtracks/mil/RNA-GLY-1.mil.reverse.centered.bw
+    jobid: 103
+    reason: Missing output files: centeredtracks/mil/RNA-GLY-1.mil.reverse.centered.bw; Input files updated by another job: centeredtracks/mil/RNA-GLY-1.mil.reverse.wig, genomes/sizes.genome
+    wildcards: method=RNA, condition=GLY, replicate=1
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+wigToBigWig centeredtracks/mil/RNA-GLY-1.mil.reverse.wig genomes/sizes.genome centeredtracks/mil/RNA-GLY-1.mil.reverse.centered.bw
+
+[Tue Sep 15 20:41:50 2026]
+localrule globalwigtobigwigrawforward:
+    input: globaltracks/raw/RIBO-GLY-1.raw.forward.wig, genomes/sizes.genome
+    output: globaltracks/raw/RIBO-GLY-1.raw.forward.global.bw
+    jobid: 79
+    reason: Missing output files: globaltracks/raw/RIBO-GLY-1.raw.forward.global.bw; Input files updated by another job: globaltracks/raw/RIBO-GLY-1.raw.forward.wig, genomes/sizes.genome
+    wildcards: method=RIBO, condition=GLY, replicate=1
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+wigToBigWig globaltracks/raw/RIBO-GLY-1.raw.forward.wig genomes/sizes.genome globaltracks/raw/RIBO-GLY-1.raw.forward.global.bw
+
+[Tue Sep 15 20:41:50 2026]
+localrule globalwigtobigwigminforward:
+    input: globaltracks/min/RIBO-GLY-1.min.forward.wig, genomes/sizes.genome
+    output: globaltracks/min/RIBO-GLY-1.min.forward.global.bw
+    jobid: 90
+    reason: Missing output files: globaltracks/min/RIBO-GLY-1.min.forward.global.bw; Input files updated by another job: genomes/sizes.genome, globaltracks/min/RIBO-GLY-1.min.forward.wig
+    wildcards: method=RIBO, condition=GLY, replicate=1
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+wigToBigWig globaltracks/min/RIBO-GLY-1.min.forward.wig genomes/sizes.genome globaltracks/min/RIBO-GLY-1.min.forward.global.bw
+
+[Tue Sep 15 20:41:50 2026]
+localrule globalwigtobigwigminrawreverse:
+    input: globaltracks/raw/RNA-GLY-1.raw.reverse.wig, genomes/sizes.genome
+    output: globaltracks/raw/RNA-GLY-1.raw.reverse.global.bw
+    jobid: 85
+    reason: Missing output files: globaltracks/raw/RNA-GLY-1.raw.reverse.global.bw; Input files updated by another job: globaltracks/raw/RNA-GLY-1.raw.reverse.wig, genomes/sizes.genome
+    wildcards: method=RNA, condition=GLY, replicate=1
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+wigToBigWig globaltracks/raw/RNA-GLY-1.raw.reverse.wig genomes/sizes.genome globaltracks/raw/RNA-GLY-1.raw.reverse.global.bw
+
+[Tue Sep 15 20:41:50 2026]
+localrule fiveprimewigtobigwigrawforward:
+    input: fiveprimetracks/raw/RIBO-GLY-1.raw.forward.wig, genomes/sizes.genome
+    output: fiveprimetracks/raw/RIBO-GLY-1.raw.forward.fiveprime.bw
+    jobid: 108
+    reason: Missing output files: fiveprimetracks/raw/RIBO-GLY-1.raw.forward.fiveprime.bw; Input files updated by another job: fiveprimetracks/raw/RIBO-GLY-1.raw.forward.wig, genomes/sizes.genome
+    wildcards: method=RIBO, condition=GLY, replicate=1
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+wigToBigWig fiveprimetracks/raw/RIBO-GLY-1.raw.forward.wig genomes/sizes.genome fiveprimetracks/raw/RIBO-GLY-1.raw.forward.fiveprime.bw
+
+[Tue Sep 15 20:41:50 2026]
+localrule fiveprimewigtobigwimilgreverse:
+    input: fiveprimetracks/mil/RIBO-GLY-1.mil.reverse.wig, genomes/sizes.genome
+    output: fiveprimetracks/mil/RIBO-GLY-1.mil.reverse.fiveprime.bw
+    jobid: 116
+    reason: Missing output files: fiveprimetracks/mil/RIBO-GLY-1.mil.reverse.fiveprime.bw; Input files updated by another job: genomes/sizes.genome, fiveprimetracks/mil/RIBO-GLY-1.mil.reverse.wig
+    wildcards: method=RIBO, condition=GLY, replicate=1
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+wigToBigWig fiveprimetracks/mil/RIBO-GLY-1.mil.reverse.wig genomes/sizes.genome fiveprimetracks/mil/RIBO-GLY-1.mil.reverse.fiveprime.bw
+
+[Tue Sep 15 20:41:50 2026]
+localrule centeredwigtobigwigminrawreverse:
+    input: centeredtracks/raw/RIBO-GLY-1.raw.reverse.wig, genomes/sizes.genome
+    output: centeredtracks/raw/RIBO-GLY-1.raw.reverse.centered.bw
+    jobid: 98
+    reason: Missing output files: centeredtracks/raw/RIBO-GLY-1.raw.reverse.centered.bw; Input files updated by another job: centeredtracks/raw/RIBO-GLY-1.raw.reverse.wig, genomes/sizes.genome
+    wildcards: method=RIBO, condition=GLY, replicate=1
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+wigToBigWig centeredtracks/raw/RIBO-GLY-1.raw.reverse.wig genomes/sizes.genome centeredtracks/raw/RIBO-GLY-1.raw.reverse.centered.bw
+
+[Tue Sep 15 20:41:50 2026]
+localrule threeprimewigtobigwigmilreverse:
+    input: threeprimetracks/mil/RIBO-GLY-1.mil.reverse.wig, genomes/sizes.genome
+    output: threeprimetracks/mil/RIBO-GLY-1.mil.reverse.threeprime.bw
+    jobid: 130
+    reason: Missing output files: threeprimetracks/mil/RIBO-GLY-1.mil.reverse.threeprime.bw; Input files updated by another job: threeprimetracks/mil/RIBO-GLY-1.mil.reverse.wig, genomes/sizes.genome
+    wildcards: method=RIBO, condition=GLY, replicate=1
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+wigToBigWig threeprimetracks/mil/RIBO-GLY-1.mil.reverse.wig genomes/sizes.genome threeprimetracks/mil/RIBO-GLY-1.mil.reverse.threeprime.bw
+
+[Tue Sep 15 20:41:50 2026]
+localrule parameterEstimation:
+    input: deepribo/GLY-1/data_list.csv
+    output: deepribo/GLY-1/parameters.txt
+    jobid: 159
+    reason: Missing output files: deepribo/GLY-1/parameters.txt; Input files updated by another job: deepribo/GLY-1/data_list.csv
+    wildcards: condition=GLY, replicate=1
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+mkdir -p deepribo; Rscript HRIBO/scripts/parameter_estimation.R -f deepribo/GLY-1/data_list.csv -o deepribo/GLY-1/parameters.txt
+
+[Tue Sep 15 20:41:50 2026]
+localrule fiveprimewigtobigwimilgreverse:
+    input: fiveprimetracks/mil/RNA-GLY-1.mil.reverse.wig, genomes/sizes.genome
+    output: fiveprimetracks/mil/RNA-GLY-1.mil.reverse.fiveprime.bw
+    jobid: 117
+    reason: Missing output files: fiveprimetracks/mil/RNA-GLY-1.mil.reverse.fiveprime.bw; Input files updated by another job: fiveprimetracks/mil/RNA-GLY-1.mil.reverse.wig, genomes/sizes.genome
+    wildcards: method=RNA, condition=GLY, replicate=1
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+wigToBigWig fiveprimetracks/mil/RNA-GLY-1.mil.reverse.wig genomes/sizes.genome fiveprimetracks/mil/RNA-GLY-1.mil.reverse.fiveprime.bw
+
+[Tue Sep 15 20:41:50 2026]
+localrule centeredwigtobigwigminforward:
+    input: centeredtracks/min/RIBO-GLY-1.min.forward.wig, genomes/sizes.genome
+    output: centeredtracks/min/RIBO-GLY-1.min.forward.centered.bw
+    jobid: 104
+    reason: Missing output files: centeredtracks/min/RIBO-GLY-1.min.forward.centered.bw; Input files updated by another job: centeredtracks/min/RIBO-GLY-1.min.forward.wig, genomes/sizes.genome
+    wildcards: method=RIBO, condition=GLY, replicate=1
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+wigToBigWig centeredtracks/min/RIBO-GLY-1.min.forward.wig genomes/sizes.genome centeredtracks/min/RIBO-GLY-1.min.forward.centered.bw
+
+[Tue Sep 15 20:41:50 2026]
+localrule globalwigtobigwigminforward:
+    input: globaltracks/min/RNA-GLY-1.min.forward.wig, genomes/sizes.genome
+    output: globaltracks/min/RNA-GLY-1.min.forward.global.bw
+    jobid: 91
+    reason: Missing output files: globaltracks/min/RNA-GLY-1.min.forward.global.bw; Input files updated by another job: genomes/sizes.genome, globaltracks/min/RNA-GLY-1.min.forward.wig
+    wildcards: method=RNA, condition=GLY, replicate=1
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+wigToBigWig globaltracks/min/RNA-GLY-1.min.forward.wig genomes/sizes.genome globaltracks/min/RNA-GLY-1.min.forward.global.bw
+
+[Tue Sep 15 20:41:50 2026]
+localrule fiveprimewigtobigwigrawreverse:
+    input: fiveprimetracks/raw/RIBO-GLY-1.raw.reverse.wig, genomes/sizes.genome
+    output: fiveprimetracks/raw/RIBO-GLY-1.raw.reverse.fiveprime.bw
+    jobid: 112
+    reason: Missing output files: fiveprimetracks/raw/RIBO-GLY-1.raw.reverse.fiveprime.bw; Input files updated by another job: fiveprimetracks/raw/RIBO-GLY-1.raw.reverse.wig, genomes/sizes.genome
+    wildcards: method=RIBO, condition=GLY, replicate=1
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+wigToBigWig fiveprimetracks/raw/RIBO-GLY-1.raw.reverse.wig genomes/sizes.genome fiveprimetracks/raw/RIBO-GLY-1.raw.reverse.fiveprime.bw
+Execute 3 jobs...
+
+[Tue Sep 15 20:41:50 2026]
+localrule mergeConditions:
+    input: tracks/GLY.reparation.gff
+    output: tracks/GLY.merged.gff
+    jobid: 142
+    reason: Missing output files: tracks/GLY.merged.gff; Input files updated by another job: tracks/GLY.reparation.gff
+    wildcards: condition=GLY
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+mkdir -p tracks; cat tracks/GLY.reparation.gff >> tracks/GLY.merged.gff.unsorted; bedtools sort -i tracks/GLY.merged.gff.unsorted > tracks/GLY.merged.gff;
+
+[Tue Sep 15 20:41:50 2026]
+localrule predictDeepRibo:
+    input: deepribo/DeepRibo_model_v1.pt, deepribo/GLY-1/data_list.csv, deepribo/GLY-1/parameters.txt
+    output: deepribo/GLY-1/predictions.csv
+    jobid: 154
+    reason: Missing output files: deepribo/GLY-1/predictions.csv; Input files updated by another job: deepribo/GLY-1/parameters.txt, deepribo/DeepRibo_model_v1.pt, deepribo/GLY-1/data_list.csv
+    wildcards: condition=GLY, replicate=1
+    threads: 8
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+
+        mkdir -p deepribo;
+        DeepRibo.py predict deepribo/ --pred_data GLY-1/ -r failed -c failed --model deepribo/DeepRibo_model_v1.pt --dest deepribo/GLY-1/predictions.csv --num_workers 8
+        
+
+[Tue Sep 15 20:41:50 2026]
+localrule plotPCA:
+    input: pca/rld.tsv, pca/variance_percentages.tsv, pca/rld_cor.tsv
+    output: pca/PCA_3D.html, pca/diffex_QC.html
+    jobid: 75
+    reason: Missing output files: pca/PCA_3D.html; Input files updated by another job: pca/rld.tsv, pca/variance_percentages.tsv, pca/rld_cor.tsv
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+
+        mkdir -p pca;
+        HRIBO/scripts/plot_PCA.py -r pca/rld.tsv -p pca/variance_percentages.tsv -c pca/rld_cor.tsv -o pca/;
+        
+Execute 2 jobs...
+
+[Tue Sep 15 20:41:50 2026]
+localrule mergeAll:
+    input: tracks/GLY.merged.gff
+    output: tracks/all.gff
+    jobid: 141
+    reason: Missing output files: tracks/all.gff; Input files updated by another job: tracks/GLY.merged.gff
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+mkdir -p tracks; HRIBO/scripts/concatenate_gff.py tracks/GLY.merged.gff -o tracks/all.gff
+
+[Tue Sep 15 20:41:50 2026]
+localrule deepriboGFF:
+    input: deepribo/GLY-1/predictions.csv
+    output: deepribo/GLY-1.deepribo.gff
+    jobid: 153
+    reason: Missing output files: deepribo/GLY-1.deepribo.gff; Input files updated by another job: deepribo/GLY-1/predictions.csv
+    wildcards: condition=GLY, replicate=1
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+mkdir -p tracks; HRIBO/scripts/create_deepribo_gff.py -c GLY -r 1 -i deepribo/GLY-1/predictions.csv -o deepribo/GLY-1.deepribo.gff
+Execute 2 jobs...
+
+[Tue Sep 15 20:41:50 2026]
+localrule filterAll:
+    input: tracks/all.gff
+    output: tracks/reparation.gff
+    jobid: 140
+    reason: Missing output files: tracks/reparation.gff; Input files updated by another job: tracks/all.gff
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+mkdir -p tracks; HRIBO/scripts/merge_duplicates_reparation.py -i tracks/all.gff -o tracks/reparation.gff
+
+[Tue Sep 15 20:41:50 2026]
+localrule concatDeepRibo:
+    input: deepribo/GLY-1.deepribo.gff
+    output: tracks/GLY.deepribo.gff
+    jobid: 152
+    reason: Missing output files: tracks/GLY.deepribo.gff; Input files updated by another job: deepribo/GLY-1.deepribo.gff
+    wildcards: condition=GLY
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+mkdir -p tracks; HRIBO/scripts/concatenate_gff.py deepribo/GLY-1.deepribo.gff -o tracks/GLY.deepribo.gff
+Execute 2 jobs...
+
+[Tue Sep 15 20:41:50 2026]
+localrule reannotatedORFs:
+    input: annotation/annotation_processed.gff, tracks/reparation.gff
+    output: tracks/reparation_annotated.gff
+    jobid: 139
+    reason: Missing output files: tracks/reparation_annotated.gff; Input files updated by another job: tracks/reparation.gff, annotation/annotation_processed.gff
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+mkdir -p tracks; HRIBO/scripts/reannotate_orfs.py -a annotation/annotation_processed.gff -c tracks/reparation.gff -o tracks/reparation_annotated.gff
+
+[Tue Sep 15 20:41:50 2026]
+localrule allDeepRibo:
+    input: tracks/GLY.deepribo.gff
+    output: tracks/deepribo_all.gff
+    jobid: 151
+    reason: Missing output files: tracks/deepribo_all.gff; Input files updated by another job: tracks/GLY.deepribo.gff
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+mkdir -p tracks; HRIBO/scripts/concatenate_gff.py tracks/GLY.deepribo.gff -o tracks/deepribo_all.gff
+Execute 2 jobs...
+
+[Tue Sep 15 20:41:50 2026]
+localrule generateReparationReadCounts:
+    input: maplink/RIBO-GLY-1.bam, maplink/RNA-GLY-1.bam, maplink/RIBO-GLY-1.bam.bai, maplink/RNA-GLY-1.bam.bai, tracks/reparation_annotated.gff
+    output: readcounts/reparation_read_counts.raw
+    jobid: 138
+    reason: Missing output files: readcounts/reparation_read_counts.raw; Input files updated by another job: maplink/RIBO-GLY-1.bam.bai, maplink/RIBO-GLY-1.bam, maplink/RNA-GLY-1.bam, tracks/reparation_annotated.gff, maplink/RNA-GLY-1.bam.bai
+    threads: 5
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+
+        mkdir -p readcounts
+        HRIBO/scripts/call_featurecounts.py -b maplink/RIBO-GLY-1.bam maplink/RNA-GLY-1.bam -s 1 --with_O -o readcounts/reparation_read_counts.raw -t 5 -a tracks/reparation_annotated.gff
+        
+
+[Tue Sep 15 20:41:50 2026]
+localrule filterDeepRibo:
+    input: tracks/deepribo_all.gff, annotation/annotation_processed.gff
+    output: tracks/deepribo_merged.gff, tracks/deepribo_merged_plus.gff
+    jobid: 150
+    reason: Missing output files: tracks/deepribo_merged.gff; Input files updated by another job: tracks/deepribo_all.gff, annotation/annotation_processed.gff
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+mkdir -p tracks; HRIBO/scripts/merge_duplicates_deepribo.py -i tracks/deepribo_all.gff -o tracks/deepribo_merged.gff -a annotation/annotation_processed.gff
+Execute 2 jobs...
+
+[Tue Sep 15 20:41:50 2026]
+localrule generateDeepRiboReadCounts:
+    input: maplink/RIBO-GLY-1.bam, maplink/RNA-GLY-1.bam, maplink/RIBO-GLY-1.bam.bai, maplink/RNA-GLY-1.bam.bai, tracks/deepribo_merged.gff
+    output: readcounts/deepribo_read_counts.raw
+    jobid: 149
+    reason: Missing output files: readcounts/deepribo_read_counts.raw; Input files updated by another job: tracks/deepribo_merged.gff, maplink/RIBO-GLY-1.bam.bai, maplink/RIBO-GLY-1.bam, maplink/RNA-GLY-1.bam, maplink/RNA-GLY-1.bam.bai
+    threads: 5
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+
+        mkdir -p readcounts
+        HRIBO/scripts/call_featurecounts.py -b maplink/RIBO-GLY-1.bam maplink/RNA-GLY-1.bam -s 1 --with_O -o readcounts/deepribo_read_counts.raw -t 5 -a tracks/deepribo_merged.gff
+        
+
+[Tue Sep 15 20:41:50 2026]
+localrule mapReparationReads:
+    input: readcounts/reparation_read_counts.raw, tracks/reparation_annotated.gff
+    output: readcounts/reparation_annotation.gff
+    jobid: 137
+    reason: Missing output files: readcounts/reparation_annotation.gff; Input files updated by another job: readcounts/reparation_read_counts.raw, tracks/reparation_annotated.gff
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+
+        mkdir -p readcounts; HRIBO/scripts/map_reads_to_annotation.py -i readcounts/reparation_read_counts.raw -a tracks/reparation_annotated.gff -o readcounts/reparation_annotation.gff
+        
+Execute 2 jobs...
+
+[Tue Sep 15 20:41:50 2026]
+localrule mapDeepRiboReads:
+    input: readcounts/deepribo_read_counts.raw, tracks/deepribo_merged.gff
+    output: readcounts/deepribo_annotation.gff
+    jobid: 148
+    reason: Missing output files: readcounts/deepribo_annotation.gff; Input files updated by another job: tracks/deepribo_merged.gff, readcounts/deepribo_read_counts.raw
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+
+        mkdir -p readcounts; HRIBO/scripts/map_reads_to_annotation.py -i readcounts/deepribo_read_counts.raw -a tracks/deepribo_merged.gff -o readcounts/deepribo_annotation.gff
+        
+
+[Tue Sep 15 20:41:50 2026]
+localrule createExcelSummary:
+    input: readcounts/bam_mapped_reads.txt, readcounts/reparation_annotation.gff, genomes/genome.fa
+    output: auxiliary/predictions_reparation.xlsx
+    jobid: 136
+    reason: Missing output files: auxiliary/predictions_reparation.xlsx; Input files updated by another job: genomes/genome.fa, readcounts/bam_mapped_reads.txt, readcounts/reparation_annotation.gff
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+mkdir -p auxiliary; HRIBO/scripts/generate_excel_reparation.py -t readcounts/bam_mapped_reads.txt -r readcounts/reparation_annotation.gff -g genomes/genome.fa -o auxiliary/predictions_reparation.xlsx
+Execute 2 jobs...
+
+[Tue Sep 15 20:41:50 2026]
+localrule createOverviewTablePredictions:
+    input: readcounts/independant_annotation.gff, genomes/genome.fa, readcounts/bam_mapped_reads.txt, readcounts/reparation_annotation.gff, readcounts/deepribo_annotation.gff
+    output: auxiliary/overview.xlsx
+    jobid: 160
+    reason: Missing output files: auxiliary/overview.xlsx; Input files updated by another job: genomes/genome.fa, readcounts/bam_mapped_reads.txt, readcounts/reparation_annotation.gff, readcounts/deepribo_annotation.gff, readcounts/independant_annotation.gff
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+
+        mkdir -p auxiliary;
+        if [ -z  ]
+        then
+            HRIBO/scripts/generate_excel_overview.py -a readcounts/independant_annotation.gff -g genomes/genome.fa -t readcounts/bam_mapped_reads.txt --mapped_reads_deepribo readcounts/deepribo_annotation.gff --mapped_reads_reparation readcounts/reparation_annotation.gff -o auxiliary/overview.xlsx
+        else
+            HRIBO/scripts/generate_excel_overview.py -a readcounts/independant_annotation.gff -c   -g genomes/genome.fa -t readcounts/bam_mapped_reads.txt --mapped_reads_deepribo readcounts/deepribo_annotation.gff --mapped_reads_reparation readcounts/reparation_annotation.gff -o auxiliary/overview.xlsx
+        fi
+        
+
+[Tue Sep 15 20:41:50 2026]
+localrule createExcelSummaryDeepRibo:
+    input: readcounts/bam_mapped_reads.txt, readcounts/deepribo_annotation.gff, genomes/genome.fa
+    output: auxiliary/predictions_deepribo.xlsx
+    jobid: 147
+    reason: Missing output files: auxiliary/predictions_deepribo.xlsx; Input files updated by another job: genomes/genome.fa, readcounts/bam_mapped_reads.txt, readcounts/deepribo_annotation.gff
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+mkdir -p auxiliary; HRIBO/scripts/generate_excel_deepribo.py -t readcounts/bam_mapped_reads.txt -r readcounts/deepribo_annotation.gff -g genomes/genome.fa -o auxiliary/predictions_deepribo.xlsx
+Execute 1 jobs...
+
+[Tue Sep 15 20:41:50 2026]
+localrule all:
+    input: metageneprofiling/RIBO-GLY-1, metageneprofiling/read_length_fractions.html, qc/multi/multiqc_report.html, tracks/potentialStopCodons.gff, tracks/potentialStartCodons.gff, tracks/potentialRibosomeBindingSite.gff, tracks/potentialAlternativeStartCodons.gff, auxiliary/annotation_total.xlsx, auxiliary/annotation_unique.xlsx, auxiliary/total_read_counts.xlsx, auxiliary/unique_read_counts.xlsx, auxiliary/samples.xlsx, figures/heatmap_SpearmanCorr_readCounts.pdf, pca/PCA_3D.html, globaltracks/raw/RIBO-GLY-1.raw.forward.global.bw, globaltracks/raw/RNA-GLY-1.raw.forward.global.bw, globaltracks/raw/RIBO-GLY-1.raw.reverse.global.bw, globaltracks/raw/RNA-GLY-1.raw.reverse.global.bw, globaltracks/mil/RIBO-GLY-1.mil.forward.global.bw, globaltracks/mil/RNA-GLY-1.mil.forward.global.bw, globaltracks/mil/RIBO-GLY-1.mil.reverse.global.bw, globaltracks/mil/RNA-GLY-1.mil.reverse.global.bw, globaltracks/min/RIBO-GLY-1.min.forward.global.bw, globaltracks/min/RNA-GLY-1.min.forward.global.bw, globaltracks/min/RIBO-GLY-1.min.reverse.global.bw, globaltracks/min/RNA-GLY-1.min.reverse.global.bw, centeredtracks/raw/RIBO-GLY-1.raw.forward.centered.bw, centeredtracks/raw/RNA-GLY-1.raw.forward.centered.bw, centeredtracks/raw/RIBO-GLY-1.raw.reverse.centered.bw, centeredtracks/raw/RNA-GLY-1.raw.reverse.centered.bw, centeredtracks/mil/RIBO-GLY-1.mil.forward.centered.bw, centeredtracks/mil/RNA-GLY-1.mil.forward.centered.bw, centeredtracks/mil/RIBO-GLY-1.mil.reverse.centered.bw, centeredtracks/mil/RNA-GLY-1.mil.reverse.centered.bw, centeredtracks/min/RIBO-GLY-1.min.forward.centered.bw, centeredtracks/min/RNA-GLY-1.min.forward.centered.bw, centeredtracks/min/RIBO-GLY-1.min.reverse.centered.bw, centeredtracks/min/RNA-GLY-1.min.reverse.centered.bw, fiveprimetracks/raw/RIBO-GLY-1.raw.forward.fiveprime.bw, fiveprimetracks/raw/RNA-GLY-1.raw.forward.fiveprime.bw, fiveprimetracks/raw/RIBO-GLY-1.raw.reverse.fiveprime.bw, fiveprimetracks/raw/RNA-GLY-1.raw.reverse.fiveprime.bw, fiveprimetracks/mil/RIBO-GLY-1.mil.forward.fiveprime.bw, fiveprimetracks/mil/RNA-GLY-1.mil.forward.fiveprime.bw, fiveprimetracks/mil/RIBO-GLY-1.mil.reverse.fiveprime.bw, fiveprimetracks/mil/RNA-GLY-1.mil.reverse.fiveprime.bw, fiveprimetracks/min/RIBO-GLY-1.min.forward.fiveprime.bw, fiveprimetracks/min/RNA-GLY-1.min.forward.fiveprime.bw, fiveprimetracks/min/RIBO-GLY-1.min.reverse.fiveprime.bw, fiveprimetracks/min/RNA-GLY-1.min.reverse.fiveprime.bw, threeprimetracks/raw/RIBO-GLY-1.raw.forward.threeprime.bw, threeprimetracks/raw/RNA-GLY-1.raw.forward.threeprime.bw, threeprimetracks/raw/RIBO-GLY-1.raw.reverse.threeprime.bw, threeprimetracks/raw/RNA-GLY-1.raw.reverse.threeprime.bw, threeprimetracks/mil/RIBO-GLY-1.mil.forward.threeprime.bw, threeprimetracks/mil/RNA-GLY-1.mil.forward.threeprime.bw, threeprimetracks/mil/RIBO-GLY-1.mil.reverse.threeprime.bw, threeprimetracks/mil/RNA-GLY-1.mil.reverse.threeprime.bw, threeprimetracks/min/RIBO-GLY-1.min.forward.threeprime.bw, threeprimetracks/min/RNA-GLY-1.min.forward.threeprime.bw, threeprimetracks/min/RIBO-GLY-1.min.reverse.threeprime.bw, threeprimetracks/min/RNA-GLY-1.min.reverse.threeprime.bw, auxiliary/predictions_reparation.xlsx, auxiliary/predictions_deepribo.xlsx, auxiliary/overview.xlsx
+    jobid: 0
+    reason: Input files updated by another job: globaltracks/mil/RNA-GLY-1.mil.reverse.global.bw, centeredtracks/mil/RIBO-GLY-1.mil.forward.centered.bw, centeredtracks/min/RNA-GLY-1.min.reverse.centered.bw, metageneprofiling/read_length_fractions.html, centeredtracks/mil/RNA-GLY-1.mil.forward.centered.bw, centeredtracks/min/RNA-GLY-1.min.forward.centered.bw, globaltracks/mil/RIBO-GLY-1.mil.reverse.global.bw, threeprimetracks/raw/RNA-GLY-1.raw.forward.threeprime.bw, threeprimetracks/mil/RIBO-GLY-1.mil.forward.threeprime.bw, centeredtracks/min/RIBO-GLY-1.min.reverse.centered.bw, threeprimetracks/min/RIBO-GLY-1.min.forward.threeprime.bw, globaltracks/raw/RIBO-GLY-1.raw.reverse.global.bw, tracks/potentialAlternativeStartCodons.gff, centeredtracks/raw/RNA-GLY-1.raw.reverse.centered.bw, tracks/potentialRibosomeBindingSite.gff, globaltracks/min/RIBO-GLY-1.min.forward.global.bw, threeprimetracks/mil/RNA-GLY-1.mil.forward.threeprime.bw, tracks/potentialStartCodons.gff, globaltracks/min/RNA-GLY-1.min.forward.global.bw, threeprimetracks/mil/RNA-GLY-1.mil.reverse.threeprime.bw, centeredtracks/mil/RNA-GLY-1.mil.reverse.centered.bw, threeprimetracks/min/RIBO-GLY-1.min.reverse.threeprime.bw, auxiliary/unique_read_counts.xlsx, globaltracks/mil/RIBO-GLY-1.mil.forward.global.bw, threeprimetracks/raw/RNA-GLY-1.raw.reverse.threeprime.bw, qc/multi/multiqc_report.html, fiveprimetracks/mil/RNA-GLY-1.mil.reverse.fiveprime.bw, globaltracks/raw/RNA-GLY-1.raw.reverse.global.bw, threeprimetracks/min/RNA-GLY-1.min.reverse.threeprime.bw, centeredtracks/mil/RIBO-GLY-1.mil.reverse.centered.bw, auxiliary/predictions_deepribo.xlsx, auxiliary/predictions_reparation.xlsx, globaltracks/min/RIBO-GLY-1.min.reverse.global.bw, centeredtracks/raw/RIBO-GLY-1.raw.forward.centered.bw, fiveprimetracks/min/RNA-GLY-1.min.reverse.fiveprime.bw, auxiliary/total_read_counts.xlsx, globaltracks/min/RNA-GLY-1.min.reverse.global.bw, auxiliary/annotation_total.xlsx, auxiliary/annotation_unique.xlsx, globaltracks/raw/RNA-GLY-1.raw.forward.global.bw, centeredtracks/min/RIBO-GLY-1.min.forward.centered.bw, fiveprimetracks/raw/RNA-GLY-1.raw.reverse.fiveprime.bw, threeprimetracks/min/RNA-GLY-1.min.forward.threeprime.bw, figures/heatmap_SpearmanCorr_readCounts.pdf, threeprimetracks/raw/RIBO-GLY-1.raw.reverse.threeprime.bw, fiveprimetracks/min/RIBO-GLY-1.min.forward.fiveprime.bw, centeredtracks/raw/RNA-GLY-1.raw.forward.centered.bw, fiveprimetracks/min/RIBO-GLY-1.min.reverse.fiveprime.bw, threeprimetracks/mil/RIBO-GLY-1.mil.reverse.threeprime.bw, centeredtracks/raw/RIBO-GLY-1.raw.reverse.centered.bw, metageneprofiling/RIBO-GLY-1, fiveprimetracks/raw/RNA-GLY-1.raw.forward.fiveprime.bw, fiveprimetracks/mil/RIBO-GLY-1.mil.reverse.fiveprime.bw, pca/PCA_3D.html, globaltracks/mil/RNA-GLY-1.mil.forward.global.bw, fiveprimetracks/mil/RIBO-GLY-1.mil.forward.fiveprime.bw, fiveprimetracks/min/RNA-GLY-1.min.forward.fiveprime.bw, threeprimetracks/raw/RIBO-GLY-1.raw.forward.threeprime.bw, globaltracks/raw/RIBO-GLY-1.raw.forward.global.bw, auxiliary/overview.xlsx, tracks/potentialStopCodons.gff, fiveprimetracks/mil/RNA-GLY-1.mil.forward.fiveprime.bw, auxiliary/samples.xlsx, fiveprimetracks/raw/RIBO-GLY-1.raw.forward.fiveprime.bw, fiveprimetracks/raw/RIBO-GLY-1.raw.reverse.fiveprime.bw
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=<TBD>
+
+Job stats:
+job                                         count
+----------------------------------------  -------
+all                                             1
+allDeepRibo                                     1
+alternativeStartCodonTrack                      1
+asiteOccupancy                                  1
+bamcompare                                      1
+bamindex                                        2
+centeredwig                                     2
+centeredwigtobigwigmilforward                   2
+centeredwigtobigwigmilreverse                   2
+centeredwigtobigwigminforward                   2
+centeredwigtobigwigminrawreverse                2
+centeredwigtobigwigminreverse                   2
+centeredwigtobigwigrawforward                   2
+checkAnnotation                                 1
+concatDeepRibo                                  1
+concatReparation                                1
+coverage                                        1
+createExcelSummary                              1
+createExcelSummaryDeepRibo                      1
+createExcelTotalAnnotation                      1
+createExcelTotalAnnotationReadCount             1
+createExcelUniqueAnnotation                     1
+createExcelUniqueAnnotationReadCount            1
+createOverviewTablePredictions                  1
+deepriboGFF                                     1
+deepriboGetModel                                1
+enrichAnnotation                                1
+fastqcmulti                                     2
+fastqcraw_single                                2
+fastqcrrnafilter                                2
+fastqctrimmed_single                            2
+fastqcunique                                    2
+featurescounts                                  2
+filterAll                                       1
+filterDeepRibo                                  1
+fiveprimewig                                    2
+fiveprimewigtobigwigmilforward                  2
+fiveprimewigtobigwigminforward                  2
+fiveprimewigtobigwigminreverse                  2
+fiveprimewigtobigwigrawforward                  2
+fiveprimewigtobigwigrawreverse                  2
+fiveprimewigtobigwimilgreverse                  2
+generateAnnotationIndependantReadCounts         1
+generateAnnotationTotalReadCounts               1
+generateAnnotationUniqueReadCounts              1
+generateDeepRiboReadCounts                      1
+generateDifferentialExpressionReadCounts        1
+generateReparationReadCounts                    1
+genomeSamToolsIndex                             1
+genomeSegemehlIndex                             1
+genomeSize                                      1
+globalwig                                       2
+globalwigtobigwigmilforward                     2
+globalwigtobigwigmilreverse                     2
+globalwigtobigwigminforward                     2
+globalwigtobigwigminrawreverse                  2
+globalwigtobigwigminreverse                     2
+globalwigtobigwigrawforward                     2
+link_single                                     2
+map                                             2
+mapDeepRiboReads                                1
+mapIndependantReads                             1
+mapReparationReads                              1
+mapTotalReads                                   1
+mapUniqueReads                                  1
+maplink                                         2
+maplinkMappedReads                              1
+mergeAll                                        1
+mergeConditions                                 1
+metageneProfiling                               1
+multiqc                                         1
+norrnafeaturescounts                            2
+parameterEstimation                             1
+parseDeepRibo                                   1
+plotCorrelation                                 1
+plotPCA                                         1
+predictDeepRibo                                 1
+preparePCAinput                                 1
+rbsTrack                                        1
+readLengthStatistics                            1
+reannotatedORFs                                 1
+reparation                                      1
+reparationGFF                                   1
+retrieveAnnotation                              1
+retrieveGenome                                  1
+reversecomplementGenome                         1
+rrnaannotation                                  1
+rrnafilter2                                     2
+rrnatotalfeaturescounts                         2
+rrnauniquefeaturescounts                        2
+runDeseqPreprocessing                           1
+sammultitobam                                   2
+samplesToExcel                                  1
+samstrandswap                                   2
+samtobam                                        2
+samuniq                                         2
+startCodonTrack                                 1
+stopCodonTrack                                  1
+threeprimewig                                   2
+threeprimewigtobigwigmilforward                 2
+threeprimewigtobigwigmilreverse                 2
+threeprimewigtobigwigminforward                 2
+threeprimewigtobigwigminreverse                 2
+threeprimewigtobigwigrawforward                 2
+threeprimewigtobigwigrawreverse                 2
+totalMappedReads                                1
+totalmappedbamindex                             2
+trim_single                                     2
+trnafeaturescounts                              2
+unambigousAnnotation                            1
+uniprotDBRetrieve                               1
+uniqueMappedReads                               1
+uniquemappedbamindex                            2
+total                                         163
+
+Reasons:
+    (check individual jobs above for details)
+    input files updated by another job:
+        all, allDeepRibo, alternativeStartCodonTrack, asiteOccupancy, bamcompare, bamindex, centeredwig, centeredwigtobigwigmilforward, centeredwigtobigwigmilreverse, centeredwigtobigwigminforward, centeredwigtobigwigminrawreverse, centeredwigtobigwigminreverse, centeredwigtobigwigrawforward, checkAnnotation, concatDeepRibo, concatReparation, coverage, createExcelSummary, createExcelSummaryDeepRibo, createExcelTotalAnnotation, createExcelTotalAnnotationReadCount, createExcelUniqueAnnotation, createExcelUniqueAnnotationReadCount, createOverviewTablePredictions, deepriboGFF, enrichAnnotation, fastqcmulti, fastqcraw_single, fastqcrrnafilter, fastqctrimmed_single, fastqcunique, featurescounts, filterAll, filterDeepRibo, fiveprimewig, fiveprimewigtobigwigmilforward, fiveprimewigtobigwigminforward, fiveprimewigtobigwigminreverse, fiveprimewigtobigwigrawforward, fiveprimewigtobigwigrawreverse, fiveprimewigtobigwimilgreverse, generateAnnotationIndependantReadCounts, generateAnnotationTotalReadCounts, generateAnnotationUniqueReadCounts, generateDeepRiboReadCounts, generateDifferentialExpressionReadCounts, generateReparationReadCounts, genomeSamToolsIndex, genomeSegemehlIndex, genomeSize, ...
+    output files have to be generated:
+        allDeepRibo, alternativeStartCodonTrack, asiteOccupancy, bamcompare, bamindex, centeredwig, centeredwigtobigwigmilforward, centeredwigtobigwigmilreverse, centeredwigtobigwigminforward, centeredwigtobigwigminrawreverse, centeredwigtobigwigminreverse, centeredwigtobigwigrawforward, checkAnnotation, concatDeepRibo, concatReparation, coverage, createExcelSummary, createExcelSummaryDeepRibo, createExcelTotalAnnotation, createExcelTotalAnnotationReadCount, createExcelUniqueAnnotation, createExcelUniqueAnnotationReadCount, createOverviewTablePredictions, deepriboGFF, deepriboGetModel, enrichAnnotation, fastqcmulti, fastqcraw_single, fastqcrrnafilter, fastqctrimmed_single, fastqcunique, featurescounts, filterAll, filterDeepRibo, fiveprimewig, fiveprimewigtobigwigmilforward, fiveprimewigtobigwigminforward, fiveprimewigtobigwigminreverse, fiveprimewigtobigwigrawforward, fiveprimewigtobigwigrawreverse, fiveprimewigtobigwimilgreverse, generateAnnotationIndependantReadCounts, generateAnnotationTotalReadCounts, generateAnnotationUniqueReadCounts, generateDeepRiboReadCounts, generateDifferentialExpressionReadCounts, generateReparationReadCounts, genomeSamToolsIndex, genomeSegemehlIndex, genomeSize, ...
+
+This was a dry-run (flag -n). The order of jobs does not reflect the order of execution.
+[2026-09-15 20:41:50] snakemake finished with exit status 0
+exit=0

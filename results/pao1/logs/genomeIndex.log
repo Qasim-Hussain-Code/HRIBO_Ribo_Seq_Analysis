@@ -1,0 +1,457 @@
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: reading database sequences.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: 1 database sequences found.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: total length of db sequences: 6264404
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: assigning all reads to default read group 'A1'.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: additional read group default values '	SM:sample1	LB:library1	PU:unit1	PL:illumina'
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: reads assigned to read group 'A1'
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: compiled sam header.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: alphabet of size (5): ACGT
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: size of db sequence: 6264405
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: constructing suftab.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: alurusort: classify.
+init bit array of 783051
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: alurusort: getting bit.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: not bit alurusort: alloc B of size 3041884.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: alurusort: initbitarray of size 3041884.
+init bit array of 380236
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: alurusort: Qmaxdist in cl of size 6264405.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: alurusort: scan B.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: alurusort: substringsort.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: setting bit array to zero
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: allocating space for buckets and buffers
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: memsetting
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: substring sort ... ok
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: checking valbitarray.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: enter Tprime calculation.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: tprime: init arrays.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: tprime: scan B
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: tprime: iterating i=6264405 elements with lenB=3041884.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: tprime: exit
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: enter alursortint.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: alurusortint: classify int.
+init bit array of 380236
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: alurusortint: getting bit.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: alurusortint: init bcktsA.
+init bit array of 380236
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: alurusortint: countingsort.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: countingsortint: init buffers and A
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: setting buffer to zero
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: countsortint: scanning buffer (1 of 3)
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: countsortint: scanning buffer (2 of 3)
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: countsortint: scanning buffer (3 of 3)
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: countsortint: scanning buffer (to set borders)
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: countsortint: exiting
+init bit array of 156754
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: arrayB: allocating B with 1254025 elements.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: arrayB: iterating to lenA=3041884.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: arrayB: exiting
+init bit array of 380236
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: alurusortint: enter get listsL.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: getlistsL: memsetting list of 3041881 elements.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: getlistsL: iter from 3041883 down to 0.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: scanning A (3041884 elems).
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: scanning accdist (13 elems) (1).
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: scanning accdist (13 elems) (2).
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: getlistsL: exit
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: alurusortint: sort listsL.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: sortlistL: allocating stuff
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: sortlistL: iterating 1254025 elems.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: sortlistL: looping 3041881 elems.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: sortlistL: iterating 3041884 elems.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: sortlistsL: exiting happily!
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: alurusortint: enter tprime.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: tprime: init arrays.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: tprime: scan B
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: tprime: iterating i=3041884 elements with lenB=1254025.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: tprime: exit
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: alurusortint: enter alurusortint.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: alurusortint: classify int.
+init bit array of 156754
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: alurusortint: getting bit.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: alurusortint: init bcktsA.
+init bit array of 156754
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: alurusortint: countingsort.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: countingsortint: init buffers and A
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: setting buffer to zero
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: countsortint: scanning buffer (1 of 3)
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: countsortint: scanning buffer (2 of 3)
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: countsortint: scanning buffer (3 of 3)
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: countsortint: scanning buffer (to set borders)
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: countsortint: exiting
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: alurusortint: Sorting type S suffixes. Init bcktsB.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: 563241	690784	1254025.
+
+init bit array of 70406
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: arrayB: allocating B with 563241 elements.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: arrayB: iterating to lenA=1254025.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: arrayB: exiting
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: alurusortint: enter Qmaxdist.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: alurusortint: enter Qdist.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: alurusortint: enter distCount.
+init bit array of 156753
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: alurusortint: enter get listsS.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: getlistsS: memsetting list of 1254023 elements.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: getlistsS: iter up to 1254025.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: getlistsS: scan A
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: getlistsS: set accidst
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: getlistsS: exiting
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: alurusortint: freeing stuff.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: alurusortint: enter sortlistsS.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: sortlistS: allocating stuff.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: sortlistS: iterating 563241 elems.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: sortlistS: looping 1254023 elems.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: sortlistS: iterating 1254025 elems.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: sortlistsS: exiting happily!
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: alurusortint: enter tprime.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: tprime: init arrays.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: tprime: scan B
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: tprime: iterating i=1254025 elements with lenB=563241.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: tprime: exit
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: alurusortint: enter alurusortint.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: alurusortint: classify int.
+init bit array of 70406
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: alurusortint: getting bit.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: alurusortint: init bcktsA.
+init bit array of 70406
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: alurusortint: countingsort.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: countingsortint: init buffers and A
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: setting buffer to zero
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: countsortint: scanning buffer (1 of 3)
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: countsortint: scanning buffer (2 of 3)
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: countsortint: scanning buffer (3 of 3)
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: countsortint: scanning buffer (to set borders)
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: countsortint: exiting
+init bit array of 31581
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: arrayB: allocating B with 252643 elements.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: arrayB: iterating to lenA=563241.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: arrayB: exiting
+init bit array of 70405
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: alurusortint: enter get listsL.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: getlistsL: memsetting list of 563238 elements.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: getlistsL: iter from 563240 down to 0.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: scanning A (563241 elems).
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: scanning accdist (20 elems) (1).
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: scanning accdist (20 elems) (2).
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: getlistsL: exit
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: alurusortint: sort listsL.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: sortlistL: allocating stuff
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: sortlistL: iterating 252643 elems.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: sortlistL: looping 563238 elems.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: sortlistL: iterating 563241 elems.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: sortlistsL: exiting happily!
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: alurusortint: enter tprime.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: tprime: init arrays.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: tprime: scan B
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: tprime: iterating i=563241 elements with lenB=252643.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: tprime: exit
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: alurusortint: enter alurusortint.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: alurusortint: classify int.
+init bit array of 31581
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: alurusortint: getting bit.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: alurusortint: init bcktsA.
+init bit array of 31581
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: alurusortint: countingsort.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: countingsortint: init buffers and A
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: setting buffer to zero
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: countsortint: scanning buffer (1 of 3)
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: countsortint: scanning buffer (2 of 3)
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: countsortint: scanning buffer (3 of 3)
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: countsortint: scanning buffer (to set borders)
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: countsortint: exiting
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: alurusortint: Sorting type S suffixes. Init bcktsB.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: 113950	138693	252643.
+
+init bit array of 14244
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: arrayB: allocating B with 113950 elements.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: arrayB: iterating to lenA=252643.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: arrayB: exiting
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: alurusortint: enter Qmaxdist.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: alurusortint: enter Qdist.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: alurusortint: enter distCount.
+init bit array of 31580
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: alurusortint: enter get listsS.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: getlistsS: memsetting list of 252638 elements.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: getlistsS: iter up to 252643.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: getlistsS: scan A
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: getlistsS: set accidst
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: getlistsS: exiting
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: alurusortint: freeing stuff.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: alurusortint: enter sortlistsS.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: sortlistS: allocating stuff.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: sortlistS: iterating 113950 elems.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: sortlistS: looping 252638 elems.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: sortlistS: iterating 252643 elems.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: sortlistsS: exiting happily!
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: alurusortint: enter tprime.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: tprime: init arrays.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: tprime: scan B
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: tprime: iterating i=252643 elements with lenB=113950.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: tprime: exit
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: alurusortint: enter alurusortint.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: alurusortint: classify int.
+init bit array of 14244
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: alurusortint: getting bit.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: alurusortint: init bcktsA.
+init bit array of 14244
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: alurusortint: countingsort.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: countingsortint: init buffers and A
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: setting buffer to zero
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: countsortint: scanning buffer (1 of 3)
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: countsortint: scanning buffer (2 of 3)
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: countsortint: scanning buffer (3 of 3)
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: countsortint: scanning buffer (to set borders)
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: countsortint: exiting
+init bit array of 6416
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: arrayB: allocating B with 51327 elements.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: arrayB: iterating to lenA=113950.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: arrayB: exiting
+init bit array of 14244
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: alurusortint: enter get listsL.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: getlistsL: memsetting list of 113946 elements.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: getlistsL: iter from 113949 down to 0.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: scanning A (113950 elems).
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: scanning accdist (10 elems) (1).
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: scanning accdist (10 elems) (2).
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: getlistsL: exit
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: alurusortint: sort listsL.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: sortlistL: allocating stuff
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: sortlistL: iterating 51327 elems.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: sortlistL: looping 113946 elems.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: sortlistL: iterating 113950 elems.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: sortlistsL: exiting happily!
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: alurusortint: enter tprime.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: tprime: init arrays.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: tprime: scan B
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: tprime: iterating i=113950 elements with lenB=51327.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: tprime: exit
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: alurusortint: enter alurusortint.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: alurusortint: classify int.
+init bit array of 6416
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: alurusortint: getting bit.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: alurusortint: init bcktsA.
+init bit array of 6416
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: alurusortint: countingsort.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: countingsortint: init buffers and A
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: setting buffer to zero
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: countsortint: scanning buffer (1 of 3)
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: countsortint: scanning buffer (2 of 3)
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: countsortint: scanning buffer (3 of 3)
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: countsortint: scanning buffer (to set borders)
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: countsortint: exiting
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: alurusortint: Sorting type S suffixes. Init bcktsB.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: 23137	28190	51327.
+
+init bit array of 2893
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: arrayB: allocating B with 23137 elements.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: arrayB: iterating to lenA=51327.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: arrayB: exiting
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: alurusortint: enter Qmaxdist.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: alurusortint: enter Qdist.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: alurusortint: enter distCount.
+init bit array of 6416
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: alurusortint: enter get listsS.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: getlistsS: memsetting list of 51326 elements.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: getlistsS: iter up to 51327.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: getlistsS: scan A
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: getlistsS: set accidst
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: getlistsS: exiting
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: alurusortint: freeing stuff.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: alurusortint: enter sortlistsS.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: sortlistS: allocating stuff.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: sortlistS: iterating 23137 elems.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: sortlistS: looping 51326 elems.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: sortlistS: iterating 51327 elems.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: sortlistsS: exiting happily!
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: alurusortint: enter tprime.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: tprime: init arrays.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: tprime: scan B
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: tprime: iterating i=51327 elements with lenB=23137.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: tprime: exit
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: alurusortint: enter alurusortint.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: alurusortint: classify int.
+init bit array of 2893
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: alurusortint: getting bit.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: alurusortint: init bcktsA.
+init bit array of 2893
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: alurusortint: countingsort.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: countingsortint: init buffers and A
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: setting buffer to zero
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: countsortint: scanning buffer (1 of 3)
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: countsortint: scanning buffer (2 of 3)
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: countsortint: scanning buffer (3 of 3)
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: countsortint: scanning buffer (to set borders)
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: countsortint: exiting
+init bit array of 1310
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: arrayB: allocating B with 10478 elements.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: arrayB: iterating to lenA=23137.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: arrayB: exiting
+init bit array of 2892
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: alurusortint: enter get listsL.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: getlistsL: memsetting list of 23135 elements.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: getlistsL: iter from 23136 down to 0.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: scanning A (23137 elems).
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: scanning accdist (9 elems) (1).
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: scanning accdist (9 elems) (2).
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: getlistsL: exit
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: alurusortint: sort listsL.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: sortlistL: allocating stuff
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: sortlistL: iterating 10478 elems.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: sortlistL: looping 23135 elems.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: sortlistL: iterating 23137 elems.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: sortlistsL: exiting happily!
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: alurusortint: enter tprime.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: tprime: init arrays.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: tprime: scan B
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: tprime: iterating i=23137 elements with lenB=10478.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: tprime: exit
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: alurusortint: enter alurusortint.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: alurusortint: classify int.
+init bit array of 1310
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: alurusortint: getting bit.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: alurusortint: init bcktsA.
+init bit array of 1310
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: alurusortint: countingsort.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: countingsortint: init buffers and A
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: setting buffer to zero
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: countsortint: scanning buffer (1 of 3)
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: countsortint: scanning buffer (2 of 3)
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: countsortint: scanning buffer (3 of 3)
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: countsortint: scanning buffer (to set borders)
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: countsortint: exiting
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: alurusortint: Sorting type S suffixes. Init bcktsB.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: 4704	5774	10478.
+
+init bit array of 588
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: arrayB: allocating B with 4704 elements.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: arrayB: iterating to lenA=10478.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: arrayB: exiting
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: alurusortint: enter Qmaxdist.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: alurusortint: enter Qdist.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: alurusortint: enter distCount.
+init bit array of 1310
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: alurusortint: enter get listsS.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: getlistsS: memsetting list of 10477 elements.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: getlistsS: iter up to 10478.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: getlistsS: scan A
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: getlistsS: set accidst
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: getlistsS: exiting
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: alurusortint: freeing stuff.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: alurusortint: enter sortlistsS.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: sortlistS: allocating stuff.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: sortlistS: iterating 4704 elems.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: sortlistS: looping 10477 elems.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: sortlistS: iterating 10478 elems.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: sortlistsS: exiting happily!
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: alurusortint: enter tprime.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: tprime: init arrays.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: tprime: scan B
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: tprime: iterating i=10478 elements with lenB=4704.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: tprime: exit
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: alurusortint: enter alurusortint.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: alurusortint: classify int.
+init bit array of 588
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: alurusortint: getting bit.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: alurusortint: init bcktsA.
+init bit array of 588
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: alurusortint: countingsort.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: countingsortint: init buffers and A
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: setting buffer to zero
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: countsortint: scanning buffer (1 of 3)
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: countsortint: scanning buffer (2 of 3)
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: countsortint: scanning buffer (3 of 3)
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: countsortint: scanning buffer (to set borders)
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: countsortint: exiting
+init bit array of 267
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: arrayB: allocating B with 2134 elements.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: arrayB: iterating to lenA=4704.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: arrayB: exiting
+init bit array of 588
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: alurusortint: enter get listsL.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: getlistsL: memsetting list of 4703 elements.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: getlistsL: iter from 4703 down to 0.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: scanning A (4704 elems).
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: scanning accdist (8 elems) (1).
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: scanning accdist (8 elems) (2).
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: getlistsL: exit
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: alurusortint: sort listsL.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: sortlistL: allocating stuff
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: sortlistL: iterating 2134 elems.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: sortlistL: looping 4703 elems.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: sortlistL: iterating 4704 elems.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: sortlistsL: exiting happily!
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: alurusortint: valbitarraysortedL.
+init bit array of 588
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: reconstructintS.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: reconstruct: init.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: reconstruct: iteration over 10478 elems.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: reconstruct: scan B (size: 4704).
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: reconstruct: exit.
+init bit array of 1310
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: reconstructintL.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: reconstruct: init.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: reconstruct: iteration over 23137 elems.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: reconstruct: scan B (size: 10478).
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: reconstruct: exit.
+init bit array of 2893
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: reconstructintS.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: reconstruct: init.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: reconstruct: iteration over 51327 elems.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: reconstruct: scan B (size: 23137).
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: reconstruct: exit.
+init bit array of 6416
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: reconstructintL.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: reconstruct: init.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: reconstruct: iteration over 113950 elems.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: reconstruct: scan B (size: 51327).
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: reconstruct: exit.
+init bit array of 14244
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: reconstructintS.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: reconstruct: init.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: reconstruct: iteration over 252643 elems.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: reconstruct: scan B (size: 113950).
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: reconstruct: exit.
+init bit array of 31581
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: reconstructintL.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: reconstruct: init.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: reconstruct: iteration over 563241 elems.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: reconstruct: scan B (size: 252643).
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: reconstruct: exit.
+init bit array of 70406
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: reconstructintS.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: reconstruct: init.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: reconstruct: iteration over 1254025 elems.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: reconstruct: scan B (size: 563241).
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: reconstruct: exit.
+init bit array of 156754
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: reconstructintL.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: reconstruct: init.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: reconstruct: iteration over 3041884 elems.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: reconstruct: scan B (size: 1254025).
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: reconstruct: exit.
+init bit array of 380236
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: reconstructcharS.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: reconstruct: init.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: reconstruct: iteration over 6264405 elems.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: reconstruct: scan B (size: 3041884).
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: reconstruct: exit.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: enter aluruSuffixArrayS start.
+init bit array of 783051
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: constructing inv_suftab (6264405).
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: inv_suftab constructed.
+[SEGEMEHL] Tue Sep 15 20:59:48 2026: constructing lcp.
+[s[K[SEGEMEHL] Tue Sep 15 20:59:49 2026: deleting inv_suftab
+[SEGEMEHL] Tue Sep 15 20:59:49 2026: constructing child tab.
+[SEGEMEHL] Tue Sep 15 20:59:49 2026: constructing suffix links.
+[SEGEMEHL] Tue Sep 15 20:59:49 2026: constructing id.
+[SEGEMEHL] Tue Sep 15 20:59:49 2026: constructing suflinks - bottom up.
+[SEGEMEHL] Tue Sep 15 20:59:50 2026: constructing suflinks - top down.
+suflink construction. pushes: 4166185, maxstack: 33
+[SEGEMEHL] Tue Sep 15 20:59:51 2026: building  the suffix array has taken 3.000000 seconds.
+[SEGEMEHL] Tue Sep 15 20:59:51 2026: total length of suffix array was 6264404.
+[SEGEMEHL] Tue Sep 15 20:59:51 2026: writing suffix array 'genomeSegemehlIndex/genome.idx' to disk.
+[SEGEMEHL] Tue Sep 15 20:59:51 2026: Mapping stats:
+	total	mapped	(%)	unique	(%)	multi	(%)	split	(%)
+all	0	0	-nan%	0	-nan%	0	-nan%	0	-nan%
+[SEGEMEHL] Tue Sep 15 20:59:51 2026: 
+Goodbye.
+ "Gehen Sie vorsichtig mit dem Begriff der Unendlichkeit um!" (Shorty)

@@ -1,0 +1,303 @@
+Building DAG of jobs...
+Your conda installation is not configured to use strict channel priorities. This is however crucial for having robust and correct environments (for details, see https://conda-forge.org/docs/user/tipsandtricks.html). Please consider to configure strict priorities by executing 'conda config --set channel_priority strict'.
+Creating conda environment HRIBO/envs/reparation.yaml...
+Downloading and installing remote packages.
+Environment for /home/qasim/hribo_work/pao1/HRIBO/rules/../envs/reparation.yaml created (location: .snakemake/conda/14bed684a89303115f79cf88642513a2_)
+Using shell: /usr/bin/bash
+Provided cores: 8
+Rules claiming more threads will be scaled down.
+Provided resources: mem_mb=6000, reparation_instances=1
+Job stats:
+job                               count
+------------------------------  -------
+all                                   1
+concatReparation                      1
+createExcelSummary                    1
+createOverviewTablePredictions        1
+filterAll                             1
+generateReparationReadCounts          1
+mapReparationReads                    1
+mergeAll                              1
+mergeConditions                       1
+metageneProfiling                     1
+plotPCA                               1
+readLengthStatistics                  1
+reannotatedORFs                       1
+reparation                            1
+reparationGFF                         1
+runDeseqPreprocessing                 1
+total                                16
+
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Sep 15 22:27:43 2026]
+localrule reparation:
+    input: genomes/genome.fa, annotation/annotation_processed.gff, uniprotDB/uniprot_sprot.fasta, bam/RIBO-GLY-1.bam, maplink/RIBO-GLY-1.bam.bai
+    output: reparation/GLY-1/Predicted_ORFs.txt, reparation/GLY-1/metagene_profile.pdf, reparation/GLY-1/PR_and_ROC_curve.pdf, reparation/GLY-1/p_site_offset.png, reparation/GLY-1/S_Curve.pdf
+    log: logs/GLY-1_reparation.log
+    jobid: 145
+    reason: Missing output files: reparation/GLY-1/Predicted_ORFs.txt
+    wildcards: condition=GLY, replicate=1
+    threads: 8
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=/home/qasim/hribo_work/pao1/tmp, reparation_instances=1
+
+
+        mkdir -p reparation/GLY-1
+        mkdir -p reparation/GLY-1/tmp
+        reparation.pl -bam bam/RIBO-GLY-1.bam -g genomes/genome.fa -gtf annotation/annotation_processed.gff -db uniprotDB/uniprot_sprot.fasta -out reparation/GLY-1 -threads 8
+        
+Activating conda environment: .snakemake/conda/14bed684a89303115f79cf88642513a2_
+[Tue Sep 15 23:11:55 2026]
+Finished job 145.
+1 of 16 steps (6%) done
+Select jobs to execute...
+Execute 4 jobs...
+
+[Tue Sep 15 23:11:55 2026]
+localrule runDeseqPreprocessing:
+    input: pca/raw_reads.csv, pca/meta.csv
+    output: pca/raw_count_distributions.pdf, pca/mean_vs_variance.pdf, pca/normalized_counts.tsv, pca/rld.tsv, pca/variance_percentages.tsv, pca/rld_cor.tsv
+    jobid: 76
+    reason: Missing output files: pca/rld.tsv, pca/variance_percentages.tsv, pca/rld_cor.tsv
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=/home/qasim/hribo_work/pao1/tmp
+
+
+        mkdir -p pca;
+        HRIBO/scripts/analyse_variance.R -r pca/raw_reads.csv -m pca/meta.csv -o pca/;
+        
+Activating conda environment: .snakemake/conda/3ecca20d19f06eeeb72ffc04d10d1cbb_
+
+[Tue Sep 15 23:11:55 2026]
+localrule metageneProfiling:
+    input: maplink/RIBO-GLY-1.bam, maplink/RIBO-GLY-1.bam.bai, genomes/genome.fa, annotation/annotation_processed.gff
+    output: metageneprofiling/RIBO-GLY-1
+    log: logs/RIBO-GLY-1_metageneprofiling.log
+    jobid: 1
+    reason: Missing output files: metageneprofiling/RIBO-GLY-1
+    wildcards: method=RIBO, condition=GLY, replicate=1
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=/home/qasim/hribo_work/pao1/tmp
+
+
+        mkdir -p metageneprofiling;
+        if [ nocolor == nocolor ]; then
+            colorList="";
+        else
+            colorList="--color_list nocolor";
+        fi;
+        HRIBO/scripts/metagene_profiling.py -b maplink/RIBO-GLY-1.bam -g genomes/genome.fa -a annotation/annotation_processed.gff -o metageneprofiling/RIBO-GLY-1             --read_lengths 25-34             --normalization_methods raw cpm window             --mapping_methods fiveprime threeprime             --positions_in_ORF 150             --positions_out_ORF 100             --filtering_method overlap length rpkm             --neighboring_genes_distance 50             --rpkm_threshold 10.0             --length_cutoff 50             --output_formats interactive svg             --include_plotly_js online             ${colorList}; > logs/RIBO-GLY-1_metageneprofiling.log
+        
+Activating conda environment: .snakemake/conda/db9397abbde3d1ea1d4eb273df148f22_
+
+[Tue Sep 15 23:11:55 2026]
+localrule reparationGFF:
+    input: reparation/GLY-1/Predicted_ORFs.txt
+    output: reparation/GLY-1.reparation.gff
+    jobid: 144
+    reason: Missing output files: reparation/GLY-1.reparation.gff; Input files updated by another job: reparation/GLY-1/Predicted_ORFs.txt
+    wildcards: condition=GLY, replicate=1
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=/home/qasim/hribo_work/pao1/tmp
+
+mkdir -p tracks; HRIBO/scripts/create_reparation_gff.py -c GLY -r 1 -i reparation/GLY-1/Predicted_ORFs.txt -o reparation/GLY-1.reparation.gff
+Activating conda environment: .snakemake/conda/7d1806eb8cf01f4bb08bc6d776e0a631_
+
+[Tue Sep 15 23:11:55 2026]
+localrule readLengthStatistics:
+    input: maplink/RIBO-GLY-1.bam, maplink/RIBO-GLY-1.bam.bai
+    output: metageneprofiling/read_length_fractions.html, metageneprofiling/read_length_fractions.xlsx, metageneprofiling/read_length_counts.xlsx
+    log: logs/read_length_statistics.log
+    jobid: 18
+    reason: Missing output files: metageneprofiling/read_length_fractions.html
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=/home/qasim/hribo_work/pao1/tmp
+
+
+        mkdir -p metageneprofiling;
+        HRIBO/scripts/read_length_statistics.py -a maplink/RIBO-GLY-1.bam -r 10-80 -o metageneprofiling/ > logs/read_length_statistics.log
+        
+Activating conda environment: .snakemake/conda/db9397abbde3d1ea1d4eb273df148f22_
+[Tue Sep 15 23:11:57 2026]
+Finished job 144.
+2 of 16 steps (12%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Sep 15 23:11:57 2026]
+localrule concatReparation:
+    input: reparation/GLY-1.reparation.gff
+    output: tracks/GLY.reparation.gff
+    jobid: 143
+    reason: Missing output files: tracks/GLY.reparation.gff; Input files updated by another job: reparation/GLY-1.reparation.gff
+    wildcards: condition=GLY
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=/home/qasim/hribo_work/pao1/tmp
+
+mkdir -p tracks; HRIBO/scripts/concatenate_gff.py reparation/GLY-1.reparation.gff -o tracks/GLY.reparation.gff
+Activating conda environment: .snakemake/conda/7d1806eb8cf01f4bb08bc6d776e0a631_
+[Tue Sep 15 23:11:58 2026]
+Finished job 143.
+3 of 16 steps (19%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Sep 15 23:11:58 2026]
+localrule mergeConditions:
+    input: tracks/GLY.reparation.gff
+    output: tracks/GLY.merged.gff
+    jobid: 142
+    reason: Missing output files: tracks/GLY.merged.gff; Input files updated by another job: tracks/GLY.reparation.gff
+    wildcards: condition=GLY
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=/home/qasim/hribo_work/pao1/tmp
+
+mkdir -p tracks; cat tracks/GLY.reparation.gff >> tracks/GLY.merged.gff.unsorted; bedtools sort -i tracks/GLY.merged.gff.unsorted > tracks/GLY.merged.gff;
+Activating conda environment: .snakemake/conda/5d78150d6c2bcb941ea97861fbf2f2bc_
+[Tue Sep 15 23:11:58 2026]
+Finished job 142.
+4 of 16 steps (25%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Sep 15 23:11:58 2026]
+localrule mergeAll:
+    input: tracks/GLY.merged.gff
+    output: tracks/all.gff
+    jobid: 141
+    reason: Missing output files: tracks/all.gff; Input files updated by another job: tracks/GLY.merged.gff
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=/home/qasim/hribo_work/pao1/tmp
+
+mkdir -p tracks; HRIBO/scripts/concatenate_gff.py tracks/GLY.merged.gff -o tracks/all.gff
+Activating conda environment: .snakemake/conda/7d1806eb8cf01f4bb08bc6d776e0a631_
+[Tue Sep 15 23:11:59 2026]
+Finished job 18.
+5 of 16 steps (31%) done
+[Tue Sep 15 23:11:59 2026]
+Finished job 141.
+6 of 16 steps (38%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Sep 15 23:11:59 2026]
+localrule filterAll:
+    input: tracks/all.gff
+    output: tracks/reparation.gff
+    jobid: 140
+    reason: Missing output files: tracks/reparation.gff; Input files updated by another job: tracks/all.gff
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=/home/qasim/hribo_work/pao1/tmp
+
+mkdir -p tracks; HRIBO/scripts/merge_duplicates_reparation.py -i tracks/all.gff -o tracks/reparation.gff
+Activating conda environment: .snakemake/conda/7d1806eb8cf01f4bb08bc6d776e0a631_
+[Tue Sep 15 23:12:00 2026]
+Finished job 140.
+7 of 16 steps (44%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Sep 15 23:12:00 2026]
+localrule reannotatedORFs:
+    input: annotation/annotation_processed.gff, tracks/reparation.gff
+    output: tracks/reparation_annotated.gff
+    jobid: 139
+    reason: Missing output files: tracks/reparation_annotated.gff; Input files updated by another job: tracks/reparation.gff
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=/home/qasim/hribo_work/pao1/tmp
+
+mkdir -p tracks; HRIBO/scripts/reannotate_orfs.py -a annotation/annotation_processed.gff -c tracks/reparation.gff -o tracks/reparation_annotated.gff
+Activating conda environment: .snakemake/conda/7d1806eb8cf01f4bb08bc6d776e0a631_
+[Tue Sep 15 23:12:00 2026]
+Finished job 139.
+8 of 16 steps (50%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Sep 15 23:12:00 2026]
+localrule generateReparationReadCounts:
+    input: maplink/RIBO-GLY-1.bam, maplink/RNA-GLY-1.bam, maplink/RIBO-GLY-1.bam.bai, maplink/RNA-GLY-1.bam.bai, tracks/reparation_annotated.gff
+    output: readcounts/reparation_read_counts.raw
+    jobid: 138
+    reason: Missing output files: readcounts/reparation_read_counts.raw; Input files updated by another job: tracks/reparation_annotated.gff
+    threads: 5
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=/home/qasim/hribo_work/pao1/tmp
+
+
+        mkdir -p readcounts
+        HRIBO/scripts/call_featurecounts.py -b maplink/RIBO-GLY-1.bam maplink/RNA-GLY-1.bam -s 1 --with_O -o readcounts/reparation_read_counts.raw -t 5 -a tracks/reparation_annotated.gff
+        
+Activating conda environment: .snakemake/conda/1e607777c0d0c5616a031d85763fc5e1_
+[Tue Sep 15 23:12:03 2026]
+Finished job 138.
+9 of 16 steps (56%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Sep 15 23:12:03 2026]
+localrule mapReparationReads:
+    input: readcounts/reparation_read_counts.raw, tracks/reparation_annotated.gff
+    output: readcounts/reparation_annotation.gff
+    jobid: 137
+    reason: Missing output files: readcounts/reparation_annotation.gff; Input files updated by another job: readcounts/reparation_read_counts.raw, tracks/reparation_annotated.gff
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=/home/qasim/hribo_work/pao1/tmp
+
+
+        mkdir -p readcounts; HRIBO/scripts/map_reads_to_annotation.py -i readcounts/reparation_read_counts.raw -a tracks/reparation_annotated.gff -o readcounts/reparation_annotation.gff
+        
+Activating conda environment: .snakemake/conda/7d1806eb8cf01f4bb08bc6d776e0a631_
+[Tue Sep 15 23:12:04 2026]
+Finished job 137.
+10 of 16 steps (62%) done
+Select jobs to execute...
+Execute 2 jobs...
+
+[Tue Sep 15 23:12:04 2026]
+localrule createOverviewTablePredictions:
+    input: readcounts/independant_annotation.gff, genomes/genome.fa, readcounts/bam_mapped_reads.txt, readcounts/reparation_annotation.gff, readcounts/deepribo_annotation.gff
+    output: auxiliary/overview.xlsx
+    jobid: 160
+    reason: Missing output files: auxiliary/overview.xlsx; Input files updated by another job: readcounts/reparation_annotation.gff
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=/home/qasim/hribo_work/pao1/tmp
+
+
+        mkdir -p auxiliary;
+        if [ -z  ]
+        then
+            HRIBO/scripts/generate_excel_overview.py -a readcounts/independant_annotation.gff -g genomes/genome.fa -t readcounts/bam_mapped_reads.txt --mapped_reads_deepribo readcounts/deepribo_annotation.gff --mapped_reads_reparation readcounts/reparation_annotation.gff -o auxiliary/overview.xlsx
+        else
+            HRIBO/scripts/generate_excel_overview.py -a readcounts/independant_annotation.gff -c   -g genomes/genome.fa -t readcounts/bam_mapped_reads.txt --mapped_reads_deepribo readcounts/deepribo_annotation.gff --mapped_reads_reparation readcounts/reparation_annotation.gff -o auxiliary/overview.xlsx
+        fi
+        
+Activating conda environment: .snakemake/conda/fa51360e7b638753ab3668d175d3d552_
+
+[Tue Sep 15 23:12:04 2026]
+localrule createExcelSummary:
+    input: readcounts/bam_mapped_reads.txt, readcounts/reparation_annotation.gff, genomes/genome.fa
+    output: auxiliary/predictions_reparation.xlsx
+    jobid: 136
+    reason: Missing output files: auxiliary/predictions_reparation.xlsx; Input files updated by another job: readcounts/reparation_annotation.gff
+    resources: mem_mb=1500, mem_mib=1431, disk_mb=4000, disk_mib=3815, tmpdir=/home/qasim/hribo_work/pao1/tmp
+
+mkdir -p auxiliary; HRIBO/scripts/generate_excel_reparation.py -t readcounts/bam_mapped_reads.txt -r readcounts/reparation_annotation.gff -g genomes/genome.fa -o auxiliary/predictions_reparation.xlsx
+Activating conda environment: .snakemake/conda/fa51360e7b638753ab3668d175d3d552_
+[Tue Sep 15 23:12:08 2026]
+Finished job 136.
+11 of 16 steps (69%) done
+[Tue Sep 15 23:12:08 2026]
+Error in rule runDeseqPreprocessing:
+    jobid: 76
+    input: pca/raw_reads.csv, pca/meta.csv
+    output: pca/raw_count_distributions.pdf, pca/mean_vs_variance.pdf, pca/normalized_counts.tsv, pca/rld.tsv, pca/variance_percentages.tsv, pca/rld_cor.tsv
+    conda-env: /home/qasim/hribo_work/pao1/.snakemake/conda/3ecca20d19f06eeeb72ffc04d10d1cbb_
+    shell:
+        
+        mkdir -p pca;
+        HRIBO/scripts/analyse_variance.R -r pca/raw_reads.csv -m pca/meta.csv -o pca/;
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job runDeseqPreprocessing since they might be corrupted:
+pca/raw_count_distributions.pdf, pca/mean_vs_variance.pdf, pca/normalized_counts.tsv
+[Tue Sep 15 23:12:08 2026]
+Finished job 1.
+12 of 16 steps (75%) done
+[Tue Sep 15 23:12:13 2026]
+Finished job 160.
+13 of 16 steps (81%) done
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2026-09-15T222634.834651.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.

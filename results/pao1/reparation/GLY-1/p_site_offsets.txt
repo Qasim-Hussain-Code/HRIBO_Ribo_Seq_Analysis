@@ -1,0 +1,50 @@
+## date = '2026-09-15 23:08:41.921368'
+## execstr = '/home/qasim/hribo_work/pao1/.snakemake/conda/14bed684a89303115f79cf88642513a2_/bin/psite /home/qasim/hribo_work/pao1/reparation/GLY-1//tmp/plastid_rois.txt /home/qasim/hribo_work/pao1/reparation/GLY-1//tmp/plastid --min_length 22 --max_length 40 --require_upstream --count_files bam/RIBO-GLY-1.bam'
+## args = {  
+##          'aggregate'        : False,,
+##          'cmap'             : None,,
+##          'constrain'        : None,,
+##          'count_files'      : ['bam/RIBO-GLY-1.bam'],,
+##          'countfile_format' : 'BAM',,
+##          'default'          : 13,,
+##          'dpi'              : 150,,
+##          'figformat'        : 'png',,
+##          'figsize'          : None,,
+##          'keep'             : False,,
+##          'mapping'          : 'fiveprime',,
+##          'max_length'       : 40,,
+##          'min_counts'       : 10,,
+##          'min_length'       : 22,,
+##          'nibble'           : 0,,
+##          'norm_region'      : None,,
+##          'normalize_over'   : None,,
+##          'offset'           : 0,,
+##          'outbase'          : '/home/qasim/hribo_work/pao1/reparation/GLY-1//tmp/plastid',,
+##          'require_upstream' : True,,
+##          'roi_file'         : '/home/qasim/hribo_work/pao1/reparation/GLY-1//tmp/plastid_rois.txt',,
+##          'stylesheet'       : None,,
+##          'sum'              : None,,
+##          'title'            : None,,
+##          'warnlevel'        : 0,
+##        }
+length	p_offset
+22	19
+23	20
+24	21
+25	22
+26	23
+27	24
+28	25
+29	13
+30	13
+31	13
+32	13
+33	17
+34	15
+35	16
+36	17
+37	18
+38	20
+39	23
+40	22
+default	13

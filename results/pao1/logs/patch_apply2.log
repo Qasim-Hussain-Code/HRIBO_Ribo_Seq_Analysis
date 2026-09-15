@@ -1,0 +1,8 @@
+[2026-09-15 22:26:06] work directory : /home/qasim/hribo_work/pao1
+[2026-09-15 22:26:06] conda          : /home/qasim/miniconda3 (conda 26.7.2)
+[2026-09-15 22:26:06] HRIBO is already present, skipping the download
+[2026-09-15 22:26:06] patch applied: HRIBO/envs/metageneprofiling.yaml
+[2026-09-15 22:26:06] patch applied: HRIBO/envs/reparation.yaml
+[2026-09-15 22:26:06] snakemake environment already exists
+[2026-09-15 22:26:06] readtools environment already exists
+[2026-09-15 22:26:08] done. HRIBO 1.8.1 and both environments are inside /home/qasim/hribo_work/pao1
