@@ -66,6 +66,21 @@ else
   echo "${HRIBO_VERSION}" > HRIBO/VERSION_INSTALLED
 fi
 
+# 1b. Local patches. Any file under <repository>/patches/HRIBO/ replaces the
+#     file at the same relative path inside the installed HRIBO tree. Each
+#     patch is explained in patches/README.md. This is how the metagene
+#     environment is pinned to a plotting stack that works without a system
+#     browser; the files are copied on every run so that a patch added later
+#     is applied by simply rerunning this script.
+if [[ -d "${REPO_ROOT}/patches/HRIBO" ]]; then
+  while IFS= read -r -d '' p; do
+    rel="${p#"${REPO_ROOT}/patches/HRIBO/"}"
+    mkdir -p "HRIBO/$(dirname "$rel")"
+    cp -p "$p" "HRIBO/${rel}"
+    log "patch applied: HRIBO/${rel}"
+  done < <(find "${REPO_ROOT}/patches/HRIBO" -type f -print0)
+fi
+
 # 2. Package cache. New downloads go into the project cache. The existing conda
 #    cache is listed second so that packages already on the machine are reused
 #    instead of downloaded again. Conda only writes to the first entry.
