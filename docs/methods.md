@@ -125,6 +125,17 @@ Snakefile lists the 3-D PCA plot as a required output there is no switch to
 turn it off. `--keep-going` lets every job that does not depend on the PCA
 finish. This behaviour is documented in the guide and was expected.
 
+The workflow was completed in three Snakemake invocations, all with the
+same command. The first (80 minutes) finished 147 of 163 jobs; three rules
+failed because of the environment problems described in
+docs/troubleshooting.md, plus the PCA. After the two environment files
+under patches/ were put in place, a second invocation was stopped by hand
+while Reparation was repeating its BLAST search, because its environment
+had not yet been patched; the third invocation (45 minutes) completed the
+remaining 13 jobs. Snakemake resumes from finished outputs, so nothing was
+computed twice except Reparation. results/pao1/summary/run_overview.tsv
+lists the three invocations with their job counts and wall-clock times.
+
 ## 4. Deviations from the guide
 
 For a reader comparing this repository with the guide's chapter on PAO1:

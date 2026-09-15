@@ -36,8 +36,9 @@ Two facts made the analysis possible at all:
 
 1. The virtual disk file was already 71 GB on disk while only 24 GB were in
    use inside it. Space freed inside WSL is not returned to Windows, but it
-   is reused by later writes. In practice the 6 GB of downloads and
-   environments written during setup did not grow the file at all.
+   is reused by later writes. In practice the whole analysis, 35 GB written
+   inside WSL, did not grow the file by a single byte: it was 71.05 GB
+   before and 71.05 GB after.
 2. I could not rely on that. The run script therefore watches the free space
    of the Windows drive (visible from WSL as /mnt/c) every 30 seconds and
    stops Snakemake with SIGTERM when it drops below a threshold. Finished
