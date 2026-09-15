@@ -161,7 +161,27 @@ For a reader comparing this repository with the guide's chapter on PAO1:
    python-kaleido 0.2.1. Nothing computed by the scripts changes; see
    patches/README.md and docs/troubleshooting.md.
 
-## 5. What the subsampling means for the results
+## 5. Summary tables and figures
+
+scripts/07_summarise_results.py reads the collected results and the
+Snakemake logs and writes the tables under results/pao1/summary/.
+scripts/10_plot_figures.py draws the four figures shown in the README from
+the same files. Two conventions in that script deserve a note:
+
+- An ORF is identified by its stop codon. A predicted ORF that ends at the
+  same stop codon as an annotated coding sequence is counted as that gene,
+  whether or not the two agree on the start codon; two callers agree on an
+  ORF when their coordinates are identical, and agree on a gene when only
+  the stop codon matches. This is the usual convention, because the stop
+  codon is fixed by the reading frame while start codon choice is exactly
+  what the callers disagree about.
+- The raw tables of both callers give coordinates without the stop codon
+  (Reparation ends three bases early, DeepRibo reports the first base of
+  the stop codon) while HRIBO's GFF tracks include it. Start codons are
+  therefore looked up by the position of the start codon, which is the
+  same in every file.
+
+## 6. What the subsampling means for the results
 
 Every stage of HRIBO ran on real data with the real parameters, so the
 outputs show what the workflow produces and are suitable for checking that
