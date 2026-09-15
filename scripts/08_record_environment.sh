@@ -62,19 +62,24 @@ log "snakemake and readtools environments recorded"
 #    names them by a hash of their definition. The readable name comes from
 #    the line "Environment for .../envs/NAME.yaml created (location: ...)"
 #    that Snakemake printed when it built each one; the run logs keep those.
-declare -A NAMES
+declare -A NAMES LATEST
 while read -r yaml hash; do
-  [[ -n "$yaml" && -n "$hash" ]] && NAMES["$hash"]="$yaml"
-done < <(grep -h "created (location:" "${WORK_DIR}"/logs/snakemake_*.log 2>/dev/null \
+  [[ -n "$yaml" && -n "$hash" ]] || continue
+  NAMES["$hash"]="$yaml"
+  LATEST["$yaml"]="$hash"          # logs are read in chronological order
+done < <(cat "${WORK_DIR}"/logs/snakemake_*.log 2>/dev/null | grep "created (location:" \
          | sed -E 's#.*envs/([^/ ]+)\.yaml created \(location: \.snakemake/conda/([^)]+)\).*#\1 \2#')
 n=0
 for envdir in "${WORK_DIR}"/.snakemake/conda/*_/; do
   [[ -d "$envdir" ]] || continue
   hash="$(basename "$envdir")"
   name="${NAMES[$hash]:-$hash}"
-  # An environment rebuilt after a patch gets a new hash and the same name;
-  # keep both lists apart by appending the hash in that case.
-  if [[ -f "${OUT}/rule_environments/${name}.txt" ]]; then name="${name}_${hash%_}"; fi
+  # An environment rebuilt after a patch gets a new hash and the same name.
+  # The most recently built one keeps the plain name; an older build is
+  # marked as superseded so that both lists stay available.
+  if [[ -n "${LATEST[$name]:-}" && "${LATEST[$name]}" != "$hash" ]]; then
+    name="${name}_superseded_${hash%_}"
+  fi
   "$CONDA" list -p "$envdir" --export > "${OUT}/rule_environments/${name}.txt"
   printf '%s\t%s\n' "$hash" "$name" >> "${OUT}/rule_environments/hash_to_name.tsv.tmp"
   n=$(( n + 1 ))

@@ -33,12 +33,17 @@ mkdir -p "$OUT"
 MANIFEST="${OUT}/manifest.tsv"
 printf 'path\tbytes\tmd5\tcopied\n' > "$MANIFEST"
 
-# copy_tree <source dir> [find expression...]
+# copy_tree <source dir> [find name tests...]
 # Copies matching files below the source directory, keeping the relative
-# path, and records every file whether copied or not.
+# path, and records every file whether copied or not. The name tests are
+# grouped in parentheses so that "-name A -o -name B" applies as a whole;
+# MAXDEPTH=n limits how deep find descends.
 copy_tree() {
   local src="$1"; shift
   [[ -d "$src" ]] || { log "skip (absent): ${src}"; return; }
+  local -a tests=() depth=()
+  (( $# )) && tests=( "(" "$@" ")" )
+  [[ -n "${MAXDEPTH:-}" ]] && depth=( -maxdepth "$MAXDEPTH" )
   local f rel bytes md5 copied
   while IFS= read -r -d '' f; do
     rel="${f#./}"
@@ -52,18 +57,20 @@ copy_tree() {
       copied="no (larger than ${MAX_FILE_MB} MB)"
     fi
     printf '%s\t%s\t%s\t%s\n' "$rel" "$bytes" "$md5" "$copied" >> "$MANIFEST"
-  done < <(find "./${src}" -type f "$@" -print0 | sort -z)
+  done < <(find "./${src}" "${depth[@]}" -type f "${tests[@]}" -print0 | sort -z)
 }
 
-# list_tree <source dir> [find expression...]
+# list_tree <source dir> [find name tests...]
 # Records files without copying them (alignments, coverage tracks).
 list_tree() {
   local src="$1"; shift
   [[ -d "$src" ]] || return 0
+  local -a tests=()
+  (( $# )) && tests=( "(" "$@" ")" )
   local f
   while IFS= read -r -d '' f; do
     printf '%s\t%s\t%s\t%s\n' "${f#./}" "$(stat -c %s "$f")" "$(md5sum "$f" | cut -d' ' -f1)" "no (not collected)" >> "$MANIFEST"
-  done < <(find "./${src}" -type f "$@" -print0 | sort -z)
+  done < <(find "./${src}" -type f "${tests[@]}" -print0 | sort -z)
 }
 
 log "collecting into ${OUT}"
@@ -72,17 +79,24 @@ log "collecting into ${OUT}"
 copy_tree auxiliary
 copy_tree figures
 copy_tree readcounts
-copy_tree tracks -name 'potential*.gff' -o -name '*annotated*.gff' -o -name '*merged*.gff' -o -name 'totalAnnotation.gff'
+# The ORF calls of both tools as GFF. The potential*.gff tracks (every
+# start codon, stop codon and ribosome binding site in the genome) are
+# derived from the genome sequence alone, weigh 40 MB together and are
+# rebuilt in seconds, so they are listed but not copied.
+copy_tree tracks -name '*.gff' -not -name 'potential*'
+list_tree tracks -name 'potential*.gff'
 
-# Quality control: the MultiQC report and the per-sample FastQC summaries.
-copy_tree qc/multi -name 'multiqc_report.html'
-copy_tree qc/multi/multiqc_data -name '*.txt'
+# Quality control: the MultiQC report with its data tables, and the
+# per-sample FastQC summaries of every stage.
+copy_tree qc/multi -name 'multiqc_report.html' -o -name 'multiqc_data.zip'
 copy_tree qc -name '*_fastqc.html'
 copy_tree metageneprofiling
 
-# ORF callers: the prediction tables and their diagnostic plots.
-copy_tree reparation -name 'Predicted_ORFs.txt' -o -name '*.pdf' -o -name '*.png'
-copy_tree deepribo -maxdepth 2 -name 'predictions.csv' -o -name 'parameters.txt'
+# ORF callers: the prediction tables and their diagnostic plots. The
+# bedgraph coverage files Reparation writes are left out; they are large
+# and derived from the alignments.
+copy_tree reparation -not -path '*/tmp/*' -a \( -name 'Predicted_ORFs.*' -o -name 'p_site_offsets.txt' -o -name '*.pdf' -o -name '*.png' \)
+MAXDEPTH=2 copy_tree deepribo -name 'predictions.csv' -o -name 'parameters.txt'
 
 # Differential expression, only present for multi-condition designs.
 copy_tree contrasts
@@ -117,8 +131,11 @@ list_tree centeredtracks
 # Sizes of the whole analysis directory, for the resource section of the README.
 {
   printf 'path\tsize\n'
-  du -sh . .snakemake/conda .snakemake/singularity .conda_pkgs .envs fastq sra deepribo reparation 2>/dev/null \
-    | awk -F'\t' '{ printf "%s\t%s\n", $2, $1 }'
+  # One du call per path: in a single call du reports nested paths only once.
+  for p in . .snakemake/conda .snakemake/singularity .envs .conda_pkgs fastq sra bam sammulti deepribo reparation uniprotDB \
+           globaltracks fiveprimetracks threeprimetracks centeredtracks; do
+    [[ -e "$p" ]] && du -sh "$p" 2>/dev/null | awk -F'\t' '{ printf "%s\t%s\n", $2, $1 }'
+  done
   printf 'files_in_deepribo\t%s\n' "$(find deepribo -type f 2>/dev/null | wc -l)"
 } > "${OUT}/logs/disk_usage.tsv"
 

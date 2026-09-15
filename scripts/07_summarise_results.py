@@ -9,11 +9,14 @@ results/<name>/ and writes a few small tables into results/<name>/summary/:
                           general statistics
     orf_predictions.tsv   number of ORFs called by Reparation and DeepRibo,
                           before and after HRIBO's filtering
-    job_timings.tsv       wall-clock time per rule, from the Snakemake log
-    run_overview.tsv      jobs finished, jobs failed, total wall-clock time
+    job_timings.tsv       wall-clock time per rule, from the Snakemake logs
+    run_overview.tsv      jobs finished, jobs failed and wall-clock time of
+                          every Snakemake invocation
 
-Only the Python standard library is used, so the script runs with any
-Python 3.8 or newer. Spreadsheet row counts are read straight from the
+Every Snakemake log under results/<name>/logs is read, so a run that was
+completed over several invocations (as this one was) is summarised as a
+whole. Only the Python standard library is used, so the script runs with
+any Python 3.8 or newer. Spreadsheet row counts are read straight from the
 XLSX archive rather than through a spreadsheet library.
 
 Usage:
@@ -22,6 +25,7 @@ Usage:
 
 import csv
 import glob
+import io
 import os
 import re
 import sys
@@ -39,9 +43,11 @@ def log(msg):
     print(f"[summarise] {msg}")
 
 
-def read_tsv(path):
-    with open(path, newline="") as fh:
-        return list(csv.DictReader(fh, delimiter="\t"))
+def read_tsv(path_or_handle):
+    if isinstance(path_or_handle, str):
+        with open(path_or_handle, newline="") as fh:
+            return list(csv.DictReader(fh, delimiter="\t"))
+    return list(csv.DictReader(path_or_handle, delimiter="\t"))
 
 
 def write_tsv(path, rows, columns):
@@ -73,17 +79,19 @@ def xlsx_row_counts(path):
         wb = z.read("xl/workbook.xml").decode("utf-8", "replace")
         sheets = re.findall(r'<sheet\b[^>]*\bname="([^"]*)"[^>]*\br:id="([^"]*)"', wb)
         rels = z.read("xl/_rels/workbook.xml.rels").decode("utf-8", "replace")
-        rel_map = dict(re.findall(r'<Relationship\b[^>]*\bId="([^"]*)"[^>]*\bTarget="([^"]*)"', rels))
-        if not rel_map:
-            rel_map = {b: a for a, b in re.findall(r'<Relationship\b[^>]*\bTarget="([^"]*)"[^>]*\bId="([^"]*)"', rels)}
+        rel_map = {}
+        for tag in re.findall(r"<Relationship\b[^>]*/?>", rels):
+            rid = re.search(r'\bId="([^"]*)"', tag)
+            target = re.search(r'\bTarget="([^"]*)"', tag)
+            if rid and target:
+                rel_map[rid.group(1)] = target.group(1)
         for sheet_name, rid in sheets:
             target = rel_map.get(rid, "")
-            member = "xl/" + target.lstrip("/").replace("xl/", "", 1) if not target.startswith("/") else target.lstrip("/")
+            member = target.lstrip("/") if target.startswith("/") else "xl/" + target
             if member not in z.namelist():
                 continue
             xml = z.read(member).decode("utf-8", "replace")
-            rows = len(re.findall(r"<row\b", xml))
-            counts[sheet_name] = max(rows - 1, 0)
+            counts[sheet_name] = max(len(re.findall(r"<row\b", xml)) - 1, 0)
     return counts
 
 
@@ -92,7 +100,7 @@ def xlsx_row_counts(path):
 # ---------------------------------------------------------------------------
 
 def parse_cutadapt(log_path):
-    """Return {sample: {...}} from every cutadapt report in the run log."""
+    """Return {sample: {...}} from every cutadapt report in one run log."""
     out = {}
     sample = None
     with open(log_path, errors="replace") as fh:
@@ -121,25 +129,22 @@ def parse_cutadapt(log_path):
     return out
 
 
-def parse_multiqc_general(path):
-    """Return {sample: total_sequences} from multiqc_general_stats.txt."""
-    out = {}
-    rows = read_tsv(path)
-    if not rows:
-        return out
-    col = next((c for c in rows[0] if c and c.endswith("total_sequences")), None)
-    if col is None:
-        return out
-    for r in rows:
-        try:
-            out[r["Sample"]] = str(int(float(r[col])))
-        except (KeyError, ValueError):
-            pass
-    return out
+def multiqc_general_stats():
+    """Return rows of multiqc_general_stats.txt, from the folder or the zip."""
+    folder = os.path.join(RES, "qc", "multi", "multiqc_data", "multiqc_general_stats.txt")
+    if os.path.exists(folder):
+        return read_tsv(folder)
+    zpath = os.path.join(RES, "qc", "multi", "multiqc_data.zip")
+    if os.path.exists(zpath):
+        with zipfile.ZipFile(zpath) as z:
+            for member in z.namelist():
+                if member.endswith("multiqc_general_stats.txt"):
+                    return read_tsv(io.StringIO(z.read(member).decode("utf-8", "replace")))
+    return []
 
 
 def parse_two_column(path):
-    """Return {name: value} for HRIBO's small read-count text files."""
+    """Return {name: value} for HRIBO's small per-library text files."""
     out = {}
     with open(path, errors="replace") as fh:
         for line in fh:
@@ -149,7 +154,7 @@ def parse_two_column(path):
     return out
 
 
-def read_processing(run_log):
+def read_processing(run_logs):
     stats_path = os.path.join(RES, "logs", "read_download_stats.tsv")
     samples = {}
     if os.path.exists(stats_path):
@@ -161,31 +166,52 @@ def read_processing(run_log):
                 "subsample_fraction": r["subsample_fraction"],
                 "reads_kept": r["reads_kept"],
             }
-    if run_log:
-        for s, d in parse_cutadapt(run_log).items():
+    for lg in run_logs:
+        for s, d in parse_cutadapt(lg).items():
             samples.setdefault(s, {"sample": s}).update(d)
-    mqc = os.path.join(RES, "qc", "multi", "multiqc_data", "multiqc_general_stats.txt")
-    if os.path.exists(mqc):
-        totals = parse_multiqc_general(mqc)
-        for s in samples:
-            for stage in ("raw", "trimmed", "norRNA", "unique"):
-                for key in (f"{s}-{stage}", f"{s}_{stage}", f"{s}-{stage}_fastqc"):
-                    if key in totals:
-                        samples[s][f"fastqc_{stage}_reads"] = totals[key]
-                        break
-    for fname, key in (("bam_mapped_reads.txt", "mapped_reads_unique_norrna"),
-                       ("bam_average_read_lengths.txt", "mean_read_length_final")):
+
+    # FastQC totals per processing stage. HRIBO runs FastQC in one folder per
+    # stage (qc/1raw, qc/2trimmed, ...) and MultiQC names each row
+    # "qc | <stage> | <sample>". Rows without a read count (the rRNA and
+    # tRNA content checks) are skipped.
+    stage_columns = []
+    rows = multiqc_general_stats()
+    if rows:
+        col = next((c for c in rows[0] if c and c.endswith("total_sequences")), None)
+        if col:
+            for r in rows:
+                parts = [p.strip() for p in r.get("Sample", "").split("|")]
+                if len(parts) >= 3:
+                    stage, s = parts[-2], parts[-1]
+                else:
+                    s = next((x for x in samples if r.get("Sample", "").startswith(x)), None)
+                    stage = r["Sample"][len(s):].strip("-_") if s else ""
+                if s not in samples or not r.get(col):
+                    continue
+                key = f"fastqc_{stage}_reads"
+                if key not in stage_columns:
+                    stage_columns.append(key)
+                try:
+                    samples[s][key] = str(int(float(r[col])))
+                except ValueError:
+                    pass
+    for fname, key in (("total_mapped_reads.txt", "alignments_all_mappers"),
+                       ("unique_mapped_reads.txt", "reads_unique_mappers"),
+                       ("bam_mapped_reads.txt", "reads_unique_after_rrna_removal"),
+                       ("unique_average_read_lengths.txt", "mean_length_unique_mappers"),
+                       ("bam_average_read_lengths.txt", "mean_length_final")):
         p = os.path.join(RES, "readcounts", fname)
         if os.path.exists(p):
             for name, value in parse_two_column(p).items():
                 for s in samples:
                     if name.startswith(s):
                         samples[s][key] = value
-    columns = ["sample", "run_accession", "reads_in_archive", "subsample_fraction", "reads_kept",
-               "cutadapt_reads_processed", "cutadapt_reads_with_adapter", "cutadapt_reads_with_adapter_pct",
-               "cutadapt_reads_too_short", "cutadapt_reads_written", "cutadapt_bases_written_pct",
-               "fastqc_raw_reads", "fastqc_trimmed_reads", "fastqc_norRNA_reads", "fastqc_unique_reads",
-               "mapped_reads_unique_norrna", "mean_read_length_final"]
+    columns = (["sample", "run_accession", "reads_in_archive", "subsample_fraction", "reads_kept",
+                "cutadapt_reads_processed", "cutadapt_reads_with_adapter", "cutadapt_reads_with_adapter_pct",
+                "cutadapt_reads_too_short", "cutadapt_reads_written", "cutadapt_bases_written_pct"]
+               + stage_columns
+               + ["alignments_all_mappers", "reads_unique_mappers", "reads_unique_after_rrna_removal",
+                  "mean_length_unique_mappers", "mean_length_final"])
     write_tsv(os.path.join(OUT, "read_processing.tsv"), list(samples.values()), columns)
 
 
@@ -202,10 +228,12 @@ def orf_predictions():
         rows.append({"caller": "DeepRibo", "sample": os.path.basename(os.path.dirname(p)),
                      "stage": "raw output (predictions.csv, every candidate ORF scored)", "orfs": count_lines(p)})
     for fname, caller in (("reparation_annotated.gff", "Reparation"), ("deepribo_merged.gff", "DeepRibo"),
-                          ("totalAnnotation.gff", "both, merged with the annotation")):
+                          ("GLY.merged.gff", "both callers, merged per condition"),
+                          ("all.gff", "both callers, all conditions")):
         p = os.path.join(RES, "tracks", fname)
         if os.path.exists(p):
-            rows.append({"caller": caller, "sample": "all", "stage": f"filtered track ({fname})", "orfs": count_lines(p, skip_header=False)})
+            rows.append({"caller": caller, "sample": "all", "stage": f"filtered track ({fname})",
+                         "orfs": count_lines(p, skip_header=False)})
     for fname, caller in (("predictions_reparation.xlsx", "Reparation"), ("predictions_deepribo.xlsx", "DeepRibo"),
                           ("overview.xlsx", "overview table")):
         p = os.path.join(RES, "auxiliary", fname)
@@ -219,7 +247,7 @@ def orf_predictions():
 
 
 # ---------------------------------------------------------------------------
-# 3. Job timings from the Snakemake log
+# 3. Job timings from the Snakemake logs
 # ---------------------------------------------------------------------------
 
 STAMP = re.compile(r"^\[(\w{3} \w{3} +\d+ \d\d:\d\d:\d\d \d{4})\]\s*$")
@@ -229,12 +257,11 @@ def parse_timestamp(s):
     return datetime.strptime(re.sub(r"\s+", " ", s), "%a %b %d %H:%M:%S %Y")
 
 
-def job_timings(run_log):
-    starts, rule_of, finished, failed = {}, {}, {}, set()
-    last_stamp = None
-    pending_rule = None
-    first, last = None, None
-    with open(run_log, errors="replace") as fh:
+def parse_run_log(path):
+    """Return (starts, rule_of, finished, failed_rules, first, last) for one log."""
+    starts, rule_of, finished, failed = {}, {}, {}, []
+    last_stamp, pending_rule, first, last = None, None, None, None
+    with open(path, errors="replace") as fh:
         for line in fh:
             m = STAMP.match(line)
             if m:
@@ -258,42 +285,67 @@ def job_timings(run_log):
                 continue
             m = re.match(r"^Error in rule (\w+):", line)
             if m:
-                failed.add(m.group(1))
+                failed.append(m.group(1))
+    return starts, rule_of, finished, failed, first, last
+
+
+def job_timings(run_logs):
     per_rule = defaultdict(lambda: {"rule": "", "jobs": 0, "total_seconds": 0, "longest_seconds": 0})
-    for jid, t0 in starts.items():
-        if jid in finished:
-            d = int((finished[jid] - t0).total_seconds())
-            r = per_rule[rule_of[jid]]
-            r["rule"] = rule_of[jid]
-            r["jobs"] += 1
-            r["total_seconds"] += d
-            r["longest_seconds"] = max(r["longest_seconds"], d)
+    overview = []
+    for lg in run_logs:
+        with open(lg, errors="replace") as fh:
+            text = fh.read()
+        if "This was a dry-run" in text:
+            continue
+        starts, rule_of, finished, failed, first, last = parse_run_log(lg)
+        if not starts:
+            continue
+        for jid, t0 in starts.items():
+            if jid in finished:
+                d = int((finished[jid] - t0).total_seconds())
+                r = per_rule[rule_of[jid]]
+                r["rule"] = rule_of[jid]
+                r["jobs"] += 1
+                r["total_seconds"] += d
+                r["longest_seconds"] = max(r["longest_seconds"], d)
+        overview.append({
+            "run_log": os.path.basename(lg),
+            "jobs_started": len(starts),
+            "jobs_finished": len(finished),
+            "rules_with_errors": ", ".join(sorted(set(failed))) or "none",
+            "wall_clock_seconds": int((last - first).total_seconds()) if first and last else "",
+            "first_timestamp": first.isoformat(sep=" ") if first else "",
+            "last_timestamp": last.isoformat(sep=" ") if last else "",
+        })
     rows = sorted(per_rule.values(), key=lambda r: -r["total_seconds"])
     write_tsv(os.path.join(OUT, "job_timings.tsv"), rows, ["rule", "jobs", "total_seconds", "longest_seconds"])
-    overview = [
-        {"item": "run_log", "value": os.path.basename(run_log)},
-        {"item": "jobs_started", "value": len(starts)},
-        {"item": "jobs_finished", "value": len(finished)},
-        {"item": "rules_with_errors", "value": ", ".join(sorted(failed)) or "none"},
-        {"item": "wall_clock_seconds", "value": int((last - first).total_seconds()) if first and last else ""},
-        {"item": "first_timestamp", "value": first.isoformat(sep=" ") if first else ""},
-        {"item": "last_timestamp", "value": last.isoformat(sep=" ") if last else ""},
-    ]
-    write_tsv(os.path.join(OUT, "run_overview.tsv"), overview, ["item", "value"])
+    overview.append({
+        "run_log": "all invocations",
+        "jobs_started": sum(o["jobs_started"] for o in overview),
+        "jobs_finished": sum(o["jobs_finished"] for o in overview),
+        "rules_with_errors": overview[-1]["rules_with_errors"] if overview else "",
+        "wall_clock_seconds": sum(o["wall_clock_seconds"] for o in overview if o["wall_clock_seconds"] != ""),
+        "first_timestamp": overview[0]["first_timestamp"] if overview else "",
+        "last_timestamp": overview[-1]["last_timestamp"] if overview else "",
+    })
+    write_tsv(os.path.join(OUT, "run_overview.tsv"), overview,
+              ["run_log", "jobs_started", "jobs_finished", "rules_with_errors",
+               "wall_clock_seconds", "first_timestamp", "last_timestamp"])
 
 
 def main():
     if not os.path.isdir(RES):
         sys.exit(f"results directory not found: {RES}")
     os.makedirs(OUT, exist_ok=True)
-    logs = sorted(glob.glob(os.path.join(RES, "logs", "snakemake_*.log")))
-    run_log = logs[-1] if logs else None
-    if run_log is None:
+    # Only logs that executed jobs: the dry run and the environment build
+    # contain no job timestamps and are skipped by parse_run_log anyway.
+    run_logs = sorted(glob.glob(os.path.join(RES, "logs", "snakemake_*.log")))
+    if not run_logs:
         log("no snakemake_*.log under results/logs; timing and cutadapt tables will be incomplete")
-    read_processing(run_log)
+    read_processing(run_logs)
     orf_predictions()
-    if run_log:
-        job_timings(run_log)
+    if run_logs:
+        job_timings(run_logs)
     log("done")
 
 
