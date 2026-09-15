@@ -34,7 +34,8 @@ any shortcut in the workflow.
 |   |-- 06_collect_results.sh  copies the small outputs into results/ with a manifest
 |   |-- 07_summarise_results.py  summary tables from the logs and result files
 |   |-- 08_record_environment.sh  resolved package lists and container identity
-|   `-- 09_cleanup.sh          removes leftovers, caches, or the whole analysis directory
+|   |-- 09_cleanup.sh          removes leftovers, caches, or the whole analysis directory
+|   `-- 10_plot_figures.py     the four figures shown below, drawn from the collected results
 |-- patches/
 |   |-- README.md              why two HRIBO environment files are replaced
 |   `-- HRIBO/envs/            the replacement files, copied over HRIBO by the install script
@@ -97,9 +98,10 @@ The full account is in docs/methods.md. In short:
 
 ## Results
 
-The complete tables are in results/pao1/summary/, the files they were
-built from are in results/pao1/, and results/pao1/README.md explains what
-each file is. What follows is the short version.
+The complete tables are in results/pao1/summary/, the figures in
+results/pao1/figures/, the files they were built from in results/pao1/,
+and results/pao1/README.md explains what each file is. What follows is the
+short version.
 
 ### Reads
 
@@ -128,6 +130,33 @@ near-identical operons in PAO1 and is discarded with the other
 multi-mappers; the explicit rRNA and tRNA filter removes a further third
 of the Ribo-seq and three quarters of the RNA-seq unique mappers.
 
+![Reads surviving each processing stage](results/pao1/figures/read_processing.png)
+
+### Library quality
+
+![Read length distribution of the Ribo-seq library](results/pao1/figures/read_length_distribution.png)
+
+The footprint length distribution is broad. Unique, rRNA-free reads run
+from about 15 to 47 nt with a mode at 39 nt, and only 32 percent fall
+inside the 25 to 34 nt window that HRIBO profiles by default and that this
+run kept from the guide. Grady et al. aimed for inserts of about 30 nt but
+excised a wide band from the gel, so the width is a property of the
+library, not of the subsampling. A rerun with metageneSettings.readLengths
+set to 25 to 42 would put most of the footprints into the metagene
+analysis; I left the guide's value in place so that the outputs stay
+comparable with it, and record the choice here.
+
+![Metagene profile of the Ribo-seq library](results/pao1/figures/metagene_profile.png)
+
+The metagene profile of 25 to 34 nt footprints over the 1,961 genes that
+passed HRIBO's overlap, length and expression filters shows the initiation
+signal one looks for in bacterial Ribo-seq: read 5' ends pile up about
+20 nt upstream of the start codon, where they are expected when the
+ribosome's P site sits on the initiation codon, followed by lower and even
+coverage through the coding region. The 3' ends show no comparable
+accumulation at the stop codon; the isolated spikes upstream of it come
+from a few highly translated genes rather than from a shared feature.
+
 ### ORF predictions
 
 | Caller | ORFs | File |
@@ -142,8 +171,27 @@ offsets, metagene profile, precision-recall and ROC curves for
 Reparation; estimated coverage parameters for DeepRibo). At a tenth of the
 depth these are not the calls the full library would give, and the guide
 does not report counts for its full-depth run, so no comparison is
-offered here. The metagene profiles and the read length distribution of
-the footprint library are in results/pao1/metageneprofiling/.
+offered here.
+
+![ORF predictions of both callers](results/pao1/figures/orf_predictions.png)
+
+For the figure each ORF is identified by its stop codon, so that a
+prediction sharing its stop with an annotated coding sequence counts as a
+re-discovery of that gene whether or not the start codon agrees. On that
+criterion 1,853 of the 1,965 Reparation calls (94 percent) are annotated
+genes and 112 end at a stop no annotated gene uses. DeepRibo's 3,209 calls
+contain 599 annotated genes and 2,610 new stops, most of them short: its
+length distribution peaks below 100 nt, where Reparation calls almost
+nothing. The two tools agree on 466 ORFs exactly and on 94 further stop
+codons with different starts; everything else is specific to one caller.
+Reparation prefers ATG (77 percent of its calls) more strongly than
+DeepRibo (50 percent). Reparation's own output table labels every one of
+its calls "Intergenic", which the comparison with the annotation
+contradicts, so that column should not be used. With a tenth of the reads,
+the many short DeepRibo-only ORFs are the calls most likely to change at
+full depth; none of them should be read as a discovery without the full
+library and experimental support. The numbers behind the figure are in
+results/pao1/summary/orf_agreement.tsv.
 
 ### What did not run
 
@@ -192,6 +240,7 @@ bash scripts/05_run_hribo.sh --keep-going    # the run
 bash scripts/06_collect_results.sh pao1
 python scripts/07_summarise_results.py
 bash scripts/08_record_environment.sh
+python scripts/10_plot_figures.py            # needs matplotlib, pandas, openpyxl
 ```
 
 Set SUBSAMPLE_FRACTION=1 for the full libraries. Every script explains its
