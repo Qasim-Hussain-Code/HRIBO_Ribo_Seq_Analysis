@@ -59,23 +59,28 @@ log "host details written"
 log "snakemake and readtools environments recorded"
 
 # 3. The tool environments Snakemake created for HRIBO's rules. Snakemake
-#    keeps a copy of the environment definition next to each environment,
-#    which tells us which HRIBO envs/*.yaml the hash belongs to.
+#    names them by a hash of their definition. The readable name comes from
+#    the line "Environment for .../envs/NAME.yaml created (location: ...)"
+#    that Snakemake printed when it built each one; the run logs keep those.
+declare -A NAMES
+while read -r yaml hash; do
+  [[ -n "$yaml" && -n "$hash" ]] && NAMES["$hash"]="$yaml"
+done < <(grep -h "created (location:" "${WORK_DIR}"/logs/snakemake_*.log 2>/dev/null \
+         | sed -E 's#.*envs/([^/ ]+)\.yaml created \(location: \.snakemake/conda/([^)]+)\).*#\1 \2#')
 n=0
 for envdir in "${WORK_DIR}"/.snakemake/conda/*_/; do
   [[ -d "$envdir" ]] || continue
   hash="$(basename "$envdir")"
-  spec="${WORK_DIR}/.snakemake/conda/${hash%_}.yaml"
-  name="$hash"
-  if [[ -f "$spec" ]]; then
-    # Match the copy against HRIBO's own files to recover the readable name.
-    for y in "${WORK_DIR}"/HRIBO/envs/*.yaml; do
-      if cmp -s "$y" "$spec"; then name="$(basename "$y" .yaml)"; break; fi
-    done
-  fi
+  name="${NAMES[$hash]:-$hash}"
+  # An environment rebuilt after a patch gets a new hash and the same name;
+  # keep both lists apart by appending the hash in that case.
+  if [[ -f "${OUT}/rule_environments/${name}.txt" ]]; then name="${name}_${hash%_}"; fi
   "$CONDA" list -p "$envdir" --export > "${OUT}/rule_environments/${name}.txt"
+  printf '%s\t%s\n' "$hash" "$name" >> "${OUT}/rule_environments/hash_to_name.tsv.tmp"
   n=$(( n + 1 ))
 done
+{ printf 'hash\tenvironment\n'; sort "${OUT}/rule_environments/hash_to_name.tsv.tmp"; } > "${OUT}/rule_environments/hash_to_name.tsv"
+rm -f "${OUT}/rule_environments/hash_to_name.tsv.tmp"
 log "${n} rule environments recorded"
 
 # 4. The container image.
