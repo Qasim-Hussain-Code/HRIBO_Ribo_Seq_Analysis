@@ -142,6 +142,13 @@ For a reader comparing this repository with the guide's chapter on PAO1:
    copies the BigWig coverage tracks, which are too large for the
    repository; scripts/06_collect_results.sh gathers the small outputs
    instead and writes a manifest with the size and md5 of every file.
+7. One HRIBO environment file was replaced. HRIBO/envs/metageneprofiling.yaml
+   pins nothing, and in September 2026 conda resolved it to the
+   free-threaded build of Python 3.14 and to Kaleido 1.3, which broke two
+   rules (a pysam segmentation fault and a missing Chrome for SVG export).
+   The copy under patches/ pins Python below 3.13, pandas 2, plotly 5 and
+   python-kaleido 0.2.1. Nothing computed by the scripts changes; see
+   patches/README.md and docs/troubleshooting.md.
 
 ## 5. What the subsampling means for the results
 

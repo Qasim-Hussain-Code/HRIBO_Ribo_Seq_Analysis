@@ -97,6 +97,40 @@ repository works without them.
 
 ## The workflow
 
+### metageneProfiling fails: Kaleido wants Chrome
+
+Symptom: the rule fails after printing "Included genes: 1961"; the
+traceback in the run log ends with
+`ChromeNotFoundError: Kaleido v1 and later requires Chrome to be installed`.
+
+Cause: HRIBO/envs/metageneprofiling.yaml pins nothing. In September 2026
+conda resolved it to plotly 7.0 and python-kaleido 1.3, and Kaleido 1.x
+renders static images through a separately installed Chrome, which a bare
+WSL installation does not have. HRIBO's plot writer calls write_image for
+every SVG plot (scripts/lib/io.py), so the rule dies at the first one.
+
+Fix: patches/HRIBO/envs/metageneprofiling.yaml pins python-kaleido 0.2.1,
+which bundles its own renderer, together with plotly 5 and pandas 2. The
+install script copies the patch over HRIBO's file; the changed content
+gives the environment a new hash, so Snakemake builds it fresh on the next
+run and reruns the two affected rules.
+
+### readLengthStatistics crashes with a segmentation fault
+
+Symptom: the rule fails, its log file is empty, and the run log shows
+`RuntimeWarning: The global interpreter lock (GIL) has been enabled to load
+module 'pysam.libchtslib'` followed by `Segmentation fault`.
+
+Cause: the same unpinned environment resolved to the free-threaded build of
+Python 3.14 (cp314t). pysam's extension module is not built for it, and
+the interpreter re-enabled the GIL and then crashed.
+
+Fix: the same patch, which keeps Python below 3.13. Other HRIBO
+environments that use pysam (the coverage and wig ones) also received
+Python 3.14t and printed the same warning, but their jobs completed; the
+resolved package list of every environment is in environment/ so that this
+can be checked.
+
 ### PCA fails with two samples
 
 Expected and documented in the guide. HRIBO/scripts/analyse_variance.R
