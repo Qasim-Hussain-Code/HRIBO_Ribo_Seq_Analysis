@@ -152,7 +152,7 @@ section below and in results/pao1/logs.
 ## Acknowledgements
 
 The procedure follows the Ribo-seq Guide using the HRIBO Pipeline by
-Muhammad Aammar Tufail (https://codanics.com/books/bioinfo/riboseq/HRIBO/),
+Muhammad Aammar Tufail (<https://codanics.com/books/bioinfo/riboseq/HRIBO/>),
 including its choice of dataset, configuration and the resource-containment
 approach for Snakemake. The scripts here are my own implementation of that
 procedure, adapted to the machine described in docs/system_constraints.md.
@@ -166,53 +166,53 @@ Sequence Read Archive.
 1. Gelhausen R, Svensson SL, Froschauer K, Heyl F, Hadjeras L, Sharma CM,
    Eggenhofer F, Backofen R. HRIBO: high-throughput analysis of bacterial
    ribosome profiling data. Bioinformatics. 2021;37(14):2061-2063.
-   https://doi.org/10.1093/bioinformatics/btaa959
+   <https://doi.org/10.1093/bioinformatics/btaa959>
 2. Grady SL, Malfatti SA, Gunasekera TS, Dalley BK, Lyman MG, Striebich RC,
    Mayhew MB, Zhou CL, Ruiz ON, Dugan LC. A comprehensive multi-omics
    approach uncovers adaptations for growth and survival of Pseudomonas
    aeruginosa on n-alkanes. BMC Genomics. 2017;18:334.
-   https://doi.org/10.1186/s12864-017-3708-4
+   <https://doi.org/10.1186/s12864-017-3708-4>
 3. Tufail MA. Ribo-seq Guide using the HRIBO Pipeline. Codanics; 2026.
-   https://codanics.com/books/bioinfo/riboseq/HRIBO/
+   <https://codanics.com/books/bioinfo/riboseq/HRIBO/>
 4. Tufail MA, Jordan B, Hadjeras L, Gelhausen R, Cassidy L, Habenicht T,
    Gutt M, Hellwig L, Backofen R, Tholey A, Sharma CM, Schmitz RA.
    Uncovering the small proteome of Methanosarcina mazei using Ribo-seq and
    peptidomics under different nitrogen conditions. Nat Commun.
-   2024;15:8659. https://doi.org/10.1038/s41467-024-53008-8
+   2024;15:8659. <https://doi.org/10.1038/s41467-024-53008-8>
 5. Mölder F, Jablonski KP, Letcher B, Hall MB, Tomkins-Tinch CH, Sochat V,
    Forster J, Lee S, Twardziok SO, Kanitz A, Wilm A, Holtgrewe M, Rahmann
    S, Nahnsen S, Köster J. Sustainable data analysis with Snakemake.
-   F1000Research. 2021;10:33. https://doi.org/10.12688/f1000research.29032.2
+   F1000Research. 2021;10:33. <https://doi.org/10.12688/f1000research.29032.2>
 6. Martin M. Cutadapt removes adapter sequences from high-throughput
    sequencing reads. EMBnet.journal. 2011;17(1):10-12.
-   https://doi.org/10.14806/ej.17.1.200
+   <https://doi.org/10.14806/ej.17.1.200>
 7. Hoffmann S, Otto C, Kurtz S, Sharma CM, Khaitovich P, Vogel J, Stadler
    PF, Hackermüller J. Fast mapping of short sequences with mismatches,
    insertions and deletions using index structures. PLoS Comput Biol.
-   2009;5(9):e1000502. https://doi.org/10.1371/journal.pcbi.1000502
+   2009;5(9):e1000502. <https://doi.org/10.1371/journal.pcbi.1000502>
 8. Ndah E, Jonckheere V, Giess A, Valen E, Menschaert G, Van Damme P.
    REPARATION: ribosome profiling assisted (re-)annotation of bacterial
    genomes. Nucleic Acids Res. 2017;45(20):e168.
-   https://doi.org/10.1093/nar/gkx758
+   <https://doi.org/10.1093/nar/gkx758>
 9. Clauwaert J, Menschaert G, Waegeman W. DeepRibo: a neural network for
    precise gene annotation of prokaryotes by combining ribosome profiling
    signal and binding site patterns. Nucleic Acids Res. 2019;47(6):e36.
-   https://doi.org/10.1093/nar/gkz061
+   <https://doi.org/10.1093/nar/gkz061>
 10. Liao Y, Smyth GK, Shi W. featureCounts: an efficient general purpose
     program for assigning sequence reads to genomic features.
     Bioinformatics. 2014;30(7):923-930.
-    https://doi.org/10.1093/bioinformatics/btt656
+    <https://doi.org/10.1093/bioinformatics/btt656>
 11. Quinlan AR, Hall IM. BEDTools: a flexible suite of utilities for
     comparing genomic features. Bioinformatics. 2010;26(6):841-842.
-    https://doi.org/10.1093/bioinformatics/btq033
+    <https://doi.org/10.1093/bioinformatics/btq033>
 12. Danecek P, Bonfield JK, Liddle J, Marshall J, Ohan V, Pollard MO,
     Whitwham A, Keane T, McCarthy SA, Davies RM, Li H. Twelve years of
     SAMtools and BCFtools. GigaScience. 2021;10(2):giab008.
-    https://doi.org/10.1093/gigascience/giab008
+    <https://doi.org/10.1093/gigascience/giab008>
 13. Ewels P, Magnusson M, Lundin S, Käller M. MultiQC: summarize analysis
     results for multiple tools and samples in a single report.
     Bioinformatics. 2016;32(19):3047-3048.
-    https://doi.org/10.1093/bioinformatics/btw354
+    <https://doi.org/10.1093/bioinformatics/btw354>
 
 ## License
 

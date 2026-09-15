@@ -15,7 +15,7 @@ and HTTPS, while conda-forge delivered 20 MB/s from the same shell.
 Cause: the route from my network to EMBL-EBI, not the machine.
 
 Fix: fetch the same runs as SRA archives from NCBI's mirror on Amazon S3
-(https://sra-pub-run-odp.s3.amazonaws.com/sra/RUN/RUN), which gave about
+(<https://sra-pub-run-odp.s3.amazonaws.com/sra/RUN/RUN>), which gave about
 3 MB/s per connection and scaled with parallel range requests. The archives
 are converted to FASTQ locally with fastq-dump. scripts/03_download_reads.sh
 does this with six streams and verifies each archive with vdb-validate.
@@ -125,11 +125,37 @@ Cause: the same unpinned environment resolved to the free-threaded build of
 Python 3.14 (cp314t). pysam's extension module is not built for it, and
 the interpreter re-enabled the GIL and then crashed.
 
-Fix: the same patch, which keeps Python below 3.13. Other HRIBO
-environments that use pysam (the coverage and wig ones) also received
-Python 3.14t and printed the same warning, but their jobs completed; the
-resolved package list of every environment is in environment/ so that this
-can be checked.
+Fix: the same patch, which keeps Python below 3.13. One other HRIBO
+environment, the coverage one (mapping.py, which writes the wiggle
+tracks), also received Python 3.14t and printed the same warning, but its
+jobs completed with the interpreter lock re-enabled; the resolved package
+list of every environment is in environment/ so that this can be checked.
+
+### Reparation dies after its BLAST step: libtiff.so.5 not found
+
+Symptom: after "Set of Positive examples created" the rule fails with
+"Error running metagene", and reparation/GLY-1/logs/metagene*.log ends in
+`ImportError: libtiff.so.5: cannot open shared object file`. Forty minutes
+of BLAST are lost each time.
+
+Cause: a channel mix. HRIBO/envs/reparation.yaml names conda-forge and
+bioconda, but my conda configuration also lists Anaconda's defaults
+channel, and conda took Pillow 9.4.0 from there. That build links
+libtiff.so.5; the libtiff 4.5 that conda-forge supplied ships .so.6.
+plastid, which Reparation uses for P-site estimation, imports matplotlib,
+which imports Pillow, and the import fails. This is exactly the situation
+the "not configured to use strict channel priorities" warning at the start
+of every run is about.
+
+Fix: patches/HRIBO/envs/reparation.yaml pins Pillow explicitly to
+conda-forge (`conda-forge::pillow`) and adds `nodefaults` to the channel
+list. In a dry solve the channel entry alone was not enough with conda
+26.7, the explicit channel on the package spec was: conda then chose
+Pillow 9.2 from conda-forge together with libtiff 4.4, which provides
+libtiff.so.5. The Snakemake run had to be stopped for this (SIGTERM waits
+for the running BLAST, so it needed SIGKILL and then `--unlock`), and
+Reparation repeats its BLAST on the next run because it does not reuse
+the files in its tmp directory.
 
 ### PCA fails with two samples
 
