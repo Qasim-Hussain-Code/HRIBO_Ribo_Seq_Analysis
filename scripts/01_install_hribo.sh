@@ -95,13 +95,20 @@ else
   conda env create -q -p "${ENV_DIR}/snakemake" --file HRIBO/environment.yaml
 fi
 
-# 4. A small helper environment for fetching and subsampling reads.
+# 4. A small helper environment for fetching and subsampling reads and for
+#    drawing the summary figures (scripts/10_plot_figures.py).
 if [[ -x "${ENV_DIR}/readtools/bin/fastq-dump" ]]; then
   log "readtools environment already exists"
 else
-  log "creating the readtools environment (sra-tools, seqtk, pigz)"
+  log "creating the readtools environment (sra-tools, seqtk, pigz, matplotlib, pandas, openpyxl)"
   conda create -q -y -p "${ENV_DIR}/readtools" -c conda-forge -c bioconda \
-    "sra-tools>=3.0" seqtk pigz
+    "sra-tools>=3.0" seqtk pigz matplotlib pandas openpyxl
+fi
+# The plotting libraries were added after the environment was first built;
+# this adds them to an existing environment that lacks them.
+if ! "${ENV_DIR}/readtools/bin/python" -c "import matplotlib, pandas, openpyxl" >/dev/null 2>&1; then
+  log "adding matplotlib, pandas and openpyxl to the readtools environment"
+  conda install -q -y -p "${ENV_DIR}/readtools" -c conda-forge matplotlib pandas openpyxl
 fi
 
 # 5. Record exactly what was installed.
