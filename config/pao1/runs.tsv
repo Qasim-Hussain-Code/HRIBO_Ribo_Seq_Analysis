@@ -1,0 +1,3 @@
+run_accession	sample_name	method	condition	replicate	library_strategy_ena	biosample	experiment	read_count	base_count	fastq_md5_ena
+SRR5356907	RIBO-GLY-1	RIBO	GLY	1	OTHER	SAMN06617368	SRX2652936	73952429	3697621450	31fe83c39b3ce219b937e56bbb177eed
+SRR5356908	RNA-GLY-1	RNA	GLY	1	RNA-Seq	SAMN06617368	SRX2652937	98145010	4907250500	b61510ee7e441a4673c87a72c826cd06

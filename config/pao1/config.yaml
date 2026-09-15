@@ -1,0 +1,76 @@
+# HRIBO configuration for the Pseudomonas aeruginosa PAO1 analysis.
+#
+# One Ribo-seq and one RNA-seq library from a single condition (growth on
+# glycerol). The file follows the structure of HRIBO's own template
+# (HRIBO/templates/config.yaml); the settings I changed are commented.
+
+##########################
+# Biological information #
+##########################
+
+biologySettings:
+  # Illumina TruSeq 3' adapter. Footprints are much shorter than the 50 nt
+  # read, so almost every Ribo-seq read runs into this sequence.
+  adapterS3: "AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC"
+  adapterS5: ""
+
+  # Paired-end adapters, unused: both libraries are single-end.
+  adapterP3R1: ""
+  adapterP5R1: ""
+  adapterP3R2: ""
+  adapterP5R2: ""
+
+  # Paths are relative to the analysis directory (WORK_DIR).
+  genome: "genome.fa"
+  annotation: "annotation.gff"
+  samples: "HRIBO/samples.tsv"
+
+  # Alternative initiation codons considered by the ORF callers.
+  alternativeStartCodons: ["GTG", "TTG"]
+
+#####################
+# Analysis settings #
+#####################
+
+differentialExpressionSettings:
+  # There is only one condition, so there is nothing to contrast. HRIBO
+  # refuses to build the workflow if this is "on" with a single condition.
+  differentialExpression: "off"
+  features: ["CDS", "sRNA"]
+  contrasts: []
+  padjCutoff: 0.05
+  log2fcCutoff: 1.0
+
+predictionSettings:
+  # DeepRibo runs inside a container (Apptainer on this machine). Reparation
+  # runs from a conda environment and is always on.
+  deepribo: "on"
+
+readstatSettings:
+  readLengths: "10-80"
+
+metageneSettings:
+  positionsOutsideORF: 100
+  positionsInORF: 150
+  filteringMethods: ["overlap", "length", "rpkm"]
+  neighboringGenesDistance: 50
+  rpkmThreshold: 10.0
+  lengthCutoff: 50
+  mappingMethods: ["fiveprime", "threeprime"]
+  # Footprint lengths profiled. See docs/methods.md for how this window was
+  # chosen for this dataset.
+  readLengths: "25-34"
+  normalizationMethods: ["raw", "cpm", "window"]
+  outputFormats: ["interactive", "svg"]
+  # "online" loads plotly.js from the web when a plot is opened instead of
+  # embedding 3.7 MB of JavaScript in every HTML file. The committed results
+  # stay small; the SVG copies of every plot do not need a network at all.
+  includePlotlyJS: "online"
+  colorList: []
+
+#####################
+# Workflow Settings #
+#####################
+
+workflowSettings:
+  workflow: "full"
